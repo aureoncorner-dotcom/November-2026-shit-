@@ -1,0 +1,18 @@
+{
+  "accountSetupItems": [
+    {
+      "accountOrgDir": "C:\\Users\\Andrew\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\7c73c904-63ba-49ec-b4a8-b6241cdbb9ee\\c8e5e675-be94-4137-802c-fb44b3199c48",
+      "importedAtMs": 1785886648933,
+      "itemType": "CONFIG"
+    },
+    {
+      "accountOrgDir": "C:\\Users\\Andrew\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\7c73c904-63ba-49ec-b4a8-b6241cdbb9ee\\c8e5e675-be94-4137-802c-fb44b3199c48",
+      "importedAtMs": 1785886648933,
+      "itemType": "PLUGINS"
+    }
+  ],
+  "connectorCandidates": [],
+  "projects": [],
+  "records": [],
+  "version": 1
+}

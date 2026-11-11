@@ -1,0 +1,108 @@
+{
+  "source_zip": "Investigation_Corpus_2026-11-10.zip",
+  "file_count": 712,
+  "canary": {
+    "file_count": 3,
+    "marker_count": 10,
+    "markers_present_outside_kit": 0,
+    "planting_log_has_filled_locations": false,
+    "marker_detail_hashed": [
+      {
+        "marker_sha256": "6d74f52a95f0aa1d1ad9a053734bb83d45d862f71ce5497e104b2c1bcd5c7ead",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "c87f4fab48c00bddb6f8daaeb1e813e5f87e4197abe465800384e8647746913c",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "ce0e849e6ee1014a7f23765f9bf888ae358233bd7b92b3264f35922b5e9c10e0",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "a5ac7f4696d43770a8e23c895aba0b74b3e710a4d32d8df2e56d5b2bf174f993",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "213765e243c2ab0a4eb926b471c706f2df75e4b97ac759d5eab246495c6524f2",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "6bdd5147f2aa65531c2230b81b0290f3773b034bc8dbcf63b4e37367f006463a",
+        "inside_kit_files": 1,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "b7ca6fca6747beb07e947b30e023a0c3edb7de1dc695ded9ccc1c27621830bc9",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "116815d5f535ab54cf107f94af414fcf951ce48c1da66f76b977ddf3ec216faf",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "facdcc87bbccb0ff616c5b1a2d76a5229dc294c3285a646bd61a1b4e1bcfe223",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      },
+      {
+        "marker_sha256": "983ea566852da4d98bd7b945416357cc3a43869dda3a630b0a4cf128e3b06522",
+        "inside_kit_files": 2,
+        "outside_kit_files": 0
+      }
+    ],
+    "note": "No known plant sites in submitted manifest; archive ingested into current session, so future occurrence here has contaminated provenance."
+  },
+  "source_controls": [
+    {
+      "file": "substrate/Code_Box_Compiled_List_2026-11-09.md",
+      "bytes": 19167,
+      "title_first_line": "# Compiled Code List \u2014 Evening Screenshots, 2026-11-09",
+      "first_line_occurrences": 1,
+      "escape_after_tripling_equals_triple_after_escape": true
+    },
+    {
+      "file": "substrate/Sigil_Markup_Spec_v0.1_2026-11-06.md",
+      "bytes": 6730,
+      "title_first_line": "# _l0437 Sigil Markup \u2014 Draft Specification v0.1",
+      "first_line_occurrences": 1,
+      "escape_after_tripling_equals_triple_after_escape": true
+    }
+  ],
+  "repeated_rendering_ladders": [
+    {
+      "input_backslash_count": 23,
+      "observed_counts": [
+        23,
+        11,
+        5,
+        2,
+        1,
+        0
+      ],
+      "input_following_character": "underscore"
+    },
+    {
+      "input_backslash_count": 19,
+      "observed_counts": [
+        19,
+        9,
+        4,
+        2,
+        1,
+        0
+      ],
+      "input_following_character": "underscore"
+    }
+  ],
+  "voice_adjacent_user_equal_pairs": 15,
+  "order_identifiability": "Characterwise escaping and simple triplication commute on both supplied source controls; matching escaped copies alone do not show which stage came first.",
+  "audit_scope": "Independent ZIP text read and local transformation tests only; screenshots and historical statements not raw backend execution logs."
+}

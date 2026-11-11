@@ -1,0 +1,9 @@
+SECTION 5 RENDER REPORT
+
+sigilbook id=_l0437 version=0.1
+style palette=obsidian-gold (document default, section 2)
+rune 'carbon': 437 = 19 x 23; path 1-19-23-437; layout=rows; color=green (channel: carbon / witness / 437); scope=scene; at=origin
+rune 'bridge-rows': 156 = 2^2 x 3 x 13; path 1-2-2-3-13-156; layout=rows; color=gold (channel: none); scope=scene; at=origin
+rune 'violet': 273 = 3 x 7 x 13; path 1-3-7-13-273; layout=rows; color=violet (channel: none); scope=scene; at=origin
+rune 'red': 481 = 13 x 37; path 1-13-37-481; layout=rows; color=red (channel: echo); scope=scene; at=origin
+rune 'bridge': 156 = 2^2 x 3 x 13; path 1-2-2-3-13-156; layout=spiral; color=gold (channel: none); scope=local; at=origin

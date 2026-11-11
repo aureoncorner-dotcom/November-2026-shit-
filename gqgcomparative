@@ -1,0 +1,212 @@
+**Hidden Quotient, GQG, toroidal cocycles, and adaptive acquisition — comparative source analysis**
+
+Prepared 11 November 2026. Scope: the user-confirmed `Math_n_shiz` and `Toroidal_scrotal_posturing` repositories.
+
+**The strongest supported connection is a shared test for whether an observation preserves the information needed for a claim.** Hidden Quotient supplies a concrete operator-algebra example; GQG specifies how to describe observations, equivalences, retained context, and valid transport; the toroidal work supplies topological observables, path identities, and explicit failures of reduced dynamics; adaptive acquisition asks how cheaply available measurements can repair a specified information loss. These are mathematically connected at the level of factorization and refinement. The sources do not establish one common physical mechanism, one common geometry, or an implication from an exact cocycle to an autonomous predictor.
+
+**Evidence and provenance.** The referenced chat could not be reopened with the available tools. I recovered local extractions whose prior intake record names `Math_n_shiz-main (1).zip` and `Toroidal_scrotal_posturing-main.zip`; the user confirmed this pair. All 524 inventoried outer files—216 Math and 308 Toroidal—match their saved SHA-256 inventory, with no missing or changed entries. The original outer ZIP files were not recovered, so this verifies the preserved extraction, not byte identity to the inaccessible chat attachments. Close reading was selective, focused on the sources below; hashing all files is not reading or proving all files. There are 29 distinct byte-identical contents shared across the repositories, including the Hidden Quotient and Geometry/GQG Word documents. Their repetition is not independent corroboration. The accompanying source index records exact paths and current hashes, and the evidence bundle preserves the selected source bytes.
+
+| Strand | Actual mathematical object | Strongest supported result | Boundary |
+|---|---|---|---|
+| Hidden Quotient | Multiplication representation of bounded measurable functions on an arbitrary measure space | Its kernel consists of locally null functions; factoring out that kernel gives a faithful representation and the correct local essential norm | Recovery of information outside that observation requires a new witness; additional duality/completeness claims require additional hypotheses |
+| GQG | An observational specification, primarily in the `Set` profile | The observation's kernel equivalence yields a quotient isomorphic to its image; retaining context refines that equivalence | A specification and a certificate requirement do not by themselves prove a cross-domain theorem or authenticate an execution |
+| Toroidal | Source-free integer currents, winding, parity sectors, declared update histories; separately, a spatial throat comparator | Parity and endpoint cocycles are exact; an elementary Villain update has provable parity-only non-descent | Static exactness and cocycle additivity do not imply reduced Markov closure, mixing, or physical Q2 evidence |
+| v2.6 acquisition | A complete finite domain, fixed target, available nondestructive queries, and explicit costs | Threshold queries give an unbounded batch/sequential worst-case query gap | Formal acquisition cost differs from installation inventory, elapsed time, energy, and prediction of an evolving system |
+
+Sources: M1–M5; T1–T4 and T7, with precise locations in the source register below.
+
+**The common theorem can be stated without geometric vocabulary.** Let `π:D→Q` be the retained observation, with `Q=π(D)`, and `w:D→Y` the target. Exact recovery is possible precisely when
+
+\[
+\pi(x)=\pi(y)\Longrightarrow w(x)=w(y).
+\]
+
+Equivalently, `Eq(π)⊆Eq(w)`, or there is a unique `w̄:Q→Y` with `w=w̄∘π`. The proof defines `w̄` by choosing any representative of a fiber; the implication makes the choice immaterial. One validated conflicting pair refutes exact recovery. A clean sample does not prove recovery on an unexamined domain. The canonical information repair is the attained pair `(π,w)`, but the target may not be available to measure. This is explicitly proved in M4, lines 25–49 and 67–95, and encoded in GQG's quotient and context rules, M3, lines 44–192.
+
+The word *kernel* needs care here. `Eq(π)` is a relation on pairs. In Hidden Quotient it is induced by a linear/algebraic kernel: two functions have the same multiplication operator when their difference lies in that kernel. In winding parity it is induced by the subgroup `2ℤ³`. The common abstraction is real; the ideal, subgroup, and arbitrary equivalence relation are not interchangeable structures.
+
+**Hidden Quotient demonstrates both what quotienting accomplishes and what it cannot recover.** For actual bounded measurable functions,
+
+\[
+\pi(f)=M_f,\qquad
+\ker\pi=\{f:f=0\text{ a.e. on every finite-measure measurable set}\}.
+\]
+
+Testing on characteristic functions of finite-measure sets proves one direction. For the converse, every square-integrable function is supported, up to null sets, on a countable union of finite-measure level sets. Hence a locally null multiplier annihilates every such test. The induced faithful C*-representation has
+
+\[
+\|M_f\|=\|[f]\|=\|f\|_{\infty,\mathrm{loc}}.
+\]
+
+This need not equal the ordinary essential supremum for an arbitrary measure. On `[0,1] ⊔ {p}`, with Lebesgue measure on the interval and infinite mass at `p`, `1_{p}` has nonzero ordinary essential supremum but acts as the zero multiplier. These arguments and the example are in M1, §§3–7.
+
+For the target `w(f)=f(p)`, the old operator observation cannot recover the target: `f` and `f+1_p` have identical operators but different point values. Retaining actual point evaluation repairs this particular loss. It must be an additional observation on actual functions, not a function invented on their old equivalence classes. M2 explicitly works through this restoration at lines 484–525. Factoring out the invisible difference and measuring that difference answer different questions.
+
+There is an important version correction. M1, line 325, states an overbroad Radon–Nikodym formulation. The qualified v1.7 source M2, lines 306–317, requires absolute continuity with respect to `λ=μ_sf` **and strong λ-semifiniteness** in its quantified density statement. Absolute continuity alone is not the full hypothesis. Semifinite reduction also does not supply missing order suprema; localizable completion is a separate construction. I rely on the corrected formulation, not the stronger wording in the older file. Some inline formulas are missing from the v1.7 text export, so the intact earlier Markdown is useful for the elementary kernel proof, while the explicit correction governs the later density claim. No operator-algebra or Radon–Nikodym theorem has been transferred to the toroidal or acquisition models merely because they also use quotients.
+
+**GQG supplies a disciplined way to express these connections.** Its normative `Set` construction is
+
+\[
+\Omega_{\mathcal W}(x)=(w(x))_{w\in\mathcal W},\quad
+x\sim_{\mathcal W}y\iff\Omega_{\mathcal W}(x)=\Omega_{\mathcal W}(y),\quad
+D/{\sim_{\mathcal W}}\cong\operatorname{im}\Omega_{\mathcal W}.
+\]
+
+Retaining context `r` replaces the observation by `(Ω,r)` and refines the fibers. Conditioning on `r=s` instead restricts the source domain. Conditioning after quotient is defined only when `r` itself descends. M3 gives the concrete example: parity does not determine residue modulo four; retaining mod-four context refines the quotient, while restricting to `4ℤ` is a different operation. This is directly relevant to winding parity and to label-conditioned acquisition. [M3, lines 44–192, 353–383.]
+
+The card calls itself an experimental language specification. It distinguishes the mathematical witness specification from code, parameters, seeds, and an execution manifest. A hash identifies bytes; it does not show that an implementation realizes the mathematical witness. Weighted marginalization and partition-function summation are explicitly outside the `Set` quotient semantics without a suitable backend or external theorem. T2 strengthens this discipline with relation types such as `DERIVED_DESCENT`, `COCYCLE_IDENTITY`, `CONSTRUCTOR_CHOICE`, and `COMPARED_WITH`. These are useful distinctions, not evidence that every proposed relation already has a proof. [M3, lines 5–41, 224–254, 302–313, 379–383; T2, lines 3–20.]
+
+**The toroidal quotient is a genuine instance, with a genuine dynamical obstruction.** On the declared divergence-free, source-free domain, signed cut winding is `W∈ℤ³` and
+
+\[
+q=W\bmod2\in(\mathbb Z/2)^3.
+\]
+
+For every sector `q`, the currents built from reference cycles with winding `q+2k`, `k∈ℤ³`, give the same parity. Thus parity loses signed winding in every attained sector. `W` determines `q`, but `q` does not determine `W`. With charge-six sources, unrestricted signed integer cut winding is no longer the same valid observable; the source uses modular flux instead. These domain restrictions are part of the result. [T1, lines 1358–1402; T6, lines 22–28; T7, lines 487–514.]
+
+The path increment and its accumulation obey
+
+\[
+\eta_n=(W_{n+1}-W_n)\bmod2=q_{n+1}-q_n,\qquad
+c_q(m,n)=\sum_{k=m}^{n-1}\eta_k=q_n-q_m,
+\]
+
+\[
+c_q(m,n)+c_q(n,p)=c_q(m,p).
+\]
+
+This is an exact cocycle identity and, more specifically, an endpoint-difference coboundary. Its additivity follows by telescoping. It does not establish a nontrivial cohomology class or a transition law computable from `q_n` alone. The separate throat quantity `c_F(a,b)=Q_c(b)-Q_c(a)` has the same additive form in a **spatial** coordinate; it is not the same observable, coefficient group, or dynamics. Periodic compensation can sum to zero while individual spatial increments are nonzero. [T1, lines 1404–1445, 1457–1546; T3, lines 463–474.]
+
+This distinction is not merely cautionary. T3 gives an elementary Villain-sector counterexample. For current `2m` around a fixed reference loop of length `L`, every state has `q=0`. With `a=L/(2J)>0`, the next-sector toggle probability for `m≥1` is
+
+\[
+p_m=\tfrac12(1+e^{-(4m+1)a}).
+\]
+
+In particular `p_1>p_2`, so the next-sector law is not constant on a parity fiber. Using `m=1,2` avoids any accidental equality possible when comparing a special pair involving `m=0`. This proves non-descent for that elementary update. It does not by itself settle a different complete macro-sweep kernel. [T3, lines 477–514.]
+
+The later consolidation contains a **positive repair theorem**, not just a suggested test. Put `A_α=Σ_{ℓ∈Γ_α}I_ℓ`. For the scheduled Villain attempt,
+
+\[
+p_\alpha(A)=\tfrac12\left[\min\{1,e^{-(L+2A)/(2J)}\}+\min\{1,e^{-(L-2A)/(2J)}\}\right].
+\]
+
+This is even in `A`. Consequently `(q,|A_α|)` determines the orientation-averaged next-sector law, and `(q,A_α)` determines the orientation-resolved acceptance quantities. This is an explicit connection between the toroidal calculation and witness-relative refinement. It proves sufficiency for this target and update; it does not prove minimal measurement cost or autonomous evolution of the enlarged state. [T7, lines 518–529.]
+
+The separate TD-COS-FH-001 all-orders theorem concerns an ideal **unbounded-current cosine kernel**, at `J=1`, `t=1/2`, `h6=0`, fixed cubic `L≥2`, and fixed positive attempted-microtick spacing. Its argument goes beyond a one-step collision: finite stationary Markov order would force `A²u=cAu` for a killed-sector operator `A=DK^dD`; a nonzero tail correction contradicts that identity. The source also treats a fixed time-homogeneous finite-order law under other initial distributions. This is a supplied analytical theorem, not an inference from finite test counts. It is not an all-orders theorem for `(q,W)`, a truncated-current simulator, accepted-move sampling, adaptive clocks, or every finite-dimensional hidden-state representation. [T4, lines 6–27, 29–78 and subsequent proof; T6, lines 30–41; T7, lines 531–601.]
+
+T7, lines 578–601, additionally gives a separately reviewed analytical extension to fixed rectangular side lengths `Lx,Ly,Lz≥2`, finite `J>0`, and `0<t<1`, with the same source-free unbounded cosine model and fixed attempted-microtick clock. It retains the negative leading correction needed for the proof. This extends the mathematical parameter scope; it does not change the named reference execution profile or establish implementation conformance.
+
+**v2.6 changes the cost of obtaining sufficient information, not the criterion for sufficiency.** A finite primitive menu `c_j` gives each bad pair a separating set
+
+\[
+S_{xy}=\{j:c_j(x)\ne c_j(y)\},\qquad
+\pi(x)=\pi(y),\ w(x)\ne w(y).
+\]
+
+A batch repairs the target exactly when it hits every such set. An empty separating set makes the target unreachable with that menu. Under the stated fixed nonnegative costs and independent choices across labels,
+
+\[
+C_{\mathrm{fixed}}=\tau_a(\cup_q H_q),\quad
+C_{\mathrm{label,worst}}=\max_q\tau_a(H_q),\quad
+C_{\mathrm{label,expected}}=\sum_qp(q)\tau_a(H_q).
+\]
+
+These are v2.5's one-batch-after-label formulas carried into v2.6. The initial label is available to both competitors, queries do not change the state, and exactness covers even attained zero-probability labels. [M4, lines 87–145.]
+
+For v2.6's threshold family, `D={1,…,n}`, constant initial label, target `w(x)=x`, and unit-cost queries `c_t(x)=1[x≥t]`, every adjacent pair requires its own unique cut. A fixed batch must therefore use all `n−1` thresholds. Sequential binary search uses `ceil(log₂ n)` queries in the worst case, and the binary decision-tree leaf bound proves optimality:
+
+\[
+\frac{C_{\mathrm{fixed}}}{C_{\mathrm{sequential,worst}}}
+=\frac{n-1}{\lceil\log_2n\rceil}\longrightarrow\infty.
+\]
+
+| States n | Exact batch queries | Optimal sequential worst case | Possible threshold inventory for either method |
+|---:|---:|---:|---:|
+| 4 | 3 | 2 | 3 |
+| 8 | 7 | 3 | 7 |
+| 32 | 31 | 5 | 31 |
+| 256 | 255 | 8 | 255 |
+
+The sequential policy still needs access to every cut it might query. Thus per-case acquisition decreases while the necessary inventory does not. This is a valid elementary theorem built from hitting sets and binary search; the documents make no mathematical-priority claim. [M4, lines 129–145; M5, entire increment.]
+
+A later source layer must also be retained in this comparison. T7, lines 776–785, states the general finite decision-tree recurrences, with a state prior for expected cost:
+
+\[
+V(S)=\min_j\{a_j+\max_vV(S_{jv})\},\quad
+F(S)=\min_j\{a_jP(S)+\sum_vF(S_{jv})\}.
+\]
+
+Leaves have constant target; informative queries strictly shrink the candidate set. This is a natural sequential refinement of the same recovery problem. T7 reports a source solver checked on 2,348 small models, while explicitly saying that suite was not rerun in that consolidation. The recovered `geometry_adaptive.py` is instead the label-conditioned **batch** optimizer, as its own opening and M8 state. These must not be conflated. For the four-state prior `(0.7,0.1,0.1,0.1)`, optimal expected threshold cost is 1.5, but its tree has worst cost 3; a worst-optimal tree has cost 2. Optimizing the two objectives can select different policies.
+
+An adaptive transcript, including the initial label and query identities/answers, is itself a retained observation. Exactness means its leaves are target-homogeneous. That is the precise GQG connection. Acquiring extra information about one unchanged state is not the same operation as predicting an evolving hidden state from a finite sector history. The v2.6 theorem therefore neither contradicts nor circumvents the toroidal all-orders obstruction.
+
+**What was checked, and what remains source-reported.** I independently checked the threshold construction for every `n=2,…,256`: 32,895 state/policy cases, 32,640 adjacent-pair checks, and the optimal depth recurrence. I exhaustively tested all 4,094 batch subsets across `n=2,…,12`, and enumerated the five ordered threshold trees for the four-state expected-cost example. All passed. An additional three-state example verifies that an exact endpoint cocycle can coexist with nonautonomous projected dynamics. These are fresh synthetic checks recorded in `independent-checks.json`; the general results rest on the proofs above. No repository executable or physical sampler was run for this analysis.
+
+The existing v2.5 receipt M7 reports 4,096 binary tables and three cost profiles, including 960 unrepairable tables and 128 strict unit-cost worst-case improvements. M8 records 23 focused test methods and explicitly marks the sequential optimizer unimplemented in that companion. These are archived receipts, not newly repeated tests. T7's later execution summary and its 2,348-model sequential-solver report have distinct scope and provenance.
+
+There is a packaging gap: M4, lines 245 and 277, cites `GEOMETRY_v2.6_Math_Audit.md`, `GEOMETRY_v2.6_Verification.json`, `GEOMETRY_v2.6_Live_Pack/`, and `ULTRA_HANDOVER_v2.6.md`. Those named artifacts were not located in either recovered tree or in the inspected nested ZIP directories. The v2.5 receipts cannot stand in for them. The new checks in this analysis also do not recreate their historical execution identity.
+
+There is also a status-version trap. T6's older master still says the proof verifier is truncated. T7, lines 671–673, records later recovery at immutable commit `e8623fa88a6e049e17e7564222356a6675d6b29d` and an October 18 rerun of six exact clock comparisons and three decimal checks; it separately says the rational certificate checker was not rerun in that consolidation. T10 preserves recovery and remaining execution-gap receipts. Proof-verifier recovery does not resolve sampler replay. The historical accepted-event totals remain 1,107,368 versus 1,108,720, a difference of −1,352. The separate L=3 direct-reference engineering follow-up reports PASS; its original pilot remains unresolved, and physical Q2 remains NOT_RUN. These retain their separate denominators, kernels, and evidence status. [T6, lines 15–17, 69–94; T7, lines 671–673; T10, lines 337–343 and 385–393.]
+
+A particularly informative **reported empirical trend** appears in the separate Q2 sampler pilot, T9. All chains visited all eight parity sectors and sector ESS was at least 6,583, yet the richer signed-winding diagnostics did not meet the declared criteria at larger sizes:
+
+| Pilot lattice size | Minimum signed-winding ESS | Maximum signed-winding R-hat | Declared pilot disposition |
+|---:|---:|---:|---|
+| L=2 | 2,344 | 1.00395 | PASS |
+| L=3 | 741 | 1.01551 | UNRESOLVED |
+| L=4 | 336 | 1.03469 | UNRESOLVED |
+
+The thresholds were ESS at least 1,000 and R-hat below 1.01. This is a practical example of why good diagnostics on a quotient need not establish good exploration of information it discards. It does not identify the cause of slow mixing, prove the all-orders theorem, or supply physical Q2 evidence. It also must not be pooled with the distinct L=3 direct-reference follow-up above. These figures are read from the archived pilot report, not re-estimated in this analysis. [T9, lines 3–29.]
+
+One small wording repair is warranted in T1. Line 1387 says a parity increment does not identify the update axis. Under the immediately following frozen move table, a **nonzero** increment `e_α` does identify the axis of a single-axis sector move. It still loses the sign/orientation and full source update, and zero increments remain highly ambiguous. The narrower statement matches the table and changes none of the cocycle conclusions.
+
+**The emerging pattern is progressively sharper claim boundaries.** The productive sequence is: identify an observation's fibers; locate a target disagreement; add a justified witness; ask whether that witness can actually be acquired; optimize a declared cost; and test dynamics separately. The newer sources also correct earlier overextensions—qualified RN hypotheses, retained context versus conditioning, static parity versus Markov closure, and query cost versus physical cost. Mixed-version repositories preserve both the original wording and its repair, so filename similarity or repetition should never decide which statement governs.
+
+| Tempting identification | What is actually supported |
+|---|---|
+| Hidden Quotient and toroidal parity are the same geometry | Both instantiate observation/factorization; their domains, algebraic kernels, norms, and additional structures differ |
+| Any information-losing operation is a GQG `Set` quotient | Weighted marginalization and conditioning have separately declared semantics |
+| Exact cocycle means autonomous dynamics | Endpoint additivity is exact even when equal current labels have unequal next laws |
+| Spatial flux closure means temporal residual closure | Different variables, boundaries, and proof obligations |
+| A finite sector set implies finite Markov memory | The ideal toroidal source gives an analytical counterexample |
+| Fewer queries means lower latency or energy | Only if a specified implementation and measured cost model support that implication |
+| Repeated documents or matching hashes corroborate a theorem | They establish shared content/provenance, not independent proof or replication |
+
+**The next tests should target the remaining implications, rather than re-demonstrating shared terminology.** The following hypotheses are deliberately distinguished from results already established.
+
+| Priority and hypothesis | Concrete next test | Success/failure criterion |
+|---|---|---|
+| 1. The toroidal sufficient witness can be acquired more cheaply than full state | Freeze the elementary Villain update and target law. Use the proven `(q,|A_α|)` repair as a reference. Declare available primitive measurements and their costs; compare fixed, label-conditioned, and sequential policies on a complete finite model or a clearly bounded empirical domain | Exact target recovery on the declared domain plus an actual cost improvement. A single same-record/different-law pair defeats exactness. This tests cost/minimality; sufficiency of the formula is already established |
+| 2. A practical compact toroidal predictor can achieve a specified error | Fix kernel, clock, horizon, initialization, and candidate record R. First test equal-R next-law agreement; for autonomous R test the law of **next R**, not only next q. If exactness fails, measure full-path prediction error under a declared tolerance and coverage plan | A validated collision refutes exact descent. A useful approximate predictor needs an upper-error guarantee or bounded empirical claim; a lower-bound collision alone cannot certify quality |
+| 3. The sequential query saving survives real acquisition costs | On the same target and inputs, log query identities, values, ordering, elapsed time, computation, switching/setup cost, and any disturbance of the state. Compare an optimized batch with an optimized sequential policy | Lower measured cost at the same accuracy/coverage. Parallel batch queries or costly sequential decisions may erase the formal query-count advantage |
+| 4. GQG can reliably reject the corpus's known invalid transports | Build an explicit certificate set for the multiplier example, mod-two/mod-four context, toroidal parity, Villain law repair, and adaptive transcripts. Include negative cases: unavailable point evaluation, post-quotient mod-four conditioning, cocycle-to-autonomy promotion, and marginalization declared as a plain `Set` quotient | Correctly accept the supplied factor maps and reject the invalid implications. A complete compiler/proof-checking claim needs these executable results, not only the language card |
+| 5. The results are reproducible from a self-contained package | Restore the cited v2.6 audit/live-pack artifacts and bind the later sequential-solver claim to exact code and receipts. Separately reconstruct the sampler using authoritative configuration, full event records, and checkpoints, retaining the historical mismatch | An identified execution reproduces its stated outputs. A replacement execution must be labeled separately and cannot retroactively resolve an unauthenticated historical stream |
+
+These tests do not need a conjectured universal toroidal substrate. They use the strongest existing common ground: explicitly declared observations, proofs of what they preserve, and measurements of what a proposed repair actually costs.
+
+**Exact source register.** Line numbers are one-based in the preserved text files. `M` and `T` are source identifiers, not version-order rankings. All paths below are archive-relative and are preserved under `source-evidence/` in the evidence bundle. The machine-readable `source-index.csv` records their original absolute paths, byte lengths, and SHA-256 hashes.
+
+| ID | Exact repository-relative path | Main locations used |
+|---|---|---|
+| M1 | `Math_n_shiz-main/Hidden_quotient_2.md` | §§3–8; kernel/example/norm and older RN statement at line 325 |
+| M2 | `Math_n_shiz-main/THE_HIDDEN_QUOTIENT_CORE_WITNESS_STRIKE_v1.7_Qualified_RN_Witness_Restoration.md.txt` | Lines 1–14, 284–319, 484–525; explicit version qualification and restoration |
+| M3 | `Math_n_shiz-main/GQG_Core_Card_v0.3.md` | Lines 5–41, 44–192, 224–254, 302–313, 353–383 |
+| M4 | `Math_n_shiz-main/GEOMETRY_Working_Master_v2.6.md` | Lines 25–49, 67–95, 101–157, 243–277 |
+| M5 | `Math_n_shiz-main/GEOMETRY_v2.6_Adaptivity_Gap.md` | Entire threshold increment |
+| M6 | `Math_n_shiz-main/geometry_adaptive.py` | Opening scope; `label_conditioned_repairs` and inventory handling |
+| M7 | `Math_n_shiz-main/GEOMETRY_v2.5_Verification.json` | `scope`, `four_state`, `cost_profiles` |
+| M8 | `Math_n_shiz-main/geometry_adaptive_verification.json` | Entire receipt, especially `sequential_optimizer_implemented` |
+| M9 | `Math_n_shiz-main/GEOMETRY_v2.5_Math_Audit.md` | Assumptions, proof scrutiny, edge cases, verification scope |
+| T1 | `Toroidal_scrotal_posturing-main/01_Field_Theory_Update_v0.2_Orbit_Quotient_Cocycle.md` | Lines 1332–1579, especially 1358–1445 and 1457–1546 |
+| T2 | `Toroidal_scrotal_posturing-main/10_GQG_Relation_Typing_v0.3.md` | Entire relation-type specification |
+| T3 | `Toroidal_scrotal_posturing-main/TOROIDAL_GEOMETRY_OMNIBUS_v1.1.md` | Lines 442–514, reduced-state status and elementary counterexample |
+| T4 | `Toroidal_scrotal_posturing-main/TD-COS-FH-001_No_Finite_Markov_Order.md` | Stated scope, operator obstruction, subsequent asymptotic proof |
+| T5 | `Toroidal_scrotal_posturing-main/05_TTSC_1_v0.4_Curved_Throat.md` | Corrected curved-throat comparator; lines 9–80 give geometry and flux identities |
+| T6 | `Toroidal_scrotal_posturing-main/toroidal_working_master.md` | Lines 19–54, 69–94; preserved earlier status |
+| T7 | `Toroidal_scrotal_posturing-main/geomas_2.9.md` | Lines 487–601, 671–673, 747–795; later repairs, solver/report distinctions |
+| T8 | `Toroidal_scrotal_posturing-main/verification_original.json` | Archived original arithmetic results referenced by T7 |
+| T9 | `Toroidal_scrotal_posturing-main/q2_sampler_pilot_9_6_26.md` | Lines 3–29; distinct pilot and signed-winding diagnostics |
+| T10 | `Toroidal_scrotal_posturing-main/RECOVERY_CHECKS.json` | Lines 337–343 and 385–393; verifier recovery and remaining historical discrepancy |
+
+Recovered source root: `C:/Users/Andrew/Documents/Codex/2026-11-03/files-mentioned-by-the-user-faaakyou/work/archives/`. Provenance comparison used the adjacent `work/archive-inventory.json` and the prior `outputs/Three_Project_Review.txt`. Connected documents helped locate the corpus; conclusions above are grounded in the preserved source files, not an assumption that live documents and archived versions match.

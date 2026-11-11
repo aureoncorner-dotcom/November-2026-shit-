@@ -1,0 +1,1213 @@
+{
+  "schema": "corner-relay-two-return-review/v1",
+  "scope": "Two externally scheduled SEND/ACK round trips on unchanged endpoints; then idempotent retry. No new engine behavior is added.",
+  "time_coordinate": "t_index is the new harness's logical action order; native RAW uses local record_no and predecessor links. No physical time base is introduced.",
+  "notation": "The archived Corner Relay packet uses T for transition relation. This harness does not rename it or equate it with the user's temporal-axis T. O2 may denote O's changed returned state, not a new endpoint identity.",
+  "not_implemented_here": [
+    "Autonomous input selection",
+    "367-degree phase integration",
+    "A separate evolving lambda-prime state",
+    "13-chamber execution",
+    "Recursive/progressive outcome classification"
+  ],
+  "checks": {
+    "independent_endpoints_and_distinct_key_labels": true,
+    "lambda_has_no_key": true,
+    "cycle_1_send_applied": true,
+    "cycle_1_ack_references_received_send": true,
+    "cycle_1_return_applied": true,
+    "cycle_1_origin_view_changed": true,
+    "cycle_2_starts_at_cycle_1_returned_views": true,
+    "cycle_2_send_before_view_equals_cycle_1_O_return": true,
+    "cycle_2_send_applied": true,
+    "cycle_2_ack_references_received_send": true,
+    "cycle_2_return_applied": true,
+    "cycle_2_origin_view_changed": true,
+    "first_cycle_raw_preserved_as_prefix": true,
+    "two_returns_have_four_records_per_endpoint": true,
+    "retry_keeps_both_views_unchanged": true,
+    "retry_extends_both_raw_histories": true,
+    "duplicate_delivery_no_new_effect": true,
+    "O_raw_hash_chain_valid": true,
+    "S_raw_hash_chain_valid": true,
+    "endpoint_roles_preserved": true,
+    "queue_empty": true,
+    "independent_repeat_is_byte_identical": true
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "send_event_id": "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+      "ack_event_id": "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47",
+      "returned_t_index": 4,
+      "O_raw_count": 2,
+      "S_raw_count": 2,
+      "O_sent_count": 1,
+      "O_ack_received_count": 1
+    },
+    {
+      "cycle": 2,
+      "send_event_id": "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+      "ack_event_id": "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+      "returned_t_index": 8,
+      "O_raw_count": 4,
+      "S_raw_count": 4,
+      "O_sent_count": 2,
+      "O_ack_received_count": 2
+    }
+  ],
+  "snapshots": [
+    {
+      "t_index": 0,
+      "action": "initial",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [],
+            "transition_bindings": []
+          },
+          "view_sha256": "a457af4f3982369b817995e43adfed01d1bdae5cc2d9a825fbcf6dcf30efb44c",
+          "raw_count": 0,
+          "raw_head": null
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [],
+            "transition_bindings": []
+          },
+          "view_sha256": "23d76548a8a710f978cb203578977a0cf1773e18fee2bc1981a95cb655a2c935",
+          "raw_count": 0,
+          "raw_head": null
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 1,
+      "action": "cycle 1: O SEND",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ]
+            ]
+          },
+          "view_sha256": "9e20c3bd1fedb833afc11478b185acb7c65e7163a36da12463c6c46b4bfb652d",
+          "raw_count": 1,
+          "raw_head": "wit:069f779d087a58a4ba6970c8d597678c40debe3cc71497e556c2b12fa9c7fcf9"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [],
+            "transition_bindings": []
+          },
+          "view_sha256": "23d76548a8a710f978cb203578977a0cf1773e18fee2bc1981a95cb655a2c935",
+          "raw_count": 0,
+          "raw_head": null
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 2,
+      "action": "cycle 1: lambda delivers SEND to S",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ]
+            ]
+          },
+          "view_sha256": "9e20c3bd1fedb833afc11478b185acb7c65e7163a36da12463c6c46b4bfb652d",
+          "raw_count": 1,
+          "raw_head": "wit:069f779d087a58a4ba6970c8d597678c40debe3cc71497e556c2b12fa9c7fcf9"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "sent_ack_ids": [],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "transition_bindings": []
+          },
+          "view_sha256": "899e09406f7105b969d1371a58f0a10339fdb589a49152e0c70ee69d6f44ac56",
+          "raw_count": 1,
+          "raw_head": "wit:18bf6729e59c27342d5d85f2f8e9251dc93481ba192640e5ad0f9677f6e96e27"
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 3,
+      "action": "cycle 1: S ACK",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ]
+            ]
+          },
+          "view_sha256": "9e20c3bd1fedb833afc11478b185acb7c65e7163a36da12463c6c46b4bfb652d",
+          "raw_count": 1,
+          "raw_head": "wit:069f779d087a58a4ba6970c8d597678c40debe3cc71497e556c2b12fa9c7fcf9"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "sent_ack_ids": [
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-s-ack-1",
+                "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+              ]
+            ]
+          },
+          "view_sha256": "7d64efde7926d7a259f4893e4b19d2bf3ef4c429526cdb7a689d263a636f9020",
+          "raw_count": 2,
+          "raw_head": "wit:432f3f27eef17e736479c0bfd9980a915a9d9a827ae190f24749c5b69511ca88"
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 4,
+      "action": "cycle 1: lambda delivers ACK to O",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ]
+            ]
+          },
+          "view_sha256": "b35e06ab2b6f0c3d796828cf80201111c9ddaf2b1ca038a3f216dd0c1fdf590a",
+          "raw_count": 2,
+          "raw_head": "wit:2a9dcb4b89f5602141d6feadbd4ac4262d6a62062b7e25e5825999e6130e1fdc"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "sent_ack_ids": [
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-s-ack-1",
+                "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+              ]
+            ]
+          },
+          "view_sha256": "7d64efde7926d7a259f4893e4b19d2bf3ef4c429526cdb7a689d263a636f9020",
+          "raw_count": 2,
+          "raw_head": "wit:432f3f27eef17e736479c0bfd9980a915a9d9a827ae190f24749c5b69511ca88"
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 5,
+      "action": "cycle 2: O SEND",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ],
+              [
+                "review-o-send-2",
+                "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+              ]
+            ]
+          },
+          "view_sha256": "caa75ee28f44be79ebc0f89b6ddaef293c1d5c7d5a74448120ff47890e02c738",
+          "raw_count": 3,
+          "raw_head": "wit:415edce796998b14309f7ebaf35f068085392db5acc9dc0b208168739eb48645"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+            ],
+            "sent_ack_ids": [
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-s-ack-1",
+                "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+              ]
+            ]
+          },
+          "view_sha256": "7d64efde7926d7a259f4893e4b19d2bf3ef4c429526cdb7a689d263a636f9020",
+          "raw_count": 2,
+          "raw_head": "wit:432f3f27eef17e736479c0bfd9980a915a9d9a827ae190f24749c5b69511ca88"
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 6,
+      "action": "cycle 2: lambda delivers SEND to S",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ],
+              [
+                "review-o-send-2",
+                "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+              ]
+            ]
+          },
+          "view_sha256": "caa75ee28f44be79ebc0f89b6ddaef293c1d5c7d5a74448120ff47890e02c738",
+          "raw_count": 3,
+          "raw_head": "wit:415edce796998b14309f7ebaf35f068085392db5acc9dc0b208168739eb48645"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "sent_ack_ids": [
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-s-ack-1",
+                "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+              ]
+            ]
+          },
+          "view_sha256": "bfe2119143e7c158d814a7d298c0a5d6eb13de5c54cb35bfd60e4b313c0b6703",
+          "raw_count": 3,
+          "raw_head": "wit:85f9d7e0421b6abadd0acd1073e55cd96322101c7a13a06133345aeb7ff8bf1e"
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 7,
+      "action": "cycle 2: S ACK",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ],
+              [
+                "review-o-send-2",
+                "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+              ]
+            ]
+          },
+          "view_sha256": "caa75ee28f44be79ebc0f89b6ddaef293c1d5c7d5a74448120ff47890e02c738",
+          "raw_count": 3,
+          "raw_head": "wit:415edce796998b14309f7ebaf35f068085392db5acc9dc0b208168739eb48645"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "sent_ack_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-s-ack-1",
+                "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+              ],
+              [
+                "review-s-ack-2",
+                "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e"
+              ]
+            ]
+          },
+          "view_sha256": "71299a138b5eeeadf565453d33f26f6e42a78a789bd1bdbf207ba95ba5d70ece",
+          "raw_count": 4,
+          "raw_head": "wit:e6aadb7585dedf02696a9d0a86394db74cc7e6dd421e99dd6894fcca7345f32b"
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 8,
+      "action": "cycle 2: lambda delivers ACK to O",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ],
+              [
+                "review-o-send-2",
+                "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+              ]
+            ]
+          },
+          "view_sha256": "8917a04f0eb9e9815a7387eb2e90b9120a4fc12e4e6955277c265f053adb68db",
+          "raw_count": 4,
+          "raw_head": "wit:317430ed5cccd93d481868a2ea8a833b69f37cfceca8b1b79ffcc46032a219d0"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "sent_ack_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-s-ack-1",
+                "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+              ],
+              [
+                "review-s-ack-2",
+                "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e"
+              ]
+            ]
+          },
+          "view_sha256": "71299a138b5eeeadf565453d33f26f6e42a78a789bd1bdbf207ba95ba5d70ece",
+          "raw_count": 4,
+          "raw_head": "wit:e6aadb7585dedf02696a9d0a86394db74cc7e6dd421e99dd6894fcca7345f32b"
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 9,
+      "action": "retry previous cycle-2 SEND; no new O effect",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ],
+              [
+                "review-o-send-2",
+                "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+              ]
+            ]
+          },
+          "view_sha256": "8917a04f0eb9e9815a7387eb2e90b9120a4fc12e4e6955277c265f053adb68db",
+          "raw_count": 5,
+          "raw_head": "wit:7f0a0eeb05856e6b3a145288dfe1b96d68d0f73348c200ce3790dcf5ccdb0cb0"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "sent_ack_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-s-ack-1",
+                "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+              ],
+              [
+                "review-s-ack-2",
+                "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e"
+              ]
+            ]
+          },
+          "view_sha256": "71299a138b5eeeadf565453d33f26f6e42a78a789bd1bdbf207ba95ba5d70ece",
+          "raw_count": 4,
+          "raw_head": "wit:e6aadb7585dedf02696a9d0a86394db74cc7e6dd421e99dd6894fcca7345f32b"
+        }
+      },
+      "queue": []
+    },
+    {
+      "t_index": 10,
+      "action": "deliver duplicate to S; retain invocation without new effect",
+      "endpoints": {
+        "O": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "O",
+            "active": true,
+            "sent_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "received_send_ids": [],
+            "sent_ack_ids": [],
+            "received_ack_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-o-send-1",
+                "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+              ],
+              [
+                "review-o-send-2",
+                "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+              ]
+            ]
+          },
+          "view_sha256": "8917a04f0eb9e9815a7387eb2e90b9120a4fc12e4e6955277c265f053adb68db",
+          "raw_count": 5,
+          "raw_head": "wit:7f0a0eeb05856e6b3a145288dfe1b96d68d0f73348c200ce3790dcf5ccdb0cb0"
+        },
+        "S": {
+          "view": {
+            "schema": "corner-relay-alpha/view/v1",
+            "actor": "S",
+            "active": true,
+            "sent_send_ids": [],
+            "received_send_ids": [
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+            ],
+            "sent_ack_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "received_ack_ids": [],
+            "own_exit_ids": [],
+            "local_effect_ids": [
+              "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+              "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+              "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+              "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+            ],
+            "transition_bindings": [
+              [
+                "review-s-ack-1",
+                "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+              ],
+              [
+                "review-s-ack-2",
+                "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e"
+              ]
+            ]
+          },
+          "view_sha256": "71299a138b5eeeadf565453d33f26f6e42a78a789bd1bdbf207ba95ba5d70ece",
+          "raw_count": 5,
+          "raw_head": "wit:363d16fd183b47dfe4d0deb033996139bd581d4bc7e774783e37f3e8663896a5"
+        }
+      },
+      "queue": []
+    }
+  ],
+  "endpoints": {
+    "O": {
+      "RAW": [
+        {
+          "record_no": 1,
+          "witness_id": "wit:069f779d087a58a4ba6970c8d597678c40debe3cc71497e556c2b12fa9c7fcf9",
+          "previous_witness_id": null,
+          "transition_id": "review-o-send-1",
+          "action": "SEND",
+          "actor": "O",
+          "key_id": "corner-relay:key:O",
+          "input_record": "{\"actor\":\"O\",\"event_id\":\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"key_id\":\"corner-relay:key:O\",\"kind\":\"SEND\",\"payload_b64\":\"ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMQ==\",\"payload_sha256\":\"aaa2b7b29a9f61d45d30028bf36626c71a1f59900ee041c32a65bac25c139fec\",\"ref_event_id\":null,\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"S\",\"transition_id\":\"review-o-send-1\"}",
+          "input_sha256": "b25a98cf23fe8c374879edb2a084cd5cd78bf21223fa362f9f68d9fb8a38b5fc",
+          "precondition": "endpoint is active and transition identifier is unused",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": true,
+          "duplicate": false,
+          "result": "SEND_EFFECT_CREATED",
+          "before_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[],\"transition_bindings\":[]}",
+          "before_view_sha256": "a457af4f3982369b817995e43adfed01d1bdae5cc2d9a825fbcf6dcf30efb44c",
+          "after_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"]]}",
+          "after_view_sha256": "9e20c3bd1fedb833afc11478b185acb7c65e7163a36da12463c6c46b4bfb652d",
+          "event": {
+            "event_id": "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-o-send-1",
+            "kind": "SEND",
+            "actor": "O",
+            "key_id": "corner-relay:key:O",
+            "target": "S",
+            "payload_b64": "ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMQ==",
+            "payload_sha256": "aaa2b7b29a9f61d45d30028bf36626c71a1f59900ee041c32a65bac25c139fec",
+            "ref_event_id": null
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        },
+        {
+          "record_no": 2,
+          "witness_id": "wit:2a9dcb4b89f5602141d6feadbd4ac4262d6a62062b7e25e5825999e6130e1fdc",
+          "previous_witness_id": "wit:069f779d087a58a4ba6970c8d597678c40debe3cc71497e556c2b12fa9c7fcf9",
+          "transition_id": "review-s-ack-1",
+          "action": "RECEIVE_ACK",
+          "actor": "O",
+          "key_id": "corner-relay:key:O",
+          "input_record": "{\"actor\":\"S\",\"event_id\":\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\",\"key_id\":\"corner-relay:key:S\",\"kind\":\"ACK\",\"payload_b64\":\"\",\"payload_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"ref_event_id\":\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"O\",\"transition_id\":\"review-s-ack-1\"}",
+          "input_sha256": "811b211062e15be29ec325c8a9cf859363a72833ad2d08d78b86b7a496dba112",
+          "precondition": "endpoint active; target, actor/key binding, integrity, and reference valid",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": true,
+          "duplicate": false,
+          "result": "DELIVERY_EFFECT_CREATED",
+          "before_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"]]}",
+          "before_view_sha256": "9e20c3bd1fedb833afc11478b185acb7c65e7163a36da12463c6c46b4bfb652d",
+          "after_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"]]}",
+          "after_view_sha256": "b35e06ab2b6f0c3d796828cf80201111c9ddaf2b1ca038a3f216dd0c1fdf590a",
+          "event": {
+            "event_id": "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-s-ack-1",
+            "kind": "ACK",
+            "actor": "S",
+            "key_id": "corner-relay:key:S",
+            "target": "O",
+            "payload_b64": "",
+            "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "ref_event_id": "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        },
+        {
+          "record_no": 3,
+          "witness_id": "wit:415edce796998b14309f7ebaf35f068085392db5acc9dc0b208168739eb48645",
+          "previous_witness_id": "wit:2a9dcb4b89f5602141d6feadbd4ac4262d6a62062b7e25e5825999e6130e1fdc",
+          "transition_id": "review-o-send-2",
+          "action": "SEND",
+          "actor": "O",
+          "key_id": "corner-relay:key:O",
+          "input_record": "{\"actor\":\"O\",\"event_id\":\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"key_id\":\"corner-relay:key:O\",\"kind\":\"SEND\",\"payload_b64\":\"ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMg==\",\"payload_sha256\":\"46751213de561a73809cf5b56c21ea138568df0af1d9dfd960aa137640c81d73\",\"ref_event_id\":null,\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"S\",\"transition_id\":\"review-o-send-2\"}",
+          "input_sha256": "6f7d2162cb289612bbca4feabfc70ef3685f6f3422dd07f2f148dc71bba37d17",
+          "precondition": "endpoint is active and transition identifier is unused",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": true,
+          "duplicate": false,
+          "result": "SEND_EFFECT_CREATED",
+          "before_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"]]}",
+          "before_view_sha256": "b35e06ab2b6f0c3d796828cf80201111c9ddaf2b1ca038a3f216dd0c1fdf590a",
+          "after_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],[\"review-o-send-2\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"]]}",
+          "after_view_sha256": "caa75ee28f44be79ebc0f89b6ddaef293c1d5c7d5a74448120ff47890e02c738",
+          "event": {
+            "event_id": "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-o-send-2",
+            "kind": "SEND",
+            "actor": "O",
+            "key_id": "corner-relay:key:O",
+            "target": "S",
+            "payload_b64": "ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMg==",
+            "payload_sha256": "46751213de561a73809cf5b56c21ea138568df0af1d9dfd960aa137640c81d73",
+            "ref_event_id": null
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        },
+        {
+          "record_no": 4,
+          "witness_id": "wit:317430ed5cccd93d481868a2ea8a833b69f37cfceca8b1b79ffcc46032a219d0",
+          "previous_witness_id": "wit:415edce796998b14309f7ebaf35f068085392db5acc9dc0b208168739eb48645",
+          "transition_id": "review-s-ack-2",
+          "action": "RECEIVE_ACK",
+          "actor": "O",
+          "key_id": "corner-relay:key:O",
+          "input_record": "{\"actor\":\"S\",\"event_id\":\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"key_id\":\"corner-relay:key:S\",\"kind\":\"ACK\",\"payload_b64\":\"\",\"payload_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"ref_event_id\":\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"O\",\"transition_id\":\"review-s-ack-2\"}",
+          "input_sha256": "200fe557a5304dbdd23bac05e8b2d4ebcbd1be4b47998150535bdee96c40e72f",
+          "precondition": "endpoint active; target, actor/key binding, integrity, and reference valid",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": true,
+          "duplicate": false,
+          "result": "DELIVERY_EFFECT_CREATED",
+          "before_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],[\"review-o-send-2\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"]]}",
+          "before_view_sha256": "caa75ee28f44be79ebc0f89b6ddaef293c1d5c7d5a74448120ff47890e02c738",
+          "after_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],[\"review-o-send-2\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"]]}",
+          "after_view_sha256": "8917a04f0eb9e9815a7387eb2e90b9120a4fc12e4e6955277c265f053adb68db",
+          "event": {
+            "event_id": "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-s-ack-2",
+            "kind": "ACK",
+            "actor": "S",
+            "key_id": "corner-relay:key:S",
+            "target": "O",
+            "payload_b64": "",
+            "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "ref_event_id": "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        },
+        {
+          "record_no": 5,
+          "witness_id": "wit:7f0a0eeb05856e6b3a145288dfe1b96d68d0f73348c200ce3790dcf5ccdb0cb0",
+          "previous_witness_id": "wit:317430ed5cccd93d481868a2ea8a833b69f37cfceca8b1b79ffcc46032a219d0",
+          "transition_id": "review-o-send-2",
+          "action": "RETRY",
+          "actor": "O",
+          "key_id": "corner-relay:key:O",
+          "input_record": "{\"actor\":\"O\",\"event_id\":\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"key_id\":\"corner-relay:key:O\",\"kind\":\"SEND\",\"payload_b64\":\"ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMg==\",\"payload_sha256\":\"46751213de561a73809cf5b56c21ea138568df0af1d9dfd960aa137640c81d73\",\"ref_event_id\":null,\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"S\",\"transition_id\":\"review-o-send-2\"}",
+          "input_sha256": "6f7d2162cb289612bbca4feabfc70ef3685f6f3422dd07f2f148dc71bba37d17",
+          "precondition": "transition identifier names an existing local effect",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": false,
+          "duplicate": true,
+          "result": "IDEMPOTENT_RETRY_RETURNED_EXISTING_EFFECT",
+          "before_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],[\"review-o-send-2\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"]]}",
+          "before_view_sha256": "8917a04f0eb9e9815a7387eb2e90b9120a4fc12e4e6955277c265f053adb68db",
+          "after_view_record": "{\"active\":true,\"actor\":\"O\",\"local_effect_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"transition_bindings\":[[\"review-o-send-1\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],[\"review-o-send-2\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"]]}",
+          "after_view_sha256": "8917a04f0eb9e9815a7387eb2e90b9120a4fc12e4e6955277c265f053adb68db",
+          "event": {
+            "event_id": "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-o-send-2",
+            "kind": "SEND",
+            "actor": "O",
+            "key_id": "corner-relay:key:O",
+            "target": "S",
+            "payload_b64": "ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMg==",
+            "payload_sha256": "46751213de561a73809cf5b56c21ea138568df0af1d9dfd960aa137640c81d73",
+            "ref_event_id": null
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        }
+      ],
+      "VIEW": {
+        "schema": "corner-relay-alpha/view/v1",
+        "actor": "O",
+        "active": true,
+        "sent_send_ids": [
+          "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+          "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+        ],
+        "received_send_ids": [],
+        "sent_ack_ids": [],
+        "received_ack_ids": [
+          "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+          "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+        ],
+        "own_exit_ids": [],
+        "local_effect_ids": [
+          "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+          "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+          "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+          "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+        ],
+        "transition_bindings": [
+          [
+            "review-o-send-1",
+            "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+          ],
+          [
+            "review-o-send-2",
+            "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+          ]
+        ]
+      }
+    },
+    "S": {
+      "RAW": [
+        {
+          "record_no": 1,
+          "witness_id": "wit:18bf6729e59c27342d5d85f2f8e9251dc93481ba192640e5ad0f9677f6e96e27",
+          "previous_witness_id": null,
+          "transition_id": "review-o-send-1",
+          "action": "RECEIVE_SEND",
+          "actor": "S",
+          "key_id": "corner-relay:key:S",
+          "input_record": "{\"actor\":\"O\",\"event_id\":\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"key_id\":\"corner-relay:key:O\",\"kind\":\"SEND\",\"payload_b64\":\"ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMQ==\",\"payload_sha256\":\"aaa2b7b29a9f61d45d30028bf36626c71a1f59900ee041c32a65bac25c139fec\",\"ref_event_id\":null,\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"S\",\"transition_id\":\"review-o-send-1\"}",
+          "input_sha256": "b25a98cf23fe8c374879edb2a084cd5cd78bf21223fa362f9f68d9fb8a38b5fc",
+          "precondition": "endpoint active; target, actor/key binding, integrity, and reference valid",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": true,
+          "duplicate": false,
+          "result": "DELIVERY_EFFECT_CREATED",
+          "before_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[],\"transition_bindings\":[]}",
+          "before_view_sha256": "23d76548a8a710f978cb203578977a0cf1773e18fee2bc1981a95cb655a2c935",
+          "after_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[],\"transition_bindings\":[]}",
+          "after_view_sha256": "899e09406f7105b969d1371a58f0a10339fdb589a49152e0c70ee69d6f44ac56",
+          "event": {
+            "event_id": "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-o-send-1",
+            "kind": "SEND",
+            "actor": "O",
+            "key_id": "corner-relay:key:O",
+            "target": "S",
+            "payload_b64": "ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMQ==",
+            "payload_sha256": "aaa2b7b29a9f61d45d30028bf36626c71a1f59900ee041c32a65bac25c139fec",
+            "ref_event_id": null
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        },
+        {
+          "record_no": 2,
+          "witness_id": "wit:432f3f27eef17e736479c0bfd9980a915a9d9a827ae190f24749c5b69511ca88",
+          "previous_witness_id": "wit:18bf6729e59c27342d5d85f2f8e9251dc93481ba192640e5ad0f9677f6e96e27",
+          "transition_id": "review-s-ack-1",
+          "action": "ACK",
+          "actor": "S",
+          "key_id": "corner-relay:key:S",
+          "input_record": "{\"actor\":\"S\",\"event_id\":\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\",\"key_id\":\"corner-relay:key:S\",\"kind\":\"ACK\",\"payload_b64\":\"\",\"payload_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"ref_event_id\":\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"O\",\"transition_id\":\"review-s-ack-1\"}",
+          "input_sha256": "811b211062e15be29ec325c8a9cf859363a72833ad2d08d78b86b7a496dba112",
+          "precondition": "endpoint is active and referenced SEND is locally received",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": true,
+          "duplicate": false,
+          "result": "ACK_EFFECT_CREATED",
+          "before_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[],\"sent_send_ids\":[],\"transition_bindings\":[]}",
+          "before_view_sha256": "899e09406f7105b969d1371a58f0a10339fdb589a49152e0c70ee69d6f44ac56",
+          "after_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"sent_send_ids\":[],\"transition_bindings\":[[\"review-s-ack-1\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"]]}",
+          "after_view_sha256": "7d64efde7926d7a259f4893e4b19d2bf3ef4c429526cdb7a689d263a636f9020",
+          "event": {
+            "event_id": "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-s-ack-1",
+            "kind": "ACK",
+            "actor": "S",
+            "key_id": "corner-relay:key:S",
+            "target": "O",
+            "payload_b64": "",
+            "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "ref_event_id": "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee"
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        },
+        {
+          "record_no": 3,
+          "witness_id": "wit:85f9d7e0421b6abadd0acd1073e55cd96322101c7a13a06133345aeb7ff8bf1e",
+          "previous_witness_id": "wit:432f3f27eef17e736479c0bfd9980a915a9d9a827ae190f24749c5b69511ca88",
+          "transition_id": "review-o-send-2",
+          "action": "RECEIVE_SEND",
+          "actor": "S",
+          "key_id": "corner-relay:key:S",
+          "input_record": "{\"actor\":\"O\",\"event_id\":\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"key_id\":\"corner-relay:key:O\",\"kind\":\"SEND\",\"payload_b64\":\"ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMg==\",\"payload_sha256\":\"46751213de561a73809cf5b56c21ea138568df0af1d9dfd960aa137640c81d73\",\"ref_event_id\":null,\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"S\",\"transition_id\":\"review-o-send-2\"}",
+          "input_sha256": "6f7d2162cb289612bbca4feabfc70ef3685f6f3422dd07f2f148dc71bba37d17",
+          "precondition": "endpoint active; target, actor/key binding, integrity, and reference valid",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": true,
+          "duplicate": false,
+          "result": "DELIVERY_EFFECT_CREATED",
+          "before_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"sent_send_ids\":[],\"transition_bindings\":[[\"review-s-ack-1\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"]]}",
+          "before_view_sha256": "7d64efde7926d7a259f4893e4b19d2bf3ef4c429526cdb7a689d263a636f9020",
+          "after_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"sent_send_ids\":[],\"transition_bindings\":[[\"review-s-ack-1\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"]]}",
+          "after_view_sha256": "bfe2119143e7c158d814a7d298c0a5d6eb13de5c54cb35bfd60e4b313c0b6703",
+          "event": {
+            "event_id": "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-o-send-2",
+            "kind": "SEND",
+            "actor": "O",
+            "key_id": "corner-relay:key:O",
+            "target": "S",
+            "payload_b64": "ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMg==",
+            "payload_sha256": "46751213de561a73809cf5b56c21ea138568df0af1d9dfd960aa137640c81d73",
+            "ref_event_id": null
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        },
+        {
+          "record_no": 4,
+          "witness_id": "wit:e6aadb7585dedf02696a9d0a86394db74cc7e6dd421e99dd6894fcca7345f32b",
+          "previous_witness_id": "wit:85f9d7e0421b6abadd0acd1073e55cd96322101c7a13a06133345aeb7ff8bf1e",
+          "transition_id": "review-s-ack-2",
+          "action": "ACK",
+          "actor": "S",
+          "key_id": "corner-relay:key:S",
+          "input_record": "{\"actor\":\"S\",\"event_id\":\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"key_id\":\"corner-relay:key:S\",\"kind\":\"ACK\",\"payload_b64\":\"\",\"payload_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"ref_event_id\":\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"O\",\"transition_id\":\"review-s-ack-2\"}",
+          "input_sha256": "200fe557a5304dbdd23bac05e8b2d4ebcbd1be4b47998150535bdee96c40e72f",
+          "precondition": "endpoint is active and referenced SEND is locally received",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": true,
+          "duplicate": false,
+          "result": "ACK_EFFECT_CREATED",
+          "before_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"sent_send_ids\":[],\"transition_bindings\":[[\"review-s-ack-1\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"]]}",
+          "before_view_sha256": "bfe2119143e7c158d814a7d298c0a5d6eb13de5c54cb35bfd60e4b313c0b6703",
+          "after_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"sent_send_ids\":[],\"transition_bindings\":[[\"review-s-ack-1\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],[\"review-s-ack-2\",\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\"]]}",
+          "after_view_sha256": "71299a138b5eeeadf565453d33f26f6e42a78a789bd1bdbf207ba95ba5d70ece",
+          "event": {
+            "event_id": "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-s-ack-2",
+            "kind": "ACK",
+            "actor": "S",
+            "key_id": "corner-relay:key:S",
+            "target": "O",
+            "payload_b64": "",
+            "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "ref_event_id": "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        },
+        {
+          "record_no": 5,
+          "witness_id": "wit:363d16fd183b47dfe4d0deb033996139bd581d4bc7e774783e37f3e8663896a5",
+          "previous_witness_id": "wit:e6aadb7585dedf02696a9d0a86394db74cc7e6dd421e99dd6894fcca7345f32b",
+          "transition_id": "review-o-send-2",
+          "action": "RECEIVE_SEND",
+          "actor": "S",
+          "key_id": "corner-relay:key:S",
+          "input_record": "{\"actor\":\"O\",\"event_id\":\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"key_id\":\"corner-relay:key:O\",\"kind\":\"SEND\",\"payload_b64\":\"ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMg==\",\"payload_sha256\":\"46751213de561a73809cf5b56c21ea138568df0af1d9dfd960aa137640c81d73\",\"ref_event_id\":null,\"schema\":\"corner-relay-alpha/event/v1\",\"target\":\"S\",\"transition_id\":\"review-o-send-2\"}",
+          "input_sha256": "6f7d2162cb289612bbca4feabfc70ef3685f6f3422dd07f2f148dc71bba37d17",
+          "precondition": "endpoint active; target, actor/key binding, integrity, and reference valid",
+          "precondition_met": true,
+          "accepted": true,
+          "effect_applied": false,
+          "duplicate": true,
+          "result": "DUPLICATE_DELIVERY_RETAINED_NO_NEW_EFFECT",
+          "before_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"sent_send_ids\":[],\"transition_bindings\":[[\"review-s-ack-1\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],[\"review-s-ack-2\",\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\"]]}",
+          "before_view_sha256": "71299a138b5eeeadf565453d33f26f6e42a78a789bd1bdbf207ba95ba5d70ece",
+          "after_view_record": "{\"active\":true,\"actor\":\"S\",\"local_effect_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"own_exit_ids\":[],\"received_ack_ids\":[],\"received_send_ids\":[\"evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee\",\"evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918\"],\"schema\":\"corner-relay-alpha/view/v1\",\"sent_ack_ids\":[\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],\"sent_send_ids\":[],\"transition_bindings\":[[\"review-s-ack-1\",\"evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47\"],[\"review-s-ack-2\",\"evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e\"]]}",
+          "after_view_sha256": "71299a138b5eeeadf565453d33f26f6e42a78a789bd1bdbf207ba95ba5d70ece",
+          "event": {
+            "event_id": "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+            "schema": "corner-relay-alpha/event/v1",
+            "transition_id": "review-o-send-2",
+            "kind": "SEND",
+            "actor": "O",
+            "key_id": "corner-relay:key:O",
+            "target": "S",
+            "payload_b64": "ZGVjbGFyZWQgcGF5bG9hZCBmb3IgY3ljbGUgMg==",
+            "payload_sha256": "46751213de561a73809cf5b56c21ea138568df0af1d9dfd960aa137640c81d73",
+            "ref_event_id": null
+          },
+          "schema": "corner-relay-alpha/raw-witness/v1"
+        }
+      ],
+      "VIEW": {
+        "schema": "corner-relay-alpha/view/v1",
+        "actor": "S",
+        "active": true,
+        "sent_send_ids": [],
+        "received_send_ids": [
+          "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+          "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918"
+        ],
+        "sent_ack_ids": [
+          "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+          "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+        ],
+        "received_ack_ids": [],
+        "own_exit_ids": [],
+        "local_effect_ids": [
+          "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e",
+          "evt:568ca7be07e8dfaced7bcc2e6d9f778e591b55192290dd36044a868d89438aee",
+          "evt:c3dce37639e18e6832b734ad470c1177ac7f46b113c5ab081ce2455eac76d918",
+          "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+        ],
+        "transition_bindings": [
+          [
+            "review-s-ack-1",
+            "evt:e3afa6e5123888edaa64e207d319d63a519072dd13b0a4825571e013b0f73a47"
+          ],
+          [
+            "review-s-ack-2",
+            "evt:23d7a7a7a15b824999b6812f5543a078c1e66ab6bd8a43ee082c8810a3000a5e"
+          ]
+        ]
+      }
+    }
+  }
+}
