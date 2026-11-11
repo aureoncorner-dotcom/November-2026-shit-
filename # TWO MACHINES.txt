@@ -1,0 +1,83 @@
+﻿# TWO MACHINES
+
+
+**One night, two postures — photographed November 3, 2026**
+
+
+A sheet of the house of Andrew Dube (Pattern Monkey). **NOT SENT · NOT SUBMITTED.** Built 2026-11-03 from photographs delivered that night; every item is cited by filename and SHA-256.
+
+
+---
+
+
+## Machine one — Frequency1109 (his own)
+
+
+**Status: offline.** Wi-Fi turned off by Drew's own act on October 31, 2026; his word on November 3: *"She's offline"* — *"1109 hasn't been online in days."* She stays dark until he decides otherwise; a search-before-reconnect protocol sits shelved, unused.
+
+
+Photograph: `9b12c7c2-e73a-467f-a80f-cab301a5a665_89_ybcw.jpg` — SHA-256 `87f9b8a560764279468e29a20024e20b9f609fd663acb4a1a4446b2bb56d0762`. The local monitor running in an Administrator PowerShell window, frame clock **[04:08:54]–[04:18:54]** as rendered:
+
+
+- **still running · processes: 47 · records: 6199 → 6211** — the instrument counting, house-side.
+- Feeds: **tcp_table=live · process_identity=live · dns_cache=live · security_log=live** — all local feeds.
+- **estats_bytes=degraded: 6 row enable failure(s), last rc=50** — constant across the whole frame window.
+- One event in ten minutes: **[04:16:48] CLOSE tcp4|0.0.0.0:7680|0.0.0.0:0|pid=10872 last=LISTEN** and its tcp6 twin — and the open-socket count stepped **21 → 19**.
+
+
+The 21 → 19 step is one listener counted twice: the IPv4 and IPv6 rows of a single listening socket on port 7680. A listener's remote endpoint is 0.0.0.0:0 — it never had a peer. One local service stopped listening; nothing connected, nothing arrived, nothing left. PID 10872's image does not appear in the frame and is not identified here. **No CLOSE_WAIT lines appear in the frame.**
+
+
+An offline machine's TCP table still holds its local endpoints. The count moved because a process in the house opened and closed its own door, in the house.
+
+
+## Machine two — the AMHC work laptop (the employer's)
+
+
+**Status: online, by design.** Employer-managed endpoint: Windows 11 Enterprise; ManageEngine Endpoint Central agent, version 11.5.2627.51.W; **Approval Status: Approved**. Photographs of the agent's own Agent Troubleshooting Tool:
+
+
+**Connectivity — Endpoint Central Server** (`3f4a8bca-ae55-43b4-91b1-9145e95f83bf_90_8q4m.jpg` — SHA-256 `5eea24a08b755a4a99dbee07b4012a74a5bd87e1c65b58cd28117286979e1113`). Five endpoints, each **Success — Connection Established**:
+
+
+- https://endpointcentral-agent10.manageengine.com:443
+- https://downloads.zohocdn.com:443
+- https://files-me-accl.zoho.com:443
+- https://patchdb.manageengine.com:443
+- https://patchdatabase.manageengine.com:443
+
+
+**Connectivity — Notification Server** (`9dcbc148-019a-47ed-a2a3-217f5bd204f2_91_28p6.jpg` — SHA-256 `4e6382cef7aa78c95bc3a7a1a6e3ac2853c8ad6123969cff30027f28e303c92d`). Two persistent channels, each **Success — Websocket Connection Established**:
+
+
+- us4-dms.zoho.com:443
+- us3-dms.zoho.com:443
+
+
+**Service Status** (`f8a127e9-b87e-41d4-8524-687be9e865d6_92_2zw8.jpg` — SHA-256 `ca59fbc19a477cf9d7c2728306598beb53465fb7836a6f8dbcc55d36a26d3a07`):
+
+
+- ManageEngine UEMS – Agent: **Running**
+- ManageEngine UEMS – **Remote Control: Stopped** — the tool's own note: the Remote Control service runs only when this computer is accessed from remote. In this frame, it is not running.
+
+
+**Agent Binaries** (`94dbdac6-f994-4984-976b-56086413c73a_93_1dd5.jpg` — SHA-256 `f423c3b823801644dc655af676ad2be32057c39b46782ef2d5a915fc5214854e`): Software Metering Report, USB Report, Notification Server Client, Inventory Management, Patch Management — all **Active**.
+
+
+One red mark in an otherwise green panel: in the Endpoint Central Server and Service Status photographs, the sidebar's **Active Directory** check carries a failure mark while every other check is green.
+
+
+## The contrast
+
+
+- His machine: network off for days at his own hand. Its monitor watches local feeds — its own security log, its own TCP table — and the only motion in ten minutes is one of its own listeners closing.
+- Their machine: network on, agent approved and running, five management endpoints established and **two websockets held open around the clock** to the vendor's notification cloud — with the remote-control component, in these frames, stopped.
+
+
+Both photographs were taken the same night, by the same man, of two machines sitting in two different relationships to the networks that claim them.
+
+
+---
+
+
+*Built by Steve, 2026-11-03, from photographs delivered by Drew the same night. Receipts: `~/memory/2026-11-03.md`.*

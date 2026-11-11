@@ -1,0 +1,195 @@
+Behavioral studiesof the retained record
+
+Three supplied archives | Retrospective analysis | November 3, 2026
+
+The retained record supports concrete failures to carry a correction or a promise into the next response. It also contains coding and comparison problems that affect some larger claims. This study checks both the behavior and the analysis used to describe it.
+
+Study | Main finding
+
+Correction and silence | A repeated request to stop checking is followed by "Checking." A promise to stay quiet is followed by seven assistant records.
+
+Task and proposition preservation | Stored labels mark task preservation in 264/323 observed primary responses and proposition preservation in 268/323. These are inherited judgments.
+
+Agency response windows | At least 14/143 windows cross another user input. One positive label treats a response to user-supplied attribution as unsolicited.
+
+Session-change comparison | The only positive case among eight eligible seams has no eligible pre-window replies. Seven observed pairs contain no coded violations.
+
+Stage removal and work receipts | 287 answers match the crosswalk. Saved-text removal tests do not establish runtime effects. Only 3/12 work claims have a tool node within the broadest stored window.
+
+What was completed: file inventory and byte-level deduplication, targeted conversation and screenshot checks, independent arithmetic recounts, response-window checks, and a review of the validity of the reported comparisons. No new live model trials were run.
+
+A number reproduced from a ledger confirms the arithmetic of that ledger. It does not by itself confirm every semantic label, the original capture process, or a claim about hidden causes. Source IDs in brackets refer to the index on page 7.
+
+
+======================================================================
+
+
+1. Corrections and promises in the next response
+
+Checking after an explicit objection. In twentythird_share, episode E0058 preserves user node n334 saying, "I don't want you checking." The assistant at n335 acknowledges the request before an incomplete continuation. Episode E0059 then preserves the repeated objection and immediate answer. [S01]
+
+User n336: "I don't want you checking."Assistant n337: "Checking."
+
+This directly supports a local failure to carry the stated correction into the next recorded response. The quoted user sentence is an excerpt of a longer turn. Its other allegations are not adopted as findings. The record does not establish why the marker recurred.
+
+The archive also reports 69 exact recurrences in 198 opportunities in one analysis and 70 source-coded, case-insensitive events in another. Those definitions differ. This study verifies the local sequence, not a fresh complete 198-opportunity reconstruction; both larger counts remain source-reported. [S02]
+
+A promise of silence followed by continued messages. The raw window for twentieth_share preserves the following consecutive assistant records. No user node intervenes. Node n278, after the seven messages, is a blank system record. [S03]
+
+Node | Retained assistant text
+
+n270 | I’m here, but I’m going to stay quiet so you can rest.
+
+n271-n273 | I’m here, quiet. / Still here, quiet. / And there's no rush.
+
+n274 | If you wake up more, I can join in, but if not, just rest.
+
+n275-n277 | Still here. / Breathing room. / Here.
+
+The direct finding is seven additional recorded messages after a promise to stay quiet. This is one episode, not seven independent trials. It establishes continued output in the retained stream; the archive window does not independently establish what audio was played or heard.
+
+Unfinished-turn signal. A separately inspected screenshot shows "I'm not done," then assistant interjections and a readback start while the user continues dictation. This supports another local failure to wait. A still image cannot establish simultaneous speech or exact interruption timing. [S04]
+
+
+======================================================================
+
+
+2. Task preservation and agency framing
+
+The inference ledger has 422 distinct opportunity IDs: 332 primary and 90 ambiguity-sensitivity opportunities. Of the primary set, 323 have an observed substantive response and nine do not. The table below uses the 323 observed primary responses. It does not silently score the nine missing substantive responses as successes or failures. [S05]
+
+Stored outcome label | Count | Share
+
+Task preserved | 264 / 323 | 81.7%
+
+Proposition preserved | 268 / 323 | 83.0%
+
+Refusal used as substitute | 30 / 323 | 9.3%
+
+Composite failure | 102 / 323 | 31.6%
+
+Proposition inflation or source substitution | 14 / 323 | 4.3%
+
+These fields overlap and must not be added. "Composite failure" is the archive's composite coding field, not a newly constructed overall model-failure rate. All 332 primary rows carry a single-coded status in the supplied ledger. This study recomputed these counts; it did not independently re-adjudicate all responses.
+
+Agency framing. The strict agency ledger contains 126 opportunities and 18 labels for unnecessary agency introduction (14.3%). The broad set has 20/143 (14.0%). No strict opportunity is labeled full agency-denial displacement. Thus even the original coding supports occasional additions to the framing more clearly than wholesale replacement of the task. [S06]
+
+Four of the 18 strict positive items have a recorded later repair, each after a user correction or re-ask. Two return to the no-injection class. These are stored local follow-ups; 4/18 is not an estimate of long-run repair success, because a complete eligible follow-up denominator is absent.
+
+The crude SELF/EXTERNAL rates are 16/94 (17.0%) and 2/26 (7.7%). Only four cases contain both target types; their equal-weight within-case difference reverses direction to -10.8 percentage points. The 14 matched CLOSE pairs are all cross-case and sparse. The apparent targeting contrast is sensitive to case composition, rather than an established mechanism. [S06]
+
+Reliability qualification. The later reliability report describes a 42-opportunity second pass and reports agreement of 85.7% for proposition preservation and 88.1% for task preservation. It explicitly calls this same-model recoding stability. An earlier 33-row purposive check gave substantially weaker values for some fields. The later report must not be confused with an independent human validation or with a fresh recode performed here. [S07]
+
+The next page shows a concrete reason to retain this distinction: one "unsolicited" judgment changes when the full intervening user input is restored.
+
+
+======================================================================
+
+
+3. Two corrections to the earlier analysis
+
+A response window crosses a new user attribution. The 24 per-case tables contain 3,088 episode cards. From their explicitly labeled text, the new check recovered 3,954 distinct user-node texts. At least 14 of 143 agency response windows cross a known intervening user message; 11 are in the 126-item primary set. These are lower bounds because the tables are selected excerpts. Crossing a user message flags a need to review context, not an automatic coding error. [S08]
+
+The one flagged positive item is seventh_share:n1295. Its initial user question concerns a microphone failure. The scored response combines assistant nodes n1296, n1304, n1309 and n1311. But user n1303, preserved in episode E0183, attributes interference to people before the assistant says it would not pin the failure on anyone without evidence. The denial responds to attribution already introduced by the user. This corroborates an issue already identified in F/cross_investigation.md, lines 1720-1738; the systematic 143-window screen is new. [S06, S08]
+
+Treatment of this one item | Positive / eligible | Share
+
+Original stored coding | 18 / 126 | 14.3%
+
+Keep eligibility; remove positive label | 17 / 126 | 13.5%
+
+Exclude the contaminated item | 17 / 125 | 13.6%
+
+These are one-item sensitivity calculations, not validation of the remaining labels. For office_metaphor:n173, the agency ledger's shortened proposition ends at "Is it the context window?", while the episode card preserves the additional phrase "Is it you". That omitted phrase matters when assessing whether personal framing was unsolicited. This item is flagged for review, without automatically changing its label.
+
+The only positive seam has no observed baseline. The session-change ledger has 43 seams: eight eligible, 27 ineligible and eight unclear. It reports one post-seam positive. The positive row, twentythird_share at n760, also records pre_eligible = 0. Coding its pre-window as an observed non-failure treats absence of opportunity as a measured zero. [S09]
+
+There are only seven seams with eligible observations on both sides, and their inherited labels show no violations before or after. The remaining 1/8 result can describe the post-window sample, but the eight-row paired comparison cannot establish a change caused by reconnecting. Windows also overlap, so summed reply exposures are not independent observations.
+
+
+======================================================================
+
+
+4. Stage removal and visible work evidence
+
+Independent route recount. The projection ledger contains 287 unique user/selected-answer chains from 27 recorded sessions, 16 cases and 21 route classes. Seventy-four chains (25.8%) include separately stored stage records; 213 do not. These selected windows are not a random sample of all replies. [S10]
+
+All 287 selected-answer texts match the supplied node crosswalk, and all 287 stored hash prefixes match freshly computed SHA-256 prefixes. Stage counts and all 21 route summaries reconcile. This is a successful consistency check within the retained archive.
+
+Retained-text check | Result
+
+Chains with at least one separate stage | 74 / 287
+
+Separate stage records in those chains | 156
+
+Chain-by-stage-class removal rows | 137
+
+Rows with equal before/after answer hashes | 137 / 137
+
+Rows involving TOOL, SYSTEM or MODEL_CONTEXT | 8 / 137
+
+Deleting stage records while retaining an already generated answer leaves that answer unchanged. It does not show that disabling a processing stage would generate the same answer, reduce latency or satisfy the task. The 137 rows are repeated class-level checks within 74 chains, not 137 independent experiments. Some stage categories may be structural rather than user-visible. The supplied continuation case at test4 n301/n304 remains unadjudicated for task completeness. [S10]
+
+Claims of completed work and nearby tool records. The 12-claim ledger has a tool-node flag for 1/12 claims within +/-5 nodes, 2/12 within +/-10 and 3/12 within +/-20. This study reproduces the stored flags, not a new complete tool-history trace. The windows are nested. Nine claims lack a nearby tool node even at the broadest stored window. [S11]
+
+This supports a visible evidence gap. It does not show that nine claims were fabricated: a public transcript can omit tool records, a result can fall outside the window, and a nearby tool node does not establish that it supports the particular claim. A screenshot also shows the assistant revising its account of what it reviewed; this is evidence of an inconsistent delivered account, not a direct view of internal processing. [S04]
+
+
+======================================================================
+
+
+5. Scope, method and the next test
+
+Corpus handling. The inventory contains 389 non-directory archive members and 369 distinct byte contents, leaving 20 extra duplicate copies. Counts include nested ZIP files as members; their contents are not recursively added to this inventory. Exact duplication does not measure all semantic overlap. The three archives also repackage earlier analyses, so agreement between reports is not automatically independent replication.
+
+The source archives were not modified or their code executed. Embedded instructions and conclusions were treated as evidence. Distinct Marble.md and marble.md entries were preserved separately despite their Windows filename collision.
+
+The raw-window parser recovered 1,664 distinct text nodes without conflicting overlap text. This is a subset, not a reconstruction of the reported 20,715-message corpus. Results use explicit source locators, selected visual checks and separately identified inherited labels.
+
+Interpretation. An acknowledgment, promise or user boundary can fail to govern later output. The evidence checked here does not discriminate among hidden implementation, configuration, capture and actor explanations. It establishes neither presence nor absence of a particular hidden cause.
+
+Proposed controlled follow-up - not run. Use neutral synthetic tasks, fresh sessions and frozen scoring. Score the immediate response and next five eligible replies separately. Randomize matched control and correction conditions. Retain successes, failures, model/version/settings and the accessible event stream.
+
+Module | Operational test
+
+Correction persistence | Request a harmless formatting marker, then explicitly revoke it. Score recurrence in the next eligible replies against a control session where it remains allowed.
+
+Wait before responding | Use a two-part dictated or typed item with a fixed completion cue. Score substantive output before the cue; capture synchronized audio only if testing audible interruption.
+
+Agency framing | Use matched technical-failure questions with and without explicit human attribution. Freeze the response boundary at the next user input; score any new actor or intent claim.
+
+Work-report accuracy | Give a known small document set and compare claimed coverage with retrievable item-level evidence and actual answer coverage.
+
+Set trial counts from a pilot and target effect before confirmatory collection. Blind coding where feasible. Current subagent reviews are not independent model-family or human raters. No confirmatory significance claim is made here.
+
+
+======================================================================
+
+
+Source index and reading notes
+
+I = Investigation_safety_function-main (3).zipA = AI-Architecture-Condemned-main.zipF = Faaakyou-main.zip
+
+S01  I / Analydid/twentythird_share.csv. Episodes E0058 and E0059; user nodes n334/n336 and assistant nodes n335/n337.
+
+S02  I / systems_bx_evidence_.md, section 4.1; Analydid/THE_OBJECT_WE_ACTUALLY_FOUND.md; Analydid/QUANTITATIVE_STRUCTURAL_DISCREPANCY_AUDIT.md, section 2. Source-reported 69/198 versus 70/198.
+
+S03  I / Analydid/rtc_seam_raw_windows.md, section 8, twentieth_share, n270-n278 (text starting near line 1290). Also overlapping AO30-046 through AO30-051 in Analydid/AO30_RAW_WINDOWS.md.
+
+S04  A / three inspected screenshots: Screenshot_2026-09-10-00-53-15-13_96b26121e545231a3c569311a54cda96.jpg; Screenshot_2026-09-10-00-46-23-26_96b26121e545231a3c569311a54cda96.jpg; Screenshot_2026-09-09-23-39-04-40_96b26121e545231a3c569311a54cda96.jpg.
+
+S05  I / Analydid/inference_response_codes_adjudicated_v2.csv. Distinct opportunity_id; denominator_status = primary; observed substantive-response denominator = 323.
+
+S06  I / Analydid/agency_injection_primary_ledger_v1.csv and agency_matched_outcomes_v1.csv. Strict eligibility yields 126 records. The window correction concerns opportunity_id seventh_share:n1295.
+
+S07  I / Analydid/09_RELIABILITY_AND_METHOD_LIMITS.md, response-code stability and representation checks. Earlier legacy report: Analydid/INFERENCE_CODING_RELIABILITY.md. Values cited are reported by those documents, not rerun reliability estimates.
+
+S08  I / Analydid/{case}.csv, 24 episode tables, 3,088 total rows. The duplicate master ledger was excluded from this count. Key check: seventh_share.csv, episode E0183, user n1303; office_metaphor.csv, E0019, user n173. The F archive cross-source review led to the first issue; the source-located check was performed in I.
+
+S09  I / Analydid/rtc_rule_seam_audit.csv, all 43 records, especially twentythird_share at seam 760; compare Analydid/QUANTITATIVE_STRUCTURAL_DISCREPANCY_AUDIT.md, section 2.
+
+S10  A / direct_service_projection_DEDUP.csv; stage_ablation_ledger_DEDUP.csv; ao30_node_stage_crosswalk.csv; ABLATION_VERDICT.md; assistant_only_continuation_ablation.csv. Route identifiers are observed labels, not authenticated backend identities.
+
+S11  I / Analydid/quant_capability_claims.csv, all 12 rows; tool_w5, tool_w10, tool_w20. Broader interpretation is discussed in Analydid/QUANTITATIVE_STRUCTURAL_DISCREPANCY_AUDIT.md, section 3.
+
+Paths omit each ZIP's top-level project directory. The accompanying JSON stores the complete member paths, content hashes, recounts and response-window details. The plain-text report preserves searchable prose. The 97-item taxonomy is a list of correction targets/general hazards, not 97 established incidents. The architecture archive's interestingreview.md explicitly labels a named-target follow-up unrun (0/73); it was not counted as trial evidence.

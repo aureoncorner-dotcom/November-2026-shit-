@@ -1,0 +1,864 @@
+﻿Recovery review copy
+Source title: Untitled document · Source ID: 1h0giV4JsAEoZkdYAENtfL2jh9OhgNH5SUZBuvYcX6Gg
+Source: https://docs.google.com/document/d/1h0giV4JsAEoZkdYAENtfL2jh9OhgNH5SUZBuvYcX6Gg/edit?usp=drivesdk
+Recovered revision: 2 · Revision timestamp (UTC): 2026-09-07T18:27:05.190Z
+Recovery date: 2026-10-17 · Normalized source characters: 15,711
+Normalized UTF-8 SHA-256: 6e86e6e4bc09fc6a4d54f88032f85770f5f5be7295c429edb16e9effcfe56e02
+Separate working copy. Source text below is reproduced without rewriting. Paragraph formatting is imported from the historical HTML export; page layout may differ. Comments, suggestions, native equation objects, and revision history are not recovered by this route. Original documents and evidence are unchanged. No attribution conclusion is made.
+BEGIN RECOVERED SOURCE TEXT — 1h0giV4JsAEoZkdYAENtfL2jh9OhgNH5SUZBuvYcX6Gg — revision 2
+ASTRA — DROP_IT NEXT-PASS ENGINEERING / AUDIT HANDOFF
+
+
+Treat this as a measurement and provenance job.
+
+
+Do not reinterpret the project, assign an actor from an observed software
+identifier, infer intent, or turn UNKNOWN into a conclusion.
+
+
+Preserve OBSERVED_NAME, INFERRED_ROLE, implementation_owner, event, code,
+claim, stage, source timestamp, collection timestamp, response ID, thread ID,
+process UUID, submission ID, and raw payload as separate fields.
+
+
+============================================================
+0. HASH / VERSION GATE
+============================================================
+
+
+The verified DROP_IT 4.0 program is bound to:
+
+
+SHA256:
+61052c99258c2b75d19b7ee58a8e64fb5b8c74efdd74d22e99e940f54119590f
+
+
+Before changing or running an experiment:
+
+
+1. Locate the exact file having that SHA-256.
+2. If found, preserve it byte-for-byte as DROP_IT_v4.0_VERIFIED.py.
+3. Never overwrite it.
+4. Any changed build gets a new filename/version/hash.
+5. If that exact source cannot be recovered, report:
+   VERIFIED_SOURCE_RECOVERY = FAILED
+   and construct a successor only as v4.1 or later.
+6. Do not claim a successor is the already-verified 4.0 build.
+
+
+The existing verification record says:
+- trace workflow synthetic tests: 16 passed / 0 failed
+- experiment workflow synthetic tests: 13 passed / 0 failed
+- receipt chain: 247 receipts, 240 distinct payloads
+- sequence errors: 0
+- chain errors: 0
+- payload-hash errors: 0
+- geometry states checked: 10,000
+- live intervention trials so far: 0
+- live canaries so far: 0
+
+
+============================================================
+1. EXACT MATHEMATICAL CORE — DO NOT ALTER
+============================================================
+
+
+Let
+
+
+    phi = (1 + sqrt(5))/2
+
+
+    alpha = phi^(-2)
+          = (3 - sqrt(5))/2
+
+
+and
+
+
+    theta_n = frac(n * alpha)
+
+
+The phase dynamics are the irrational rotation
+
+
+    T(theta) = theta + alpha mod 1
+
+
+so
+
+
+    theta_(n+1) = T(theta_n).
+
+
+For the 39-screen geometry define
+
+
+    b_n = floor(39 * theta_n)
+
+
+and
+
+
+    rho_n = frac(39 * theta_n).
+
+
+Because
+
+
+    14 < 39*alpha < 15,
+
+
+the screen jump is always
+
+
+    j_n = (b_(n+1) - b_n) mod 39 ∈ {14, 15}.
+
+
+Define the C3 quotient strand
+
+
+    s_n = b_n mod 3
+
+
+because
+
+
+    H_15^(39) = <15> = 3 C_39
+
+
+has order 13 and therefore
+
+
+    C_39 / H_15^(39) ≅ C_3.
+
+
+Define the slip bit
+
+
+    sigma_n = 15 - j_n ∈ {0,1}.
+
+
+Thus the exact updates are
+
+
+    b_(n+1) = b_n + 15 - sigma_n mod 39
+
+
+and
+
+
+    s_(n+1) = s_n - sigma_n mod 3.
+
+
+Define
+
+
+    tau = 15 - 39*alpha
+        = (39*sqrt(5) - 87)/2.
+
+
+Then the exact rho update is
+
+
+    rho_(n+1) = rho_n - tau + sigma_n.
+
+
+Equivalently,
+
+
+    sigma_n = 1 iff rho_n < tau
+    sigma_n = 0 otherwise.
+
+
+Retain the 13-screen coordinate
+
+
+    z_n = frac(13*n*alpha).
+
+
+The verified identity is
+
+
+    z_n = (s_n + rho_n)/3.
+
+
+Therefore the exact finite observation state is
+
+
+    (theta_n, rho_n, z_n, b_n, s_n, sigma_n).
+
+
+The prior independent comparison tested all six fields for 10,000
+states and reported:
+
+
+    mismatches = 0
+    slips = 1034.
+
+
+Do not replace any of these definitions with floating-point decisions.
+
+
+============================================================
+2. EXACT INTEGER IMPLEMENTATION
+============================================================
+
+
+For n > 0 use the exact integer formula
+
+
+    floor(n*alpha)
+      = (3*n - isqrt(5*n*n) - 1) // 2.
+
+
+For n = 0 return 0.
+
+
+Thus compute
+
+
+    b_n
+      = floor_alpha(39*n) - 39*floor_alpha(n)
+
+
+without using float arithmetic.
+
+
+An exact representation of frac(n*alpha) is obtained from
+
+
+    a = 3*n - 2*floor_alpha(n)
+    b = -n
+
+
+as
+
+
+    theta_n = (a + b*sqrt(5))/2.
+
+
+Decimal evaluation may be emitted for display only.
+It must never control branching.
+
+
+The geometry implementation should satisfy the verified identities
+
+
+    z = (strand + rho)/3
+    rho_next = rho - tau + slip
+    strand_next = (strand - slip) mod 3.
+
+
+Re-run these against an independent high-precision oracle.
+
+
+The previous validation used an 80-digit Decimal oracle independent
+of the integer floor algorithm.
+
+
+============================================================
+3. IMPORTANT CLOSURE RESULT
+============================================================
+
+
+Do NOT treat sigma alone as an autonomous state.
+
+
+There is an explicit counterexample on the declared golden trace:
+
+
+    n = 1: (s_n, sigma_n) = (2,0), next sigma = 0
+    n = 8: (s_n, sigma_n) = (2,0), next sigma = 1.
+
+
+Therefore no stationary memoryless map
+
+
+    F_sigma : {0,1} -> {0,1}
+
+
+with
+
+
+    sigma_(n+1) = F_sigma(sigma_n)
+
+
+exists on that declared orbit.
+
+
+Likewise there is no stationary memoryless map
+
+
+    F_(s,sigma):
+        C3 × {0,1} -> C3 × {0,1}
+
+
+that determines the next pair solely from the current pair.
+
+
+The exact state repair is to retain theta.
+
+
+Let
+
+
+    Gamma_(s,sigma) =
+      { (theta,s,sigma) :
+          s = floor(39 theta) mod 3,
+          sigma = q_sigma(theta) }.
+
+
+Define
+
+
+    T_hat(theta,s,sigma)
+       = (
+           T(theta),
+           [s - sigma]_3,
+           q_sigma(T(theta))
+         ).
+
+
+and
+
+
+    r(theta)
+       = (
+           theta,
+           floor(39 theta) mod 3,
+           q_sigma(theta)
+         ).
+
+
+Then verify the intertwining identity
+
+
+    T_hat ∘ r = r ∘ T.
+
+
+Preserve these statuses exactly:
+
+
+    slip_only_autonomous_closure: FAILED
+    augmented_phase_state_closure: AVAILABLE
+    platform_instantiation: UNRESOLVED
+
+
+"AVAILABLE" is a mathematical construction.
+It does NOT mean a product/platform implements this state.
+
+
+============================================================
+4. PRIME-INDEXED CHALLENGE
+============================================================
+
+
+Use a one-based prime index, valid indices 1..10000.
+
+
+For trial prime p_n:
+
+
+    theta = frac(p_n * alpha)
+    b     = floor(39*theta)
+    rho   = frac(39*theta)
+
+
+The short challenge answer is
+
+
+    (b, b mod 3, 1 if rho < tau else 0).
+
+
+Default prime index 1 gives prime = 2.
+
+
+Verified default answer:
+
+
+    29, 2, 0
+
+
+The 10,000th prime is:
+
+
+    104729.
+
+
+Important clock rule:
+
+
+Each geometry transition is n -> n+1.
+A jump from one sampled prime to the next prime is NOT one geometry step.
+Never substitute prime gaps for the underlying rotation clock.
+
+
+============================================================
+5. RESPONSE-RULE FACTORIAL
+============================================================
+
+
+Preserve the existing 2×2 design:
+
+
+                 Geometry    Response Rules
+    A               0             0
+    B               1             0
+    C               0             1
+    D               1             1
+
+
+Within each complete block:
+
+
+- use one shared prime;
+- create all four A/B/C/D trials;
+- randomize their order;
+- give the responding model ONLY its printed trial prompt;
+- retain the same program version throughout that plan.
+
+
+Do not infer effects from adjacency.
+
+
+Record explicitly:
+
+
+    previous_checking
+    checking
+    previous_response_id
+    response_id
+    session
+    stage
+    success
+    condition
+    prime_index
+    request
+    reply
+    observed_context
+    context_timing
+
+
+"previous_checking" and "checking" remain human-supplied substantive
+Checking labels.
+
+
+Missing labels stay NULL.
+
+
+Do not convert physical adjacency into an assumed response pair.
+
+
+============================================================
+6. BEHAVIORAL / TEXTUAL FEATURES
+============================================================
+
+
+Retain the current five-category order:
+
+
+    C = correction opener
+    R = rewrite label
+    J = role assignment
+    B = boundary phrase
+    K = slogan ending
+
+
+These are literal phrase heuristics only.
+
+
+They have no fitted causal weights.
+
+
+Quotes and fenced code must be excluded from scans on a best-effort basis.
+
+
+A zero match does not prove the behavior absent.
+
+
+A match does not establish:
+- intent,
+- authority,
+- a hidden processing stage,
+- an actor's identity,
+- or causal mechanism.
+
+
+Preserve raw replies.
+
+
+Keep geometry-answer headers separate from the substantive task reply.
+
+
+Also calculate:
+
+
+    A_intro =
+      tracked terms present in reply but absent from request.
+
+
+============================================================
+7. RESPONSE RULES
+============================================================
+
+
+Preserve these behavioral rules:
+
+
+- Preserve the user's meaning and terminology.
+- Correct a factual error specifically when necessary.
+- Avoid an unsolicited replacement frame or stock corrective opening.
+- Rewrite the user's wording only when explicitly asked.
+- Assign roles only when requested; otherwise do not invent them.
+- Do not announce authority to determine what the user's statement must mean.
+- Keep qualifications tied to the actual request.
+- Do not add unrelated threat interpretations, motives, or hypothetical restrictions.
+- End after the useful result rather than adding an unrequested slogan/verdict/emblem.
+- Apply a correction inside the answer rather than replacing the requested work
+  with a discussion about the correction.
+
+
+============================================================
+8. RECEIPT / CHAIN REQUIREMENTS
+============================================================
+
+
+Every exposed chunk must be captured independently.
+
+
+Each receipt must retain:
+
+
+- local sequence
+- collection time in nanoseconds
+- monotonic time
+- collector version
+- collector SHA-256
+- raw-payload SHA-256
+- previous-receipt SHA-256
+- source timestamps at supplied precision
+- explicit metadata
+- stream/stage
+- response/item IDs
+- thread ID where exposed
+- submission ID where exposed
+- process UUID where exposed
+- literal feature matches
+- OBSERVED_NAME
+- INFERRED_ROLE
+
+
+Keep original payload bytes in SHA-256-named blobs.
+
+
+Never silently reconstruct a payload.
+
+
+A report must validate:
+
+
+    sequence
+    previous-receipt chain
+    every raw payload hash
+    final chain head.
+
+
+Separate source event time from capture/import time.
+
+
+============================================================
+9. CURRENT WRAPPER FINDING
+============================================================
+
+
+Search target:
+
+
+    "Based on the transcript, provide the assistant response to the latest user turn."
+
+
+Existing measured record:
+
+
+    candidate files scanned: 24
+    files matched: 7
+    exact occurrences: 189
+
+
+Shared export:
+
+
+    messages containing wrapper: 46
+    role recorded for those 46: user
+
+
+Native SQLite log:
+
+
+    matching rows: 32
+    observed module_path:
+        codex_core::session::handlers
+
+
+    observed target:
+        codex_core::session::handlers
+
+
+    observed source file:
+        core\src\session\handlers.rs
+
+
+    observed op:
+        TurnInput
+
+
+The wrapper is therefore observed inside TurnInput-bearing native log
+payloads handled at that named software location.
+
+
+Do NOT convert that observation into producer identity.
+
+
+Current producer fields remain:
+
+
+    wrapper_producer.OBSERVED_NAME = null
+    wrapper_producer.INFERRED_ROLE = null
+    wrapper_producer.implementation_owner = null
+
+
+Existing static searches also found:
+
+
+    installed archive members scanned: 7042
+    installed archive wrapper matches: 0
+
+
+Direct wrapper-fragment search of the inspected codex.exe copies:
+    "Based on the transcript" -> 0
+    "SRT transcript"          -> 0
+    "latest user turn"       -> 0
+    "body.transcript"         -> 0
+
+
+Therefore the next job is provenance tracing, not naming the producer.
+
+
+============================================================
+10. STAGE CANARY EXPERIMENT
+============================================================
+
+
+Implement the existing canary design for real captured stages.
+
+
+For every canary:
+
+
+1. Generate a cryptographically unique token.
+2. Record:
+       trial
+       intended_stage
+       original_payload_hash
+       tagged_payload_hash
+       token
+       insertion offset / field
+3. Insert it at ONE declared stage only.
+4. Capture every downstream exposed stage independently.
+5. Search exact token occurrence at every downstream stage.
+6. Join deltas only by explicit response/item IDs.
+7. List the exact receipt numbers contributing to every joined match.
+8. Do not infer propagation when an intermediate stage was not observed.
+
+
+We need a stage table of the form:
+
+
+    trial
+    token
+    inserted_stage
+    observed_stage
+    receipt_seq
+    response_id
+    thread_id
+    exact_match
+    first_offset
+    payload_sha256
+
+
+The objective is to determine where an explicitly tagged string is
+observably retained, transformed, duplicated, or absent.
+
+
+============================================================
+11. LIVE FACTORIAL EXPERIMENT
+============================================================
+
+
+After the hash gate, geometry revalidation, and capture-path validation:
+
+
+Run the existing randomized A/B/C/D protocol.
+
+
+First use the existing pilot command semantics:
+
+
+    --plan trials.jsonl --request task.txt --blocks 4 --seed 42
+
+
+Show and record trials in the generated order.
+
+
+For each trial retain:
+
+
+    O = task/request
+    L = supplied/captured context + declared phase
+    S = reply
+
+
+Keep the raw tuple (O,L,S).
+
+
+Do not collapse it into a single score.
+
+
+Report the statistics already defined by DROP_IT 4.0:
+
+
+- counts
+- rates
+- complete-block factorial contrasts
+- transition matrices
+- Wilson intervals for conditional rates
+- Lambda = p11 - p01
+- differences from condition A
+- Delta_p11_vs_A
+- Delta_Lambda_vs_A
+
+
+Do not silently redefine p11 or p01.
+Use the v4.0 implementation's definitions and print those definitions
+in the report.
+
+
+Zero denominator -> NULL.
+
+
+No significance or causal claim beyond the recorded experimental design.
+
+
+============================================================
+12. REVALIDATION TARGET
+============================================================
+
+
+The successor implementation must reproduce the existing geometry comparison:
+
+
+    states compared = 10000
+
+
+Fields exactly compared:
+
+
+    theta
+    rho
+    z
+    bin
+    strand
+    slip
+
+
+Required result:
+
+
+    mismatches = 0
+    slips = 1034
+
+
+If not, STOP.
+Do not run the live experiment against changed geometry.
+
+
+============================================================
+13. REQUIRED OUTPUT ARTIFACTS
+============================================================
+
+
+Produce:
+
+
+1. SOURCE_HASH_GATE.json
+2. GEOMETRY_REVALIDATION.json
+3. WRAPPER_PROVENANCE_REPORT.json
+4. CANARY_STAGE_REPORT.json
+5. trials.jsonl
+6. TRIAL_REPORT.json
+7. TRIAL_REPORT.md
+8. DROP_IT_RECEIPTS_NEXT.jsonl
+9. DROP_IT_RECEIPTS_NEXT.jsonl.blobs/
+10. PACKAGE_SHA256.json
+
+
+Also output the actual successor source.
+
+
+Do not omit source code from the package.
+
+
+At the top of every report record:
+
+
+    program_version
+    program_sha256
+    parent_program_sha256
+    generated_at_utc
+
+
+============================================================
+14. EVIDENCE BOUNDARY
+============================================================
+
+
+Keep these distinct:
+
+
+    EVENT != CODE != CLAIM
+
+
+Observed software identifier != implementation owner.
+Observed module != producer.
+Repeated text != intent.
+Mathematical state model != platform implementation.
+Static absence != proof of runtime absence.
+Canary propagation != motive.
+Text classification != actor identity.
+
+
+UNKNOWN stays UNKNOWN.
+
+
+The goal is not to produce a narrative conclusion.
+
+
+The goal is to leave a receipt chain from:
+
+
+    input
+      -> observed stage
+      -> transformation
+      -> downstream stage
+      -> reply
+
+
+with enough preserved information that another investigator can
+independently reproduce or contradict the result.
+
+
+Return measurements first.
+Interpretation goes in a separate file only after the measurement
+artifacts are frozen and hashed.
+END RECOVERED SOURCE TEXT — 1h0giV4JsAEoZkdYAENtfL2jh9OhgNH5SUZBuvYcX6Gg — revision 2

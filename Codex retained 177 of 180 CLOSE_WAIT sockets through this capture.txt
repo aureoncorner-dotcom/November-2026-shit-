@@ -1,0 +1,134 @@
+﻿Codex retained 177 of 180 CLOSE_WAIT sockets through this capture
+The pasted console and the saved native journal agree. The identified Codex app-server process, PID 40204, had 180 CLOSE_WAIT sockets at the start of the pasted window and 177 at the end. Three sockets disappeared at the same observed second in both sources.
+PID 40204 state
+	Window start
+	Window end
+	CLOSE_WAIT
+	180
+	177
+	ESTABLISHED
+	11
+	11
+	CLOSE_WAIT is the TCP state after a peer has ended its sending side while local endpoint closure is pending. The concrete finding here is a persistent population under one identified process lifetime. The next diagnostic target is that process’s socket lifecycle and the requests or tasks holding those sockets.
+Exact match for three removals
+All three rows have local address 192.168.40.7 and process identity 40204:134371743620557123. The console reports 06:08:38; the journal records 2026-10-23T06:08:38.607484Z.
+Local port
+	Remote endpoint
+	Paste line
+	Journal sequence
+	50362
+	172.64.155.209:443
+	894
+	3597
+	50658
+	172.64.155.209:443
+	895
+	3598
+	62159
+	172.64.155.209:443
+	896
+	3599
+	Journal location: events-000004.jsonl, physical lines 550–552. Last observed present: 06:08:36.574Z; first observed in this monitor run: 06:03:57.331Z. These are collection boundaries.
+The control page contributes 248 socket records
+Port 54918 belongs to the monitor I started, Python PID 47084. It accounts for 248 of 868 socket records in the paste: 163 OPEN rows and 85 CLOSE rows. The listener appears at paste line 146; a local established pair appears at lines 469–470. Those rows are preserved and separately counted as monitor control traffic.
+What the console counters contain
+The paste has 901 nonblank records: 29 process rows, 648 OPEN, 218 CLOSE, 2 STATE and 4 heartbeat summaries. Its first 394 sockets are the startup baseline. Replaying the later changes yields 430 sockets at the end; the last heartbeat’s 432 precedes the final removals. The four displayed socket counts agree with the replay.
+Local evidence review · Incident 20261023T065117Z-247e8349
+Confirmed software failures, with a request-level trace
+Marked October 23, 2026 at 2:51:17 a.m. Eastern. Your stated context was a ChatGPT call using our research. This review preserves that context and identifies the events the local records establish.
+Independently verified
+29 of 29 manifest entries match. All 3,684 timeline records verify.
+The requested five-minute lead-in and 30-second follow-up completed. Saved observations span approximately 2:46:18–2:51:46 a.m. EDT. The chain is continuous from sequence 29,876 through 33,559, with zero omitted records reported.
+Acquisition and source hashes · Independent chain check · Originals rechecked after review
+10
+Response-decoding error records
+4
+Codex sockets entered CLOSE_WAIT
+1
+BITS startup-setting change
+1. A background integration request encountered a recorded failure
+At 2:48:24.847–2:48:28.559 a.m. EDT, the Codex app server logged ten transport-worker errors containing error decoding response body. The same interval contains five retry records, two codex_apps startup-failure records, and one record saying the application continued with cached tools. These categories describe stages and records within a burst; they are not 18 independent incidents.
+A later-preserved desktop log supplies the precise context for one traced startup failure. An inbox widget called code-review / pull_requests.inboxDetails, retired an extension-host thread, and created a replacement. The replacement’s thread/start request ID is the same one in the startup-failure trace. At 2:48:25.194 a.m., the widget recorded “Can’t connect to GitHub. Try again.”
+Saved database: logs_2.sqlite, decoder rows 8844654, 8844661, 8844679, 8844723, 8844732, 8844733, 8844738, 8844741, 8844743, 8844745; startup rows 8844739 and 8844746; fallback row 8844747. Desktop log …t0-i1-000005-1.log, lines 22705–22714, 22733 and 22741. Exact request/thread evidence · All 207 database rows in the selected window.
+Exact correlation identifiers
+Request c932f58b-6105-4755-b24f-85a9b00a4dda
+Extension-host thread 01a16784-94cb-7e42-8dc1-df29a667dbc2
+Widget operation a90ebcef-8ba4-4989-914a-cd60fa3fea07
+Native process pid:40204:ae326ef0-67ad-4c90-9b30-9f7e79eee705
+The request/thread binding applies to the traced extension-host startup. The other worker errors share its process and time interval; their individual requests are not all identified.
+2. Four retained sockets changed state in the same Codex process
+For process identity 40204:134371743620557123, replaying the saved tuple changes gives 175 → 179 CLOSE_WAIT sockets and 26 → 23 ESTABLISHED sockets. The final complete native snapshot was observed at 2:51:46.104 a.m. EDT. All four new CLOSE_WAIT observations remained in that snapshot.
+Observed EDT
+	Local port
+	Remote endpoint
+	State change
+	events.jsonl line
+	02:48:05.172
+	56023
+	172.64.155.209:443
+	ESTABLISHED → CLOSE_WAIT
+	1196
+	02:49:31.488
+	49289
+	104.18.32.47:443
+	ESTABLISHED → CLOSE_WAIT
+	2211
+	02:50:15.671
+	59796
+	104.18.32.47:443
+	ESTABLISHED → CLOSE_WAIT
+	2695
+	02:50:15.671
+	59797
+	104.18.32.47:443
+	ESTABLISHED → CLOSE_WAIT
+	2696
+	Local address 192.168.40.7. Each tuple retains PID, process creation time, address family, scopes and ports. Reverse reconstruction and forward replay agree. Reproducible socket-state result.
+3. Windows recorded a BITS startup-setting change
+At 2:48:38.8939759 a.m. EDT, Service Control Manager recorded Background Intelligent Transfer Service (BITS): auto start → demand start. This is an explicit setting-change event. The event’s provider execution PID is 1096; the saved record does not identify the client that requested the change.
+System event 7040, record 47964; events.jsonl line 1716, sequence 31591. Full source fields and XML in findings data.
+4. The eight unmatched thread IDs have an identified source
+The incident’s rollout selector reported eight IDs missing from its state-database copy. All eight have explicit extension-host creation records in the desktop log. Their identity is now resolved at the extension-host layer.
+Show all eight identity matches
+Thread ID
+	Created UTC
+	Desktop log line
+	01a16744-b413-7353-904a-87722050a99b
+	2026-10-23T05:38:38.347Z
+	15727
+	01a1675b-3a5e-7aa0-803c-47d8e63fc8c3
+	2026-10-23T06:03:14.541Z
+	17961
+	01a1676c-c254-7331-9b8b-2ad329366839
+	2026-10-23T06:22:23.439Z
+	21394
+	01a16771-b8cc-7f33-87f3-a086d94cb71b
+	2026-10-23T06:27:48.695Z
+	21853
+	01a16776-5853-7ce2-976a-a732872cfcfc
+	2026-10-23T06:32:51.678Z
+	22012
+	01a1677a-f825-7f70-a4ef-a1bf18fe0d6b
+	2026-10-23T06:37:54.738Z
+	22165
+	01a1677f-f4b0-7010-a28e-5a5fd79d8d00
+	2026-10-23T06:43:21.530Z
+	22593
+	01a16784-94cb-7e42-8dc1-df29a667dbc2
+	2026-10-23T06:48:24.662Z
+	22713
+	Full identity matches. All are from the later-preserved desktop log; original incident contents remain unchanged.
+What the monitor preserved for this call
+The packet saved full copies of state_5.sqlite and logs_2.sqlite; both pass database integrity checks. It saved 2,129 distinct Windows event keys, process lifetimes, TCP changes, UDP local bindings, and the selected configuration file. The current and retained prior configuration copies have the same SHA-256.
+The requested full conversation capture was incomplete in this incident.
+The collector skipped thread_history_1.sqlite because both WAL/SHM sidecars were absent; its source-preservation guard deliberately refused that state. It selected zero rollout files. The packet contains no saved ChatGPT call audio, spoken transcript, or call request/response identifier.
+Eight of sixteen Windows event channels were available. Security and six SMB channels were access-denied; Sysmon was absent; the DNS-cache query was denied. The TCP/UDP native-table reads completed. These statuses are retained in the packet.
+Process and collection context
+The ChatGPT.exe network process, PID 35596, resolves to the OpenAI.Codex_26.1016.8622.0 package and has the role network.mojom.NetworkService. Its 35 established TCP sockets in the ending snapshot belong to that shared browser-network process; a conversation-level join is needed to identify a call’s traffic.
+Three monitor processes were present: the original access monitor PID 63940, the Downloads copy of this monitor PID 25028, and this workspace’s collector PID 47084. Their process identities and command lines are saved in findings.json. Repeated collector activity should be assessed with that context.
+Case disposition
+Add the integration failure, four socket transitions, and BITS change to the technical record. The records establish those events and preserve an exact application-request connection for the integration failure.
+To assess the ChatGPT call itself, the remaining evidence is the conversation identifier, timestamped spoken exchange, and the response or failure you were testing. Those would let us evaluate what the call did and seek a matching call request. The surrounding machine events alone do not supply that content or a reaction-to-the-research mechanism.
+Evidence labels: directly verified records (V); replayed counts and joins (D); your reported call context (R). No actor, intent, or call-causation conclusion has been assigned.
+Complete findings and source references · Original monitor report · Original manifest
+Review completed locally. Original packet: 31 files / 311,317,875 bytes including the manifest and prior verification receipt. The three desktop logs were acquired later as supplemental evidence and are separately receipted. Manifest SHA-256: dcfd857b094b1daf2b6637906bdae4bba8dbc8a70c7f08993b4fe3863aed

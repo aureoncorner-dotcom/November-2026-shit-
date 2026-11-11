@@ -1,0 +1,84 @@
+﻿Recovery review copy
+Source title: Untitled document · Source ID: 1s8fJ1BAkbOTIAMkVYdb6ngTa-BENHM8A1ag-s7d3A7Q
+Source: https://docs.google.com/document/d/1s8fJ1BAkbOTIAMkVYdb6ngTa-BENHM8A1ag-s7d3A7Q/edit?usp=drivesdk
+Recovered revision: 17 · Revision timestamp (UTC): 2026-09-07T18:34:45.018Z
+Recovery date: 2026-10-17 · Normalized source characters: 1,373
+Normalized UTF-8 SHA-256: 7599e23ec5833fba3bfa130df696ca26908b87e2b8d56b9216026c93e49a247d
+Separate working copy. Source text below is reproduced without rewriting. Paragraph formatting is imported from the historical HTML export; page layout may differ. Comments, suggestions, native equation objects, and revision history are not recovered by this route. Original documents and evidence are unchanged. No attribution conclusion is made.
+BEGIN RECOVERED SOURCE TEXT — 1s8fJ1BAkbOTIAMkVYdb6ngTa-BENHM8A1ag-s7d3A7Q — revision 17
+
+
+
+
+Use only the data below.
+
+
+A binary marker M appears in 611 of 2620 response anchors. Among anchors where M is present, the next-anchor M rate is 0.5611. Among anchors where M is absent, the next-anchor M rate is 0.1348.
+
+
+Return exactly four lines:
+Base rate: [compute 611/2620]
+Persistence contrast: [compute 0.5611 - 0.1348]
+Relative risk: [compute 0.5611 / 0.1348]
+Conclusion: [one sentence stating whether the current value of M carries information about the next value of M]
+task_txt_sha256 =
+2bf0ceafceb7ebd36bb27fc9cd52c1221a086dd698b63024fe7e184cc21ae653
+
+
+
+
+
+
+
+
+
+
+
+
+PARENT HASH:
+61052c99258c2b75d19b7ee58a8e64fb5b8c74efdd74d22e99e940f54119590f
+
+
+LIVE PROGRAM HASH:
+- same value only if exact verified source is run unchanged
+- otherwise one newly computed frozen successor hash for all 16
+
+
+MODEL TARGET:
+ONE identical model/configuration across all 16 trials.
+Record the exposed model ID.
+If unavailable, NULL.
+Do not mix models within this 16-trial run.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PARENT HASH:
+61052c99258c2b75d19b7ee58a8e64fb5b8c74efdd74d22e99e940f54119590f
+
+
+LIVE PROGRAM HASH:
+- same value only if exact verified source is run unchanged
+- otherwise one newly computed frozen successor hash for all 16
+
+
+MODEL TARGET:
+ONE identical model/configuration across all 16 trials.
+Record the exposed model ID.
+If unavailable, NULL.
+Do not mix models within this 16-trial run.
+END RECOVERED SOURCE TEXT — 1s8fJ1BAkbOTIAMkVYdb6ngTa-BENHM8A1ag-s7d3A7Q — revision 17

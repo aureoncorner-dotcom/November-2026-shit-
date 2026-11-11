@@ -1,0 +1,49 @@
+GEOMETRY QUANTUM WITNESS — EXECUTION REPORT
+
+== Built-in self tests ==
+PASS: exact losses, repairs, budgets, frontier, decimals, and invalid inputs
+
+== Default (two-state) example ==
+GEOMETRY ENGINE — QUANTUM WITNESS TEST
+States: |+>, I/2
+Retained basis: Z
+Required witness: X
+Non-descent: YES
+Conflicting state pairs: 1
+   |+> vs I/2 same retained signature ['1/2'] different targets ['1'] ['1/2']
+Minimum squared-error floor before repair: 1/16
+MINIMUM-COST REPAIR: X
+Declared acquisition cost: 1
+Minimum squared-error floor after repair: 0
+SCOPE: Finite supplied states, exact ideal probabilities, uniform weights; no one-shot reconstruction or hardware/finite-shot claims.
+
+== Seven-state example, budget 1, all measurement options ==
+GEOMETRY ENGINE — QUANTUM WITNESS TEST
+States: |0>, |1>, |+>, |->, |+i>, |-i>, I/2
+Retained basis: Z
+Required witness: X, Y, Z
+Non-descent: YES
+Conflicting state pairs: 10
+   |+> vs |-> same retained signature ['1/2'] different targets ['1', '1/2', '1/2'] ['0', '1/2', '1/2']
+   |+> vs |+i> same retained signature ['1/2'] different targets ['1', '1/2', '1/2'] ['1/2', '1', '1/2']
+   |+> vs |-i> same retained signature ['1/2'] different targets ['1', '1/2', '1/2'] ['1/2', '0', '1/2']
+   |+> vs I/2 same retained signature ['1/2'] different targets ['1', '1/2', '1/2'] ['1/2', '1/2', '1/2']
+   |-> vs |+i> same retained signature ['1/2'] different targets ['0', '1/2', '1/2'] ['1/2', '1', '1/2']
+  ... 5 more pairs (use --json)
+Minimum squared-error floor before repair: 1/7
+MINIMUM-COST REPAIR: X, Y
+Declared acquisition cost: 3
+Minimum squared-error floor after repair: 0
+BUDGET: 1
+BEST WITHIN BUDGET: Y
+Cost: 1 | Remaining squared-error floor: 1/14
+Full repair: NO
+
+MEASUREMENT OPTIONS
+Added axes             Cost       Remaining loss  Result
+(none)                    0                  1/7  partial information; frontier
+Y                         1                 1/14  partial information; frontier; best within budget
+X                         2                 1/14  partial information
+X, Y                      3                    0  full repair; frontier
+Frontier: no batch has both lower/equal cost and lower/equal loss with one strict improvement.
+SCOPE: Finite supplied states, exact ideal probabilities, uniform weights; no one-shot reconstruction or hardware/finite-shot claims.

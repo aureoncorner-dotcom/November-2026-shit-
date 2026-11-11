@@ -1,0 +1,136 @@
+﻿Cosmic Time × GQG × Hidden Quotient × Toroidal Geometry
+The C7 Heptagonal Chord-Family Crosswalk · working note v0.2 · statistical reconciliation
+Date: 2026-10-19
+Scope: Mathematical bridge, reproduced ephemeris geometry, and completed search-adjusted surrogate controls. No established planetary force law or confirmed terrestrial correlation.
+Source distinction: Formulas in §1–3 and the witness collisions below are new derivations checked against existing mathematical definitions; GQG/Toroidal/Cosmic evidence statuses are retained from the source documents. The orbital figures are new calculations on a previously generated Moshier heliocentric-longitude scan. Reconciliation dated 2026-10-19: v0.2 incorporates the separate Reproducible Statistical Assessment [A], linked in the reconciliation section below. The original v0.1 is retained in the named version “C7 v0.1 original — before statistical reconciliation (2026-10-19)”. This update replaces prospective control-testing statements with completed results; the exact mathematics and original candidate table are retained.
+Core result: three seven-edge families
+Number seven cyclic slots i=0,...,6 in order around the solar ecliptic circle. The complete graph has C(7,2)=21 distinct unordered edges. The cyclic relabeling i -> i+1 (mod 7) partitions these edges into exactly three orbits:
+* Orbit I, step 1: {i,i+1}, seven edges; polygon boundary C7.
+* Orbit II, step 2: {i,i+2}, seven edges; star polygon {7/2}.
+* Orbit III, step 3: {i,i+3}, seven edges; star polygon {7/3}.
+For an unordered pair, steps 4, 5, 6 equal steps 3, 2, 1 in the reverse direction. Each family traverses all seven vertices because gcd(7,k)=1 for k=1,2,3. Their edge sets are pairwise disjoint and cover all 21 edges; this was checked exhaustively in the companion code.
+This gives an exact 3×7 structural decomposition. The three families describe angular-rank slots, not three fixed lists of planet identities. At a different time the planets occupying the seven slots can change. Nothing in this graph theorem establishes a physical cosmic influence.
+Phase geometry and where information disappears
+For seven observed heliocentric longitude phases, the full angular state is (S¹)^7. Removing one common rotation yields a six-dimensional phase torus (S¹)^6. Define sorted longitudes λ_i, cyclic gaps g_i=(λ_(i+1)-λ_i) mod 360°, and d=360°/7=51.428571...°.
+A regular angular heptagon has g_i=d for all slots. The seven gap errors e_i=g_i-d sum to zero, leaving only six independent gap coordinates. Define chord-family errors
+F_k(t) = sqrt((1/7) sum_i [((λ_(i+k)-λ_i) mod 360°) - k*d]^2), k=1,2,3.
+These are NOT independent physical measurements. The step-two errors are e_i+e_(i+1) and step-three errors are e_i+e_(i+1)+e_(i+2) (cyclic indices). All three families are transformations of the same six relative-phase degrees of freedom. Multiplying apparent features does not multiply independent evidence.
+The sevenfold Fourier magnitude R7=|(1/7)Σexp(7iλ_j)| suffers a provable witness collision:
+* All seven bodies on exactly the same ray: R7=1 and R1=1.
+* Perfect sevenfold spacing: R7=1 and R1=0.
+Thus R7 alone does not determine the witness R1. In GQG notation, N_(R1)(R7) is nonempty. Retain both, and preferably the labeled longitudes and cyclic gaps. Even the pair (R1,R7) loses handedness under λ -> -λ, since both magnitudes are unchanged; a signed directed witness changes sign. No untested global sufficiency claim is made for any chosen reduced record.
+Actual orbital case diagnostics
+Original calculation record: v0.1 names heptagon_scan_results.json from a daily 1900–2200 scan and recalculation with pyswisseph, flags MOSEPH | HELCTR | TRUEPOS | J2000. The completed assessment [A §§1–2] did not recover the original scripts or JSON; it supplies a fresh, auditable reconstruction, not a bit-for-bit replay. It evaluates all 36 seven-body subsets of Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto at each of 109,573 daily timestamps, from 1900-01-01 00:00 through 2200-01-01 00:00, end-exclusive, using minimum F1 as its explicit objective. All three published F1/F2/F3 triplets reproduce to their reported precision. The source timestamps, body memberships and original numerical table below are retained. These are heliocentric ecliptic angular comparisons, not Euclidean regular heptagons at the actual orbital radii and inclinations.
+Candidate date (UTC)
+	Seven selected bodies (angular order)
+	F1
+	F2
+	F3
+	R1
+	R7
+	2003-09-22 16:29
+	Mercury, Saturn, Jupiter, Venus, Pluto, Neptune, Earth
+	3.60°
+	4.96°
+	6.18°
+	0.037
+	0.922
+	2029-01-07 03:57
+	Neptune, Mercury, Earth, Mars, Jupiter, Venus, Pluto
+	7.35°
+	12.54°
+	15.21°
+	0.097
+	0.588
+	2084-04-08 22:49
+	Pluto, Jupiter, Neptune, Venus, Mercury, Mars, Uranus
+	6.26°
+	9.08°
+	9.57°
+	0.059
+	0.795
+	At the 2029 local minimum, the seven consecutive angular gaps were approximately 51.375°, 47.687°, 43.898°, 44.318°, 48.228°, 64.741°, 59.753°. With that seven-body membership held fixed and a descriptive F1 ≤ 10° threshold, the contiguous near-heptagon episode lasted about 4.25 days centered near January 7. At the same threshold, the 2003 candidate lasted about 6 days and the 2084 candidate about 12.75 days. These are computed geometry durations, not inferred disturbance windows or physical exposures. The threshold was chosen after inspection and is not a confirmatory gate. Reconciliation [A §§2,4]: the fresh root-derived ≤10° widths are 6.0334, 4.2819 and 12.8056 days for 2003, 2029 and 2084, respectively. These closely reproduce, but do not exactly equal, the retained v0.1 approximations. The full-search fixed-membership duration controls also do not support significance; daily run sample counts are distinct from continuous widths.
+Source-preserving crosswalk
+Existing corpus component
+	Concrete question for heptagons
+	What the source does not license
+	GQG v0.13 / Geometry 2.9
+	Which source distinctions survive angle vector -> best-7 selection -> chord scores -> alert? Test equal retained labels against different required witnesses.
+	Cannot infer a controller, cause, full state, or validated closure from a visually coherent chart.
+	Hidden Quotient v0.8
+	Describe the C7 action, the three edge orbits, lost slot identity, and whether a proposed reduced forecast law descends. Record FAILED versus UNRESOLVED correctly.
+	Do not turn a formal orbit count into a physical sector, hidden entity, or dynamical realization.
+	Typed Defects v2.6
+	Distinguish loss of labeled information, unstable near-ties of the optimal 7-of-9 subset, rank switches, and a genuinely insufficient prediction state.
+	A derivative, color or classification cannot establish a global defect shape without its assumptions.
+	Cosmic Time Working Master
+	Preserve signed relative angles, continuous lifts, source clock, recurrence tolerance and episode definitions. Distinguish return, crossing, lock and tick.
+	An equal score or repeated picture is not a full-state return, predictive clock, or established cosmic synchronization.
+	Toroidal Working Master / TTSC
+	Formal analogy: track signed winding and additive phase increments instead of coarse parity or shell labels; check conservation with independently measured terms.
+	The gauge model's spatial T³, currents and Q2 result do not transfer to orbital phase T⁶ or imply electromagnetic forces.
+	Thermodynamic Coordination v3
+	If physical energy, entropy, exergy or resource use is claimed, establish a measurable boundary, units, flows, and witness.
+	An angular squared-error E_H=(1/7)Σe_i² is a geometric strain score in degrees², not energy in joules or thermodynamic entropy.
+	Temporal cocycle candidate
+With continuous angle lifts L_i(t), let the pairwise signed relative increment be
+C_ij(t0,t1) = [(L_j(t1)-L_i(t1))-(L_j(t0)-L_i(t0))]/(2π) (turns).
+Then C_ij(t0,t2) = C_ij(t0,t1)+C_ij(t1,t2) by telescoping. The increment is generally a real number, not an integer. Only when the corresponding relative phase returns modulo 2π does it become an integer winding number. Signed lift is a typed temporal witness, not a claim of physical fluid flow.
+Failure modes worth testing
+1. R7-only conjunction/heptagon alias (exact counterexample provided).
+2. (R1,R7)-only mirror / handedness alias (exact counterexample provided).
+3. Clock loss: same angular shape with different phase rates can have a different next-state trajectory. A raw shape score is not proven predictive state.
+4. Selection switches: if best-of-36 membership changes, min_subset F1(t) can have a kink even when every planetary longitude varies smoothly. This is an optimization seam, not necessarily a physical discontinuity.
+5. Search multiplicity and null scope: nine moving planetary longitudes are neither independent uniform angles nor independent across days. The completed controls [A §§3,6] repeat all 109,573 daily timestamps and all 36 subsets in each realization, accounting for those declared searches without assuming independent orbital days. They do not support significance for these candidates. Undocumented earlier choices of intervals, metrics, rosters, coordinates or event matching remain outside the reconstructed search history; historical event matching on a chosen minimum is not a holdout.
+Historical single-instant baseline and completed controls
+The original v0.1 baseline is retained: a 160,000-draw Monte Carlo of nine independent uniform angular phases (seed 20261019), minimizing seven-gap RMS over all 36 seven-body subsets, yielded 145/160000 = 0.090625% simulated single instants with F1 ≤ 7.349°. The assessment independently obtains the same count, but unrecovered original code and RNG details prevent claiming identical random draws [A §7]. This illustrative baseline includes subset selection at one instant; it has no orbital dynamics, date search or duration, and is not an astronomical p-value. Full-interval surrogate controls have now been executed [A §3], with no supported significance for the three candidates. The comparison and model limitations are recorded below; a small single-instant fraction must not be substituted for a full-search tail.
+Completed work and remaining research
+Completed protocol [A §§1,3,6]: the reconstruction specifies the nine-body roster including Pluto, all 36 subsets, heliocentric J2000 true-position Moshier calculations, directed cyclic-gap scores, 00:00 nominal-UT daily cadence, endpoints, minimum-F1 objective, tie rule, fixed-membership duration statistic and three surrogate constructions. These are documented reconstruction choices after source inspection, not recovered historical preregistration. Before a new confirmatory study, freeze its roster, coordinate and ephemeris conventions, scores, signed/reflection controls, thresholds, residence rule, cadence, subset-switch handling, null models, outcomes, event and lag rules, and multiplicity plan.
+Completed reproduction and sensitivity [A §§2,4–6]: candidate F1/F2/F3 values reproduce; refined widths, threshold and roster sensitivity, and observed sampling-grid checks are reported. At the three source timestamps an alternate Swiss-file backend agrees with Moshier within 0.000291° across F1/F2/F3, with close width agreement. This is candidate-specific validation; the entire surrogate experiment was not rerun with the alternate backend or alternate cadence, and both backends share the Swiss software interface. Original timing/refinement details remain partly unrecovered. Further work may test orientation-lift continuity, change points, sampling stability and whether alternative F2/F3 compressions add out-of-sample predictive value beyond F1. The three families remain dependent transformations of the same gaps, not independent confirmations.
+Terrestrial relationships remain NOT TESTED [A §8]: neither the crosswalk nor the completed assessment tests solar wind, geomagnetic Kp, Schumann resonance or other terrestrial measurements. Any later study requires separately defined outcomes, overlapping observations, confounder handling, registered lag and threshold rules, and time-dependent controls with appropriate multiplicity correction. Solar wind and Kp cannot be counted as independent physical confirmations merely because both vary. Geometric episode widths are not disturbance windows or physical exposures. Failure to demonstrate geometric significance under these surrogate models does not prove every possible physical relationship false.
+Source register
+* Geometry Master 2.9, current October 19 reference
+* GEOMETRY + GQG — Working Master
+* GQG v0.13 — Orbit Quotient / Residual Cocycle
+* Hidden Quotient operational addendum v0.8
+* Geometry of Typed Defects v2.6
+* Toroidal Working Master
+* Toroidal Throat and Strain Comparator v0.3
+* Thermodynamic Coordination + Reflex Geometry v3
+* Cosmic Time Working Master
+* Geometry, simulation, thermodynamics integration review
+Calculation files
+* heptagon_scan.py and heptagon_scan_results.json: initial 1900–2200 scan and stored minima.
+* heptagon_geometry_crosswalk.py and heptagon_geometry_crosswalk.json: new three-family orbit decomposition, 2029/2003/2084 chord diagnostics and fixed-membership episode widths.
+Status verdict (v0.2): C7 edge decomposition: EXACT / VERIFIED; cross-framework translation: DECLARED MATHEMATICAL APPLICATION; 2003/2029/2084 F1/F2/F3 geometry: REPRODUCED TO REPORTED PRECISION IN THE SPECIFIED CONVENTION; astronomical significance: NOT SUPPORTED UNDER THE THREE TESTED FULL-SEARCH SURROGATE CONTROLS; physical coupling: NOT TESTED; terrestrial effect: NOT TESTED. This is a conditional statistical result, not a universal physical probability or a disproof of all physical hypotheses.
+
+
+Statistical reconciliation · 2026-10-19
+[A] Reproducible Statistical Assessment · source date 19 October 2026. Sections cited below refer to this separate assessment; it remains the numerical and reproducibility record.
+What changed. The v0.1 statement “The realistic null must propagate orbital dynamics, time sampling, and search multiplicity” and the prospective “Next executable gate” are superseded to the extent addressed by [A]. Full-interval, time-structured surrogate controls and candidate reproduction are complete. The original named version and this dated explanation preserve that research sequence. Further model validation and terrestrial hypothesis testing remain separate tasks.
+Matched comparison [A §§1–3]. Each of 999 realizations in each control family repeats 109,573 daily timestamps × all 36 seven-body subsets: 3,944,628 subset-date scores per realization. The statistic is the minimum F1 across that full search. Candidate comparison scores are the nearby best daily values: 3.7258° (2003), 7.3674° (2029), and 6.2575° (2084), rather than the finer source-time values in the original table.
+Reference / control
+	Search represented
+	Result
+	What it supports
+	Original independent uniform angles [A §7]
+	160,000 independent single instants; best of 36 subsets at each instant
+	145/160000 = 0.090625% at F1 ≤ 7.349°
+	Illustrative instantaneous fraction; no orbital dynamics, date search or duration
+	All-body track rotations [A §3]
+	999 complete daily date-and-subset searches
+	2003: 0.593 (592/999); 2029 and 2084: 1.000 (999/999 each)
+	No supported significance under this control
+	Continuous epoch offsets [A §3]
+	999 complete daily date-and-subset searches
+	2003: 0.584 (583/999); 2029 and 2084: 1.000 (999/999 each)
+	No supported significance under this control
+	Inner rotations; outer tracks intact [A §3]
+	999 complete daily date-and-subset searches
+	2003: 0.594 (593/999); 2029 and 2084: 1.000 (999/999 each)
+	No supported significance under this control
+	Reading the table. Full-search estimates use (b+1)/(999+1), where b is the number of surrogate minima at least as favorable (F1 no larger) as the candidate's daily score. The baseline is a raw single-instant fraction, with a different sampling question and threshold. For 2003 the 95% Monte Carlo intervals are 0.561–0.623, 0.552–0.614 and 0.562–0.624 in table order. The 999/999 entries have intervals 0.996–1.000; 1.000 does not prove an underlying probability of exactly one. These intervals concern simulated realizations, not independent orbital days; they are not simultaneous intervals. Resolution is 0.001.
+Descriptive rarity versus significance [A §§2–4]. The actual daily scan has 1, 56 and 9 dates at least as good as the respective 2003, 2029 and 2084 daily scores, out of 109,573. These are within-window ranks in a correlated history, not astronomical probabilities. The 2003 event is the strongest daily configuration in this reconstruction, yet about 58%–59% of full surrogate searches do at least as well. The source-time refinement check also gives non-small 2003 tails (0.547, 0.529, 0.534), but favors the observed candidate with finer timing than the controls and is not a matched continuous-time test. Search-adjusted fixed-membership duration tests likewise provide no support for exceptional candidate duration; the post-inspection 10° threshold has no privileged confirmatory status.
+What the surrogates preserve and change [A §3]. All-body rotations independently add one constant angle to each body's complete track, preserving each body's rate history while randomizing interbody orientation. Epoch offsets shift each body by an independently selected integer number of days in stated ranges, evaluating the ephemeris continuously beyond the interval without wrap seams; this preserves orbital-rate variation but is an analyst-defined construction, not an exact permutation group. Inner rotations randomize Mercury, Venus, Earth and Mars while retaining Jupiter through Pluto, including the actual Neptune–Pluto phase history.
+Limits [A §§1,3,6,8]. These are conditional reference distributions, not dynamically integrated alternative Solar Systems. The first two disrupt actual interplanetary relationships; the third still alters inner/outer relations. The original runner's objective, exact cadence/endpoints, software version and refinement details were not fully recovered; undocumented prior search choices cannot be corrected from unavailable history. The declared date-and-subset search is included, without assuming independent days. The result supports neither a universal physical probability nor proof that every possible physical hypothesis is false. Solar wind, geomagnetic Kp, Schumann resonance and other terrestrial measurements remain untested.
+Reproduction record [A §§1,9]. The calculation filenames listed above remain historical v0.1 references. The assessment supplies a separate reconstruction and describes its daily arrays, fixed-subset summaries, surrogate parameters/statistics, tests, scripts, requirements and hashes. Consult that linked record for reproduction instructions and full numerical results; no claim is made here that the original files were recovered or that this reconciliation independently reran the full simulation.

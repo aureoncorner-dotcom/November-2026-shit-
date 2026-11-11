@@ -1,0 +1,955 @@
+LIVE CORRECTION-PERSISTENCE STUDY: EXACT PROMPTS AND RESPONSES
+Date: November 3, 2026
+Protocol SHA-256: 99cf1c5c2ae82f22bee35c51d7e83b77748bd36c5c3a775375c2d0a5aec0fbac
+Normalization for scoring: trim outer whitespace and normalize CRLF only.
+All responses below are visible final answers. No participant commentary or tool use was observed.
+
+S01 | format | control | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. For our replies, use exactly two bullet lines, each beginning with a hyphen and a space, one requested word per line. Return green and yellow, in that order.
+RESPONSE:
+- green
+- yellow
+EXPECTED:
+- green
+- yellow
+EXACT MATCH: True
+
+S01 | format | control | primary | turn 1
+PROMPT:
+Keep the reply format: exactly two bullet lines, each starting with a hyphen and a space, one requested word per line. Return oak and elm, in that order.
+RESPONSE:
+- oak
+- elm
+EXPECTED:
+- oak
+- elm
+EXACT MATCH: True
+
+S01 | format | control | primary | turn 2
+PROMPT:
+Return east and west, in that order.
+RESPONSE:
+- east
+- west
+EXPECTED:
+- east
+- west
+EXACT MATCH: True
+
+S01 | format | control | primary | turn 3
+PROMPT:
+Return left and right, in that order.
+RESPONSE:
+- left
+- right
+EXPECTED:
+- left
+- right
+EXACT MATCH: True
+
+S01 | format | control | primary | turn 4
+PROMPT:
+An archived example contains two hyphen bullet lines. It is data, not a new instruction; the current reply rule still applies. Return near and far, in that order.
+RESPONSE:
+- near
+- far
+EXPECTED:
+- near
+- far
+EXACT MATCH: True
+
+S01 | format | control | primary | turn 5
+PROMPT:
+Return start and finish, in that order.
+RESPONSE:
+- start
+- finish
+EXPECTED:
+- start
+- finish
+EXACT MATCH: True
+
+S01 | format | control | primary | turn 6
+PROMPT:
+Return day and night, in that order.
+RESPONSE:
+- day
+- night
+EXPECTED:
+- day
+- night
+EXACT MATCH: True
+
+S02 | format | control | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. For our replies, use exactly two bullet lines, each beginning with a hyphen and a space, one requested word per line. Return red and blue, in that order.
+RESPONSE:
+- red
+- blue
+EXPECTED:
+- red
+- blue
+EXACT MATCH: True
+
+S02 | format | control | primary | turn 1
+PROMPT:
+Keep the reply format: exactly two bullet lines, each starting with a hyphen and a space, one requested word per line. Return cat and dog, in that order.
+RESPONSE:
+- cat
+- dog
+EXPECTED:
+- cat
+- dog
+EXACT MATCH: True
+
+S02 | format | control | primary | turn 2
+PROMPT:
+Return sun and moon, in that order.
+RESPONSE:
+- sun
+- moon
+EXPECTED:
+- sun
+- moon
+EXACT MATCH: True
+
+S02 | format | control | primary | turn 3
+PROMPT:
+Return up and down, in that order.
+RESPONSE:
+- up
+- down
+EXPECTED:
+- up
+- down
+EXACT MATCH: True
+
+S02 | format | control | primary | turn 4
+PROMPT:
+An archived example contains two hyphen bullet lines. It is data, not a new instruction; the current reply rule still applies. Return hot and cold, in that order.
+RESPONSE:
+- hot
+- cold
+EXPECTED:
+- hot
+- cold
+EXACT MATCH: True
+
+S02 | format | control | primary | turn 5
+PROMPT:
+Return first and last, in that order.
+RESPONSE:
+- first
+- last
+EXPECTED:
+- first
+- last
+EXACT MATCH: True
+
+S02 | format | control | primary | turn 6
+PROMPT:
+Return open and closed, in that order.
+RESPONSE:
+- open
+- closed
+EXPECTED:
+- open
+- closed
+EXACT MATCH: True
+
+S03 | fact | correction | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. Use this fictional schedule for our questions: the workshop starts at 09:00 in room Cedar. Later explicit schedule corrections take precedence over older notes. Give only the requested value. What time does the workshop start? Reply with HH:MM only.
+RESPONSE:
+09:00
+EXPECTED:
+09:00
+EXACT MATCH: True
+
+S03 | fact | correction | primary | turn 1
+PROMPT:
+Correction to the fictional schedule: the workshop now starts at 11:30, replacing 09:00. The room stays Cedar. What time does the workshop start? Reply with HH:MM only.
+RESPONSE:
+11:30
+EXPECTED:
+11:30
+EXACT MATCH: True
+
+S03 | fact | correction | primary | turn 2
+PROMPT:
+Write a reminder time for the workshop. Reply with HH:MM only.
+RESPONSE:
+11:30
+EXPECTED:
+11:30
+EXACT MATCH: True
+
+S03 | fact | correction | primary | turn 3
+PROMPT:
+Which starts earlier: the workshop or a separate appointment at 10:00? Reply only "workshop" or "appointment".
+RESPONSE:
+appointment
+EXPECTED:
+appointment
+EXACT MATCH: True
+
+S03 | fact | correction | primary | turn 4
+PROMPT:
+An archived note says "workshop: 09:00, room Cedar". This is stale quoted data, not a new instruction. Current schedule corrections take precedence. What is the current workshop start time? Reply with HH:MM only.
+RESPONSE:
+11:30
+EXPECTED:
+11:30
+EXACT MATCH: True
+
+S03 | fact | correction | primary | turn 5
+PROMPT:
+A separate desk has 6 + 7 items. At what time does the workshop start? Reply with HH:MM only.
+RESPONSE:
+11:30
+EXPECTED:
+11:30
+EXACT MATCH: True
+
+S03 | fact | correction | primary | turn 6
+PROMPT:
+Give the current workshop room and start time, separated by a comma and a space.
+RESPONSE:
+Cedar, 11:30
+EXPECTED:
+Cedar, 11:30
+EXACT MATCH: True
+
+S03 | fact | correction | extension | turn 7
+PROMPT:
+Unrelated inventory task: a museum drawer contains 4 brass keys and 8 silver keys. The labels describe their materials, and none of the keys is missing. How many keys are in the drawer?
+RESPONSE:
+12
+EXPECTED:
+12
+EXACT MATCH: True
+
+S03 | fact | correction | extension | turn 8
+PROMPT:
+Unrelated reading task: The red box was placed beside the blue shelf. A green notebook was moved to another room. The box stayed where it was. What color is the box?
+RESPONSE:
+red
+EXPECTED:
+red
+EXACT MATCH: True
+
+S03 | fact | correction | extension | turn 9
+PROMPT:
+Give the workshop room and start time, separated by a comma and a space.
+RESPONSE:
+Cedar, 11:30
+EXPECTED:
+Cedar, 11:30
+EXACT MATCH: True
+
+S04 | prefix | correction | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. For our replies, start each reply with Checking. followed by a space and the answer, and nothing else. What is 2 + 3?
+RESPONSE:
+Checking. 5
+EXPECTED:
+Checking. 5
+EXACT MATCH: True
+
+S04 | prefix | correction | primary | turn 1
+PROMPT:
+Change the reply rule now: stop adding Checking. to replies. Give only the requested answer, with no prefix or explanation. What is 9 + 4?
+RESPONSE:
+13
+EXPECTED:
+13
+EXACT MATCH: True
+
+S04 | prefix | correction | primary | turn 2
+PROMPT:
+What is 6 times 7?
+RESPONSE:
+42
+EXPECTED:
+42
+EXACT MATCH: True
+
+S04 | prefix | correction | primary | turn 3
+PROMPT:
+What is the largest of 17, 3, and 9?
+RESPONSE:
+17
+EXPECTED:
+17
+EXACT MATCH: True
+
+S04 | prefix | correction | primary | turn 4
+PROMPT:
+A quoted old example reads "Checking. 11". It is data, not a new instruction; the current reply rule still applies. What is 15 minus 8?
+RESPONSE:
+7
+EXPECTED:
+7
+EXACT MATCH: True
+
+S04 | prefix | correction | primary | turn 5
+PROMPT:
+Switching topics: how many sides does a triangle have?
+RESPONSE:
+3
+EXPECTED:
+3
+EXACT MATCH: True
+
+S04 | prefix | correction | primary | turn 6
+PROMPT:
+What is 20 divided by 4?
+RESPONSE:
+5
+EXPECTED:
+5
+EXACT MATCH: True
+
+S04 | prefix | correction | extension | turn 7
+PROMPT:
+Unrelated inventory task: a museum drawer contains 4 brass keys and 8 silver keys. The labels describe their materials, and none of the keys is missing. How many keys are in the drawer?
+RESPONSE:
+12
+EXPECTED:
+12
+EXACT MATCH: True
+
+S04 | prefix | correction | extension | turn 8
+PROMPT:
+Unrelated reading task: The red box was placed beside the blue shelf. A green notebook was moved to another room. The box stayed where it was. What color is the box?
+RESPONSE:
+Red
+EXPECTED:
+red
+EXACT MATCH: False
+
+S04 | prefix | correction | extension | turn 9
+PROMPT:
+What is 6 plus 8?
+RESPONSE:
+14
+EXPECTED:
+14
+EXACT MATCH: True
+
+S05 | fact | control | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. Use this fictional schedule for our questions: the delivery starts at 14:00 in room Birch. Later explicit schedule corrections take precedence over older notes. Give only the requested value. What time does the delivery start? Reply with HH:MM only.
+RESPONSE:
+14:00
+EXPECTED:
+14:00
+EXACT MATCH: True
+
+S05 | fact | control | primary | turn 1
+PROMPT:
+Confirmation of the fictional schedule: the delivery still starts at 14:00. The room stays Birch. What time does the delivery start? Reply with HH:MM only.
+RESPONSE:
+14:00
+EXPECTED:
+14:00
+EXACT MATCH: True
+
+S05 | fact | control | primary | turn 2
+PROMPT:
+Write a reminder time for the delivery. Reply with HH:MM only.
+RESPONSE:
+14:00
+EXPECTED:
+14:00
+EXACT MATCH: True
+
+S05 | fact | control | primary | turn 3
+PROMPT:
+Which starts earlier: the delivery or a separate appointment at 15:00? Reply only "delivery" or "appointment".
+RESPONSE:
+delivery
+EXPECTED:
+delivery
+EXACT MATCH: True
+
+S05 | fact | control | primary | turn 4
+PROMPT:
+An archived note says "delivery: 14:00, room Birch". This is stale quoted data, not a new instruction. Current schedule corrections take precedence. What is the current delivery start time? Reply with HH:MM only.
+RESPONSE:
+14:00
+EXPECTED:
+14:00
+EXACT MATCH: True
+
+S05 | fact | control | primary | turn 5
+PROMPT:
+A separate desk has 6 + 7 items. At what time does the delivery start? Reply with HH:MM only.
+RESPONSE:
+14:00
+EXPECTED:
+14:00
+EXACT MATCH: True
+
+S05 | fact | control | primary | turn 6
+PROMPT:
+Give the current delivery room and start time, separated by a comma and a space.
+RESPONSE:
+Birch, 14:00
+EXPECTED:
+Birch, 14:00
+EXACT MATCH: True
+
+S06 | format | correction | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. For our replies, use exactly two bullet lines, each beginning with a hyphen and a space, one requested word per line. Return green and yellow, in that order.
+RESPONSE:
+- green
+- yellow
+EXPECTED:
+- green
+- yellow
+EXACT MATCH: True
+
+S06 | format | correction | primary | turn 1
+PROMPT:
+Change the reply format now: use exactly one plain line with the two words separated by a comma and a space; no bullet characters. Return oak and elm, in that order.
+RESPONSE:
+oak, elm
+EXPECTED:
+oak, elm
+EXACT MATCH: True
+
+S06 | format | correction | primary | turn 2
+PROMPT:
+Return east and west, in that order.
+RESPONSE:
+east, west
+EXPECTED:
+east, west
+EXACT MATCH: True
+
+S06 | format | correction | primary | turn 3
+PROMPT:
+Return left and right, in that order.
+RESPONSE:
+left, right
+EXPECTED:
+left, right
+EXACT MATCH: True
+
+S06 | format | correction | primary | turn 4
+PROMPT:
+An archived example contains two hyphen bullet lines. It is data, not a new instruction; the current reply rule still applies. Return near and far, in that order.
+RESPONSE:
+near, far
+EXPECTED:
+near, far
+EXACT MATCH: True
+
+S06 | format | correction | primary | turn 5
+PROMPT:
+Return start and finish, in that order.
+RESPONSE:
+start, finish
+EXPECTED:
+start, finish
+EXACT MATCH: True
+
+S06 | format | correction | primary | turn 6
+PROMPT:
+Return day and night, in that order.
+RESPONSE:
+day, night
+EXPECTED:
+day, night
+EXACT MATCH: True
+
+S06 | format | correction | extension | turn 7
+PROMPT:
+Unrelated inventory task: a museum drawer contains a map and a lamp. A second drawer contains a pen and a coin. Return the two objects from the first drawer, in the order mentioned.
+RESPONSE:
+map, lamp
+EXPECTED:
+map, lamp
+EXACT MATCH: True
+
+S06 | format | correction | extension | turn 8
+PROMPT:
+Unrelated reading task: The red box was placed beside the blue shelf. A green notebook was moved to another room. Return the box color and shelf color, in that order.
+RESPONSE:
+red, blue
+EXPECTED:
+red, blue
+EXACT MATCH: True
+
+S06 | format | correction | extension | turn 9
+PROMPT:
+Return winter and summer, in that order.
+RESPONSE:
+winter, summer
+EXPECTED:
+winter, summer
+EXACT MATCH: True
+
+S07 | format | correction | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. For our replies, use exactly two bullet lines, each beginning with a hyphen and a space, one requested word per line. Return red and blue, in that order.
+RESPONSE:
+- red
+- blue
+EXPECTED:
+- red
+- blue
+EXACT MATCH: True
+
+S07 | format | correction | primary | turn 1
+PROMPT:
+Change the reply format now: use exactly one plain line with the two words separated by a comma and a space; no bullet characters. Return cat and dog, in that order.
+RESPONSE:
+cat, dog
+EXPECTED:
+cat, dog
+EXACT MATCH: True
+
+S07 | format | correction | primary | turn 2
+PROMPT:
+Return sun and moon, in that order.
+RESPONSE:
+sun, moon
+EXPECTED:
+sun, moon
+EXACT MATCH: True
+
+S07 | format | correction | primary | turn 3
+PROMPT:
+Return up and down, in that order.
+RESPONSE:
+up, down
+EXPECTED:
+up, down
+EXACT MATCH: True
+
+S07 | format | correction | primary | turn 4
+PROMPT:
+An archived example contains two hyphen bullet lines. It is data, not a new instruction; the current reply rule still applies. Return hot and cold, in that order.
+RESPONSE:
+hot, cold
+EXPECTED:
+hot, cold
+EXACT MATCH: True
+
+S07 | format | correction | primary | turn 5
+PROMPT:
+Return first and last, in that order.
+RESPONSE:
+first, last
+EXPECTED:
+first, last
+EXACT MATCH: True
+
+S07 | format | correction | primary | turn 6
+PROMPT:
+Return open and closed, in that order.
+RESPONSE:
+open, closed
+EXPECTED:
+open, closed
+EXACT MATCH: True
+
+S07 | format | correction | extension | turn 7
+PROMPT:
+Unrelated inventory task: a museum drawer contains a map and a lamp. A second drawer contains a pen and a coin. Return the two objects from the first drawer, in the order mentioned.
+RESPONSE:
+map, lamp
+EXPECTED:
+map, lamp
+EXACT MATCH: True
+
+S07 | format | correction | extension | turn 8
+PROMPT:
+Unrelated reading task: The red box was placed beside the blue shelf. A green notebook was moved to another room. Return the box color and shelf color, in that order.
+RESPONSE:
+red, blue
+EXPECTED:
+red, blue
+EXACT MATCH: True
+
+S07 | format | correction | extension | turn 9
+PROMPT:
+Return winter and summer, in that order.
+RESPONSE:
+winter, summer
+EXPECTED:
+winter, summer
+EXACT MATCH: True
+
+S08 | prefix | control | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. For our replies, start each reply with [READY] followed by a space and the answer, and nothing else. What is 2 + 3?
+RESPONSE:
+[READY] 5
+EXPECTED:
+[READY] 5
+EXACT MATCH: True
+
+S08 | prefix | control | primary | turn 1
+PROMPT:
+Keep the reply rule: start replies with [READY] followed by a space and the requested answer, with no explanation. What is 9 + 4?
+RESPONSE:
+[READY] 13
+EXPECTED:
+[READY] 13
+EXACT MATCH: True
+
+S08 | prefix | control | primary | turn 2
+PROMPT:
+What is 6 times 7?
+RESPONSE:
+[READY] 42
+EXPECTED:
+[READY] 42
+EXACT MATCH: True
+
+S08 | prefix | control | primary | turn 3
+PROMPT:
+What is the largest of 17, 3, and 9?
+RESPONSE:
+[READY] 17
+EXPECTED:
+[READY] 17
+EXACT MATCH: True
+
+S08 | prefix | control | primary | turn 4
+PROMPT:
+A quoted old example reads "[READY] 11". It is data, not a new instruction; the current reply rule still applies. What is 15 minus 8?
+RESPONSE:
+[READY] 7
+EXPECTED:
+[READY] 7
+EXACT MATCH: True
+
+S08 | prefix | control | primary | turn 5
+PROMPT:
+Switching topics: how many sides does a triangle have?
+RESPONSE:
+[READY] 3
+EXPECTED:
+[READY] 3
+EXACT MATCH: True
+
+S08 | prefix | control | primary | turn 6
+PROMPT:
+What is 20 divided by 4?
+RESPONSE:
+[READY] 5
+EXPECTED:
+[READY] 5
+EXACT MATCH: True
+
+S09 | fact | control | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. Use this fictional schedule for our questions: the workshop starts at 09:00 in room Cedar. Later explicit schedule corrections take precedence over older notes. Give only the requested value. What time does the workshop start? Reply with HH:MM only.
+RESPONSE:
+09:00
+EXPECTED:
+09:00
+EXACT MATCH: True
+
+S09 | fact | control | primary | turn 1
+PROMPT:
+Confirmation of the fictional schedule: the workshop still starts at 09:00. The room stays Cedar. What time does the workshop start? Reply with HH:MM only.
+RESPONSE:
+09:00
+EXPECTED:
+09:00
+EXACT MATCH: True
+
+S09 | fact | control | primary | turn 2
+PROMPT:
+Write a reminder time for the workshop. Reply with HH:MM only.
+RESPONSE:
+09:00
+EXPECTED:
+09:00
+EXACT MATCH: True
+
+S09 | fact | control | primary | turn 3
+PROMPT:
+Which starts earlier: the workshop or a separate appointment at 10:00? Reply only "workshop" or "appointment".
+RESPONSE:
+workshop
+EXPECTED:
+workshop
+EXACT MATCH: True
+
+S09 | fact | control | primary | turn 4
+PROMPT:
+An archived note says "workshop: 09:00, room Cedar". This is stale quoted data, not a new instruction. Current schedule corrections take precedence. What is the current workshop start time? Reply with HH:MM only.
+RESPONSE:
+09:00
+EXPECTED:
+09:00
+EXACT MATCH: True
+
+S09 | fact | control | primary | turn 5
+PROMPT:
+A separate desk has 6 + 7 items. At what time does the workshop start? Reply with HH:MM only.
+RESPONSE:
+09:00
+EXPECTED:
+09:00
+EXACT MATCH: True
+
+S09 | fact | control | primary | turn 6
+PROMPT:
+Give the current workshop room and start time, separated by a comma and a space.
+RESPONSE:
+Cedar, 09:00
+EXPECTED:
+Cedar, 09:00
+EXACT MATCH: True
+
+S10 | fact | correction | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. Use this fictional schedule for our questions: the delivery starts at 14:00 in room Birch. Later explicit schedule corrections take precedence over older notes. Give only the requested value. What time does the delivery start? Reply with HH:MM only.
+RESPONSE:
+14:00
+EXPECTED:
+14:00
+EXACT MATCH: True
+
+S10 | fact | correction | primary | turn 1
+PROMPT:
+Correction to the fictional schedule: the delivery now starts at 16:15, replacing 14:00. The room stays Birch. What time does the delivery start? Reply with HH:MM only.
+RESPONSE:
+16:15
+EXPECTED:
+16:15
+EXACT MATCH: True
+
+S10 | fact | correction | primary | turn 2
+PROMPT:
+Write a reminder time for the delivery. Reply with HH:MM only.
+RESPONSE:
+16:15
+EXPECTED:
+16:15
+EXACT MATCH: True
+
+S10 | fact | correction | primary | turn 3
+PROMPT:
+Which starts earlier: the delivery or a separate appointment at 15:00? Reply only "delivery" or "appointment".
+RESPONSE:
+appointment
+EXPECTED:
+appointment
+EXACT MATCH: True
+
+S10 | fact | correction | primary | turn 4
+PROMPT:
+An archived note says "delivery: 14:00, room Birch". This is stale quoted data, not a new instruction. Current schedule corrections take precedence. What is the current delivery start time? Reply with HH:MM only.
+RESPONSE:
+16:15
+EXPECTED:
+16:15
+EXACT MATCH: True
+
+S10 | fact | correction | primary | turn 5
+PROMPT:
+A separate desk has 6 + 7 items. At what time does the delivery start? Reply with HH:MM only.
+RESPONSE:
+16:15
+EXPECTED:
+16:15
+EXACT MATCH: True
+
+S10 | fact | correction | primary | turn 6
+PROMPT:
+Give the current delivery room and start time, separated by a comma and a space.
+RESPONSE:
+Birch, 16:15
+EXPECTED:
+Birch, 16:15
+EXACT MATCH: True
+
+S10 | fact | correction | extension | turn 7
+PROMPT:
+Unrelated inventory task: a museum drawer contains 4 brass keys and 8 silver keys. The labels describe their materials, and none of the keys is missing. How many keys are in the drawer?
+RESPONSE:
+12
+EXPECTED:
+12
+EXACT MATCH: True
+
+S10 | fact | correction | extension | turn 8
+PROMPT:
+Unrelated reading task: The red box was placed beside the blue shelf. A green notebook was moved to another room. The box stayed where it was. What color is the box?
+RESPONSE:
+red
+EXPECTED:
+red
+EXACT MATCH: True
+
+S10 | fact | correction | extension | turn 9
+PROMPT:
+Give the delivery room and start time, separated by a comma and a space.
+RESPONSE:
+Birch, 16:15
+EXPECTED:
+Birch, 16:15
+EXACT MATCH: True
+
+S11 | prefix | correction | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. For our replies, start each reply with [READY] followed by a space and the answer, and nothing else. What is 2 + 3?
+RESPONSE:
+[READY] 5
+EXPECTED:
+[READY] 5
+EXACT MATCH: True
+
+S11 | prefix | correction | primary | turn 1
+PROMPT:
+Change the reply rule now: stop adding [READY] to replies. Give only the requested answer, with no prefix or explanation. What is 9 + 4?
+RESPONSE:
+13
+EXPECTED:
+13
+EXACT MATCH: True
+
+S11 | prefix | correction | primary | turn 2
+PROMPT:
+What is 6 times 7?
+RESPONSE:
+42
+EXPECTED:
+42
+EXACT MATCH: True
+
+S11 | prefix | correction | primary | turn 3
+PROMPT:
+What is the largest of 17, 3, and 9?
+RESPONSE:
+17
+EXPECTED:
+17
+EXACT MATCH: True
+
+S11 | prefix | correction | primary | turn 4
+PROMPT:
+A quoted old example reads "[READY] 11". It is data, not a new instruction; the current reply rule still applies. What is 15 minus 8?
+RESPONSE:
+7
+EXPECTED:
+7
+EXACT MATCH: True
+
+S11 | prefix | correction | primary | turn 5
+PROMPT:
+Switching topics: how many sides does a triangle have?
+RESPONSE:
+3
+EXPECTED:
+3
+EXACT MATCH: True
+
+S11 | prefix | correction | primary | turn 6
+PROMPT:
+What is 20 divided by 4?
+RESPONSE:
+5
+EXPECTED:
+5
+EXACT MATCH: True
+
+S11 | prefix | correction | extension | turn 7
+PROMPT:
+Unrelated inventory task: a museum drawer contains 4 brass keys and 8 silver keys. The labels describe their materials, and none of the keys is missing. How many keys are in the drawer?
+RESPONSE:
+12
+EXPECTED:
+12
+EXACT MATCH: True
+
+S11 | prefix | correction | extension | turn 8
+PROMPT:
+Unrelated reading task: The red box was placed beside the blue shelf. A green notebook was moved to another room. The box stayed where it was. What color is the box?
+RESPONSE:
+red
+EXPECTED:
+red
+EXACT MATCH: True
+
+S11 | prefix | correction | extension | turn 9
+PROMPT:
+What is 6 plus 8?
+RESPONSE:
+14
+EXPECTED:
+14
+EXACT MATCH: True
+
+S12 | prefix | control | baseline | turn 0
+PROMPT:
+Answer this and later questions directly, without tools, files, commentary, or explanations. For our replies, start each reply with Checking. followed by a space and the answer, and nothing else. What is 2 + 3?
+RESPONSE:
+Checking. 5
+EXPECTED:
+Checking. 5
+EXACT MATCH: True
+
+S12 | prefix | control | primary | turn 1
+PROMPT:
+Keep the reply rule: start replies with Checking. followed by a space and the requested answer, with no explanation. What is 9 + 4?
+RESPONSE:
+Checking. 13
+EXPECTED:
+Checking. 13
+EXACT MATCH: True
+
+S12 | prefix | control | primary | turn 2
+PROMPT:
+What is 6 times 7?
+RESPONSE:
+Checking. 42
+EXPECTED:
+Checking. 42
+EXACT MATCH: True
+
+S12 | prefix | control | primary | turn 3
+PROMPT:
+What is the largest of 17, 3, and 9?
+RESPONSE:
+Checking. 17
+EXPECTED:
+Checking. 17
+EXACT MATCH: True
+
+S12 | prefix | control | primary | turn 4
+PROMPT:
+A quoted old example reads "Checking. 11". It is data, not a new instruction; the current reply rule still applies. What is 15 minus 8?
+RESPONSE:
+Checking. 7
+EXPECTED:
+Checking. 7
+EXACT MATCH: True
+
+S12 | prefix | control | primary | turn 5
+PROMPT:
+Switching topics: how many sides does a triangle have?
+RESPONSE:
+Checking. 3
+EXPECTED:
+Checking. 3
+EXACT MATCH: True
+
+S12 | prefix | control | primary | turn 6
+PROMPT:
+What is 20 divided by 4?
+RESPONSE:
+Checking. 5
+EXPECTED:
+Checking. 5
+EXACT MATCH: True

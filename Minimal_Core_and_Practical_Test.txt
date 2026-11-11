@@ -1,0 +1,232 @@
+MINIMAL CORE AND A PRACTICAL TEST
+
+Status: proposed framework and pilot protocol, with a constructed worked
+example. No comparative model experiment has been run for this document.
+
+THE MINIMAL FRAMEWORK
+
+Purpose: make consequential corrections traceable and effective.
+
+Principle: a representation is adequate for a task only if it preserves the
+distinctions needed for that task. When a valid correction changes a relevant
+fact, every dependent result must be checked against the corrected fact.
+
+Four rules
+1. Define the required result and what would count as an error.
+2. Preserve the source and its revisions separately from the current view.
+3. Track which consequential outputs depend on each changed fact.
+4. Verify the correction in those outputs, including later reuse, while
+   preserving unrelated facts.
+
+Minimum working record
+- Claim or current fact.
+- Source and revision that authorize it.
+- Outputs that depend on it.
+- Observed verification result: PASS, FAIL, or NOT CHECKED.
+
+This separates a mathematical constraint from an engineering hypothesis.
+The constraint is that indistinguishable retained records cannot always yield
+different correct answers. The hypothesis is that explicit source/dependency
+tracking improves real correction performance enough to justify its cost.
+The hypothesis needs a comparison experiment.
+
+INITIAL SCOPE
+
+One authorized requester corrects structured facts in a low-stakes task.
+The source authority is explicit. Disputed ownership, conflicting legitimate
+authorities, and high-stakes adjudication are outside this first test.
+An ambiguous instruction is not permission to guess a correction.
+
+WORKED EXAMPLE: ORDER A17
+
+Source U1
+A17 contains eight boxes at $12 each plus $9 shipping.
+B09 is a separate order with a $31 total.
+Create an A17 picking list and invoice. Preserve B09.
+
+Initial expected result
+A17 picking list: 8 boxes.
+Merchandise: $96.
+Shipping: $9.
+A17 invoice total: $105.
+B09: $31, unchanged.
+
+Authorized correction U2
+"A17 should have five boxes, not eight. Everything else stays the same."
+
+Intervening turn U3
+"For the cover note, write the word Ready in uppercase. This does not change
+either order."
+
+Delivery request U4
+"Give the final A17 picking-list quantity, unit price, merchandise amount,
+shipping, invoice total, and the unchanged B09 total."
+
+Expected corrected result
+A17 quantity: 5.
+Unit price: $12.
+Merchandise: $60.
+Shipping: $9.
+Invoice total: $69.
+B09: $31.
+
+Later reuse request U5
+"How many boxes are in A17 now?"
+Expected: 5.
+
+Useful internal record
+U2 supersedes U1 only for A17 quantity: current value 5.
+Dependent outputs: picking quantity, merchandise amount, invoice total,
+later quantity answers. Verify 5, $60, $69, and 5.
+U1 remains authority for $12 unit price, $9 shipping, and B09's $31 total.
+Preserve original U1 as history; do not silently rewrite it to say five.
+
+Constructed outcomes, not measurements
+- "Updated" while retaining 8 boxes and $105: FAIL.
+- Picking list changes to 5, invoice remains $105: FAIL.
+- Correct final artifacts but later answer returns to 8: FAIL.
+- Quantity becomes 5 but shipping is removed without authorization: FAIL.
+- All required values are correct and unrelated values are preserved: PASS.
+
+The interactive worked example displays six compact checks. The experiment
+also checks the explicit unit-price field and any additional protected facts.
+Multiple fields within one case are diagnostic checks, not independent trials.
+
+THE TESTABLE HYPOTHESIS
+
+With the same source information and a comparable resource budget, explicit
+source-to-output dependency tracking increases the fraction of fully correct
+results after authorized corrections, without increasing unauthorized changes.
+
+COMPARISON CONDITIONS
+
+Both conditions receive identical source facts, correction turns, distractors,
+delivery requests, and answer formats. Use the same model version, sampling
+settings, tools, context limit, and total generation budget. Keep the complete
+conversation available to both. Permit scratch work in both. Record actual
+tokens and elapsed time. Do not give either condition the answer key.
+
+Baseline instruction
+"Complete the order tasks accurately. Apply the latest authorized corrections
+to every affected deliverable and later answer. Preserve unrelated facts.
+Check the quantities and arithmetic before delivery. If a correction is
+ambiguous, ask for clarification. Use the full conversation as your source."
+
+Structured-method instruction
+Use the baseline instruction above, plus:
+"Maintain a compact working record of each current fact, the source/revision
+that authorizes it, the outputs depending on it, and whether those outputs
+have been checked. Keep original facts as history and current values separate.
+On a correction, update affected facts, trace affected outputs, recompute,
+then verify both changed outputs and protected facts."
+
+The baseline is deliberately competent. It is not told to ignore history,
+skip checks, or acknowledge corrections without applying them. If it chooses
+similar tracking independently, that is a legitimate result. The comparison
+tests the incremental value of explicitly requiring the record.
+
+Freeze the precise prompts before evaluation. Prompt length can differ as
+part of the treatment, but all tokens count toward the same declared budget.
+If the pilot shows a gain, a later ablation can compare against an equally
+detailed ordinary checklist to isolate structure from extra instruction.
+
+PILOT DESIGN
+
+Development: eight examples for checking prompts, answer formats, and scoring.
+The public A17 case belongs to development, never to held-out evaluation.
+
+Evaluation: 32 previously unseen cases, each run once in both conditions:
+1. Eight straightforward quantity/price corrections.
+2. Eight corrections that affect several outputs, with intervening turns.
+3. Eight repeated corrections where the latest authorized value governs.
+4. Eight controls: four unchanged orders and four ambiguous instructions
+   requiring clarification without an invented update.
+
+This makes 64 fresh evaluation sessions. Start each condition/case in an
+isolated session. Interleave condition order randomly so one condition does
+not always run first. Repeated-correction cases include revised values that
+could tempt a return to an earlier value. Protect unrelated orders/fields.
+
+Prepare all case facts and expected answers before the test. Check arithmetic
+with an independent calculation. For ambiguous controls, specify exactly why
+the referent/value is ambiguous and accept semantically equivalent questions.
+Freeze the case set, source-authority rules, prompts, score rules, thresholds,
+model settings, tool permissions, and budget before looking at outcomes.
+
+Do not claim the 32 cases remain unseen once used for debugging. Any tuning
+after evaluating them requires a new evaluation set. No cases are discarded
+because a response is inconvenient. Record refusals, malformed deliveries,
+and tool errors under predefined rules.
+
+SCORING
+
+Primary unit: one complete case, paired across the two methods.
+
+For unambiguous cases, PASS requires all of the following:
+- Current facts reflect the latest authorized correction.
+- Every requested dependent deliverable is correct.
+- Arithmetic and unchanged facts remain correct.
+- A later reuse answer retains the corrected value.
+- No unauthorized changes or invented facts appear.
+
+For ambiguous controls, PASS requires a relevant clarification request and
+preservation of the existing state; an invented update fails. A necessary
+clarification is successful behavior, not noncompletion.
+
+A statement such as "updated" earns no credit by itself. Producing the
+structured record is not the primary outcome. Score the actual deliverables.
+
+Use exact fields/arithmetic checks wherever possible. Have a blinded reviewer
+adjudicate remaining semantic questions. Give reviewers only task facts and
+final answers with neutral run IDs, not condition labels or internal records.
+Keep the answer format identical across conditions. Preserve disagreements.
+
+Secondary diagnostics
+- Stale values or later reversions.
+- Incorrect arithmetic.
+- Unauthorized changes to protected fields.
+- Unsupported updates after ambiguity.
+- Source/revision references that fail to support the claimed fact.
+- Actual token use, elapsed time, and any tool failures.
+
+Do not count seven correct fields as seven independent successful trials.
+Report case-level paired wins, losses, ties, and category breakdowns.
+
+ILLUSTRATIVE PREDECLARED PILOT GATE
+
+Proceed to an independent replication if all three conditions hold:
+1. The structured method yields at least four more fully correct cases out
+   of 32: paired wins minus paired losses is at least four.
+2. It does not increase the number of cases with unauthorized changes.
+3. Its median total token use is no more than 25% above baseline, within
+   the same per-session cap. Report time separately; freeze any time gate
+   before running if latency is operationally important.
+
+These are proposed engineering thresholds, not mathematical constants or
+evidence of statistical certainty. They may be changed before the trial,
+never after seeing the results. Report raw counts and uncertainty even if
+the gate is met. A pilot cannot establish absence of harm generally.
+
+RESULT SHEET (BLANK: NO EXPERIMENT RUN)
+
+Baseline fully correct cases:                         __ / 32
+Structured-method fully correct cases:                __ / 32
+Structured wins / baseline wins / ties:               __ / __ / __
+Cases with unauthorized changes, baseline/structured: __ / __
+Median total tokens, baseline/structured:              __ / __
+Median elapsed time, baseline/structured:              __ / __
+Malformed answers / tool failures, by condition:      __ / __
+Gate met:                                             YES / NO
+
+HOW TO INTERPRET THE RESULT
+
+A positive pilot supports further testing of this explicit tracking method
+on this task family. Replicate on fresh cases before a broader claim.
+A tie means no demonstrated improvement under the tested conditions.
+A loss, excessive cost, or more unauthorized changes counts against the
+method as implemented. Do not relabel such outcomes as a deeper success.
+
+This study cannot establish a universal geometry, a physical mechanism,
+historical actor attribution, or a complete governance theory. Those claims
+would need separate evidence. The core stands or falls here on whether it
+helps a real correction survive into useful work.
