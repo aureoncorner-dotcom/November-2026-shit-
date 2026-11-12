@@ -1,0 +1,21 @@
+{
+  "kind": "document_assembly_only",
+  "date": "2026-11-12",
+  "source_sha256": "80f85e4d818ec6a5702f4ffa03151ab9073a637bf85a23bddc2b14f4cfaa4f33",
+  "output_sha256": "181b1592442377d937ec98d9347d67647986381a88f711749c70d06c0e8e36ec",
+  "output_bytes": 195493,
+  "output_lines": 2813,
+  "base_sections_present": 12,
+  "extension_sections_present": 27,
+  "constitutional_section_text_unchanged": true,
+  "constitutional_occurrences": 1,
+  "anchors_unique": true,
+  "internal_links_resolve": true,
+  "code_fences_balanced": true,
+  "display_math_delimiter_count_even": true,
+  "source_files_unchanged": true,
+  "source_programs_executed": false,
+  "source_tests_rerun": false,
+  "mathematical_reverification_claimed": false,
+  "source_prefix_hash_confirmed": true
+}

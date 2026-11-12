@@ -1,0 +1,319 @@
+{
+  "changes": [
+    {
+      "source_line": 1914,
+      "section": "E17",
+      "reason": "Explicit n=1 threshold and general accumulated-error condition.",
+      "old": "The same review corrects the comparison at $\\epsilon=0.5$: the sharpened bound is approximately 0.1148530669767509 and the rational bound 0.1354166666666667. The rational bound is approximately **17.9043% larger**; conversely, the sharpened bound is approximately 15.1854% smaller. Carry the corrected denominator in place of “15% looser.” The source's strict threshold is $|\\epsilon|<r_*$ with $\\widehat E(r_*)=1/78$ and $r_*\\approx0.2469198819488882320676$. Failure of this sufficient certificate does not by itself show an incorrect bin. The targeted review supplies this numerical comparison; its full sharpened formula is not reproduced here.",
+      "new": "The same review corrects the comparison at $\\epsilon=0.5$: the sharpened bound is approximately 0.1148530669767509 and the rational bound 0.1354166666666667. The rational bound is approximately **17.9043% larger**; conversely, the sharpened bound is approximately 15.1854% smaller. Carry the corrected denominator in place of “15% looser.” **For $n=1$**, the strict margin certificate can hold only if $|\\epsilon|<r_*$, where $\\widehat E(r_*)=1/78$ and $r_*\\approx0.2469198819488882320676$. For general integer $n\\ge1$, its uniform margin ceiling requires $n\\widehat E_\\epsilon<1/78$; certification of the particular row still requires the stronger row-specific condition $d_n>n\\widehat E_\\epsilon$. Failure of this sufficient certificate does not by itself show an incorrect bin. The targeted review supplies the numerical comparison; its full sharpened formula is not reproduced here."
+    },
+    {
+      "source_line": 1631,
+      "section": "E12",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "These are attributed analytical results from the supplied master. This upgrade carries their statements and scope forward. The numerical checks performed for this revision concern the clock arithmetic, lattice routing, modular examples and stored prime/phase evidence. They do not rerun or independently certify the all-orders proof or simulation implementation.",
+      "new": "These are attributed analytical results from the supplied master. This working edition carries their statements and scope forward. The predecessor upgrade draft records numerical checks concerning clock arithmetic, lattice routing, modular examples and stored prime/phase evidence. Those recorded checks do not rerun or independently certify the all-orders proof or simulation implementation; this consolidation adds no execution."
+    },
+    {
+      "source_line": 1636,
+      "section": "E12",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "The October 18 additions review retains a proof extension for fixed rectangular side lengths, finite $J>0$, $0<t<1$ and fixed attempted-microtick spacing $d$. Its numerical cases are illustrations of the analytical argument. For this upgrade, exact eight-state convolution was independently compared with its character formula and all three transition derivatives for shapes $(2,3,4)$, $(2,2,3)$ and $(3,4,5)$, each at $d=1$ and $d=B$. All six comparisons agreed and each derivative was negative. The $d=1$ shortest-axis coefficients were $-1/398$, $-1/103$ and $-1/974$. The source's nine 70-digit local Bessel-ratio calculations were not rerun here; no sampler execution was performed.",
+      "new": "The October 18 additions review retains a proof extension for fixed rectangular side lengths, finite $J>0$, $0<t<1$ and fixed attempted-microtick spacing $d$. Its numerical cases are illustrations of the analytical argument. The predecessor upgrade draft reports an independent comparison of exact eight-state convolution with its character formula and all three transition derivatives for shapes $(2,3,4)$, $(2,2,3)$ and $(3,4,5)$, each at $d=1$ and $d=B$. It records agreement in all six comparisons, negative derivatives, and $d=1$ shortest-axis coefficients $-1/398$, $-1/103$ and $-1/974$. This remains a predecessor-draft report. The source's nine 70-digit local Bessel-ratio calculations and sampler execution were not repeated for this consolidation."
+    },
+    {
+      "source_line": 1676,
+      "section": "E13",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "For this revision, symbolic differentiation verified divergence zero and material-boundary tangency. Source-reported numerical Cartesian and side-surface checks retain their original attribution.",
+      "new": "The predecessor upgrade draft reports a symbolic check of zero divergence and material-boundary tangency. Source-reported numerical Cartesian and side-surface checks retain their separate original attribution. Neither report is a new execution in this consolidation."
+    },
+    {
+      "source_line": 1742,
+      "section": "E15",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "The frozen engineering screen is |dual−reference|+5 SE_combined≤0.04 for every sector, using the source's chain-based uncertainty procedure. This revision checked the count arithmetic and Fourier normalization. The full simulation and uncertainty screens retain source-reported status. The original pilot and follow-up remain distinct cohorts.",
+      "new": "The frozen engineering screen is $|\\mathrm{dual}-\\mathrm{reference}|+5\\,\\mathrm{SE}_{\\mathrm{combined}}\\le0.04$ for every sector, using the source's chain-based uncertainty procedure. The predecessor upgrade draft records a check of the count arithmetic and Fourier normalization. The full simulation and uncertainty screens retain source-reported status. The original pilot and follow-up remain distinct cohorts; this consolidation reruns neither."
+    },
+    {
+      "source_line": 1886,
+      "section": "E17",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "The October 21 verified package retains original and corrected code. Its audit reports correction of near-unit-warp inverse-solver divergence and short-duration WAV failures. This revision ran the corrected implementation's 70 built-in checks successfully and independently recomputed the stated counterexample in rational √5 arithmetic. The archived audit's 20,002-state exact-algebra review and audio tests remain separately attributed.",
+      "new": "The October 21 verified package retains original and corrected code. Its audit reports correction of near-unit-warp inverse-solver divergence and short-duration WAV failures. The predecessor upgrade draft additionally reports a successful run of the corrected implementation's 70 built-in checks and an independent recomputation of the stated counterexample in rational $\\sqrt5$ arithmetic. That drafting report and the archived audit's 20,002-state exact-algebra review and audio tests remain separately attributed. No check or audio render was repeated for this consolidation."
+    },
+    {
+      "source_line": 1958,
+      "section": "E18",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "For R_m=|(1/7)Σ_j exp(imθ_j)|, R₇=1 both at complete conjunction and at a regular heptagon. R₁ distinguishes those two constructed cases, with values one and zero respectively. The pair (R₁,R₇) still requires a sufficiency argument for any broader target. This revision independently checked the edge partition and this alias.",
+      "new": "For $R_m=|(1/7)\\sum_j\\exp(im\\theta_j)|$, $R_7=1$ both at complete conjunction and at a regular heptagon. $R_1$ distinguishes those two constructed cases, with values one and zero respectively. The pair $(R_1,R_7)$ still requires a sufficiency argument for any broader target. The predecessor upgrade draft reports an independent check of the edge partition and this alias; this consolidation retains that report without a new execution."
+    },
+    {
+      "source_line": 2004,
+      "section": "E19",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "The dyadic gate continues to use reciprocal contact, effective correction, usable exit and absence of a compulsory third seat. For a partly unresolved gate, retain the native gate status alongside known_violations and coverage. In the source example, C_bind=0 and U_exit=UNKNOWN give gate_status=UNRESOLVED, known_violations=[C_bind] and coverage=INCOMPLETE. An answer-validation rule that preserves known failure has its own criterion version. Among the 81 ternary four-coordinate vectors, 50 contain both a failure and an unknown; this revision independently enumerated that count.",
+      "new": "The dyadic gate continues to use reciprocal contact, effective correction, usable exit and absence of a compulsory third seat. For a partly unresolved gate, retain the native gate status alongside `known_violations` and `coverage`. In the source example, `C_bind=0` and `U_exit=UNKNOWN` give `gate_status=UNRESOLVED`, `known_violations=[C_bind]` and `coverage=INCOMPLETE`. An answer-validation rule that preserves known failure has its own criterion version. The predecessor upgrade draft reports that, among the 81 ternary four-coordinate vectors, 50 contain both a failure and an unknown. This consolidation does not repeat that enumeration."
+    },
+    {
+      "source_line": 2041,
+      "section": "E20",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "For equally frequent readiness at 40 and 400 ms, threshold 180 ms produces release at 180 and 400 ms. Mean latency increases from 220 to 290 ms while population SD decreases from 180 to 110 ms. This revision independently checked that example and six feasible finite release vectors for a separate three-point readiness fixture. The review's 1,157-candidate check remains source-reported.",
+      "new": "For equally frequent readiness at 40 and 400 ms, threshold 180 ms produces release at 180 and 400 ms. Mean latency increases from 220 to 290 ms while population SD decreases from 180 to 110 ms. The predecessor upgrade draft reports checking this example and six feasible finite release vectors for a separate three-point readiness fixture. The review's 1,157-candidate check remains a separately attributed source result. Neither check was repeated for this consolidation."
+    },
+    {
+      "source_line": 2069,
+      "section": "E21",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "The later Geometry–GQG master supplies an exact elliptic-curve sign example on y²=x³+2x+2 over F₁₃. With P=(2,1), Q=(3,3), the pairs (P,Q) and (P,−Q) retain the same x-coordinates (2,3), while x(P+Q)=12 and x(P−Q)=11. Retaining the signed inputs resolves this target on the stated affine domain. This revision independently checked the curve-addition arithmetic.",
+      "new": "The later Geometry–GQG master supplies an exact elliptic-curve sign example on $y^2=x^3+2x+2$ over $\\mathbb F_{13}$. With $P=(2,1)$ and $Q=(3,3)$, the pairs $(P,Q)$ and $(P,-Q)$ retain the same x-coordinates $(2,3)$, while $x(P+Q)=12$ and $x(P-Q)=11$. Retaining the signed inputs resolves this target on the stated affine domain. The predecessor upgrade draft reports an independent check of the curve-addition arithmetic; that report is retained without a new execution."
+    },
+    {
+      "source_line": 2353,
+      "section": "E25",
+      "reason": "Historical attribution of predecessor drafting checks.",
+      "old": "This upgrade independently evaluated the ellipse area analytically, the quartic area through its beta-function integral, and the interior inversion at four rational parameter values. These are normalized projected clearance areas. Loaded mechanical contact requires material properties, physical scales and a mechanical model.",
+      "new": "The predecessor upgrade draft reports evaluating the ellipse area analytically, the quartic area through its beta-function integral, and the interior inversion at four rational parameter values. These are normalized projected clearance areas. Loaded mechanical contact requires material properties, physical scales and a mechanical model. This consolidation retains the reported checks without repeating them."
+    },
+    {
+      "section": "E10",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E15",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E16",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E17",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E18",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E20",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E21",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E22",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E23",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E24",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E25",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E26",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E27",
+      "reason": "Disambiguated inherited revision/intake narration."
+    },
+    {
+      "section": "E1",
+      "reason": "Explicit constitutional base-section reference after namespace introduction.",
+      "old": "Constitutional §10",
+      "new": "Constitutional B§10"
+    },
+    {
+      "section": "E6",
+      "reason": "Explicit constitutional base-section reference after namespace introduction.",
+      "old": "No overwrite of §10",
+      "new": "No overwrite of B§10"
+    },
+    {
+      "section": "B2",
+      "reason": "Local cross-reference to existing known-violation and coverage rule."
+    },
+    {
+      "section": "E10.2",
+      "reason": "Operative crosswalk: implemented mechanisms vs proposed records; receipt vs recovery vs C_bind; precise recipient/angular coverage."
+    },
+    {
+      "section": "E20.1",
+      "reason": "Explicit pre-answer acquisition guard from existing source."
+    },
+    {
+      "section": "E24.6",
+      "reason": "Separately scoped November 11 sequential report; no executable inspection or rerun claimed."
+    }
+  ],
+  "module_map": [
+    {
+      "id": "B10",
+      "part": "part-i"
+    },
+    {
+      "id": "B0",
+      "part": "part-i"
+    },
+    {
+      "id": "B1",
+      "part": "part-i"
+    },
+    {
+      "id": "B2",
+      "part": "part-i"
+    },
+    {
+      "id": "B4",
+      "part": "part-i"
+    },
+    {
+      "id": "B7",
+      "part": "part-i"
+    },
+    {
+      "id": "B8",
+      "part": "part-i"
+    },
+    {
+      "id": "B3",
+      "part": "part-ii"
+    },
+    {
+      "id": "B5",
+      "part": "part-ii"
+    },
+    {
+      "id": "B6",
+      "part": "part-ii"
+    },
+    {
+      "id": "E22",
+      "part": "part-ii"
+    },
+    {
+      "id": "E23",
+      "part": "part-ii"
+    },
+    {
+      "id": "E24",
+      "part": "part-ii"
+    },
+    {
+      "id": "E11",
+      "part": "part-ii"
+    },
+    {
+      "id": "E12",
+      "part": "part-ii"
+    },
+    {
+      "id": "E13",
+      "part": "part-ii"
+    },
+    {
+      "id": "E14",
+      "part": "part-ii"
+    },
+    {
+      "id": "E17",
+      "part": "part-ii"
+    },
+    {
+      "id": "E19",
+      "part": "part-ii"
+    },
+    {
+      "id": "E21",
+      "part": "part-ii"
+    },
+    {
+      "id": "E1",
+      "part": "part-iii"
+    },
+    {
+      "id": "E2",
+      "part": "part-iii"
+    },
+    {
+      "id": "E3",
+      "part": "part-iii"
+    },
+    {
+      "id": "E4",
+      "part": "part-iii"
+    },
+    {
+      "id": "E5",
+      "part": "part-iii"
+    },
+    {
+      "id": "E7",
+      "part": "part-iii"
+    },
+    {
+      "id": "E8",
+      "part": "part-iii"
+    },
+    {
+      "id": "E9",
+      "part": "part-iii"
+    },
+    {
+      "id": "E10",
+      "part": "part-iii"
+    },
+    {
+      "id": "E16",
+      "part": "part-iii"
+    },
+    {
+      "id": "E20",
+      "part": "part-iii"
+    },
+    {
+      "id": "E25",
+      "part": "part-iii"
+    },
+    {
+      "id": "B9",
+      "part": "part-iv"
+    },
+    {
+      "id": "E6",
+      "part": "part-iv"
+    },
+    {
+      "id": "E15",
+      "part": "part-iv"
+    },
+    {
+      "id": "E18",
+      "part": "part-iv"
+    },
+    {
+      "id": "E26",
+      "part": "part-iv"
+    },
+    {
+      "id": "E27",
+      "part": "part-iv"
+    },
+    {
+      "id": "B11",
+      "part": "part-iv"
+    }
+  ]
+}
