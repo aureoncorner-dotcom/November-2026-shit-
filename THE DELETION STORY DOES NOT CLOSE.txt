@@ -1,0 +1,492 @@
+﻿THE DELETION STORY DOES NOT CLOSE
+
+
+Palantir, ICE, CMS Data, AWS, and the Accountability Crisis in Federal Data Infrastructure
+
+
+Adversarial Evidence Assessment | 24 October 2026
+
+
+Record examined: The Argon AI–defense narrative; Basket Retrieval Packet dated 16 October 2026; federal procurement records; sworn declarations and discovery responses in State of California et al. v. U.S. Department of Health and Human Services et al., Case No. 3:25-cv-05536-VC.
+
+
+---
+
+
+EXECUTIVE FINDING
+
+
+The government's own records establish a documented federal data-custody failure involving sensitive CMS information, ICE data engineering, AWS infrastructure, Microsoft 365, and a specific data-sharing event naming Palantir Technologies.
+
+
+ICE requested and received CMS data in January 2026. The agency loaded the information into Databricks for normalization and maintained it within an AWS S3 environment. The government separately identified the ELITE Team and Palantir as recipients of the January 7 dataset through Microsoft Teams.
+
+
+On March 30, 2026, ICE represented that the dataset had been deleted and that no additional sources or derived versions remained within ICE holdings.
+
+
+On May 29, ICE discovered an overlooked copy in an AWS S3 Production bucket.
+
+
+A subsequent investigation identified further copies within Microsoft 365. In a sworn declaration executed July 8, ICE disclosed that system logs showed six users had copies of the January 7 file, including one recorded download. Expanded searches also located multiple filename variants.
+
+
+The record establishes a sequence of official deletion assurances followed by additional discoveries that exposed the limits of the earlier inventory.
+
+
+That sequence is the central evidentiary finding.
+
+
+The government has also identified Palantir as an incumbent supplier of systems central to ICE investigative case management and immigration enforcement. Its procurement justifications describe proprietary software, integrated data processing, operational dependencies, and substantial barriers to replacement.
+
+
+The relationship between Palantir and ICE is documented through primary federal contracting records. The sharing of the disputed CMS dataset with Palantir is documented through a government interrogatory response reproduced in a filed declaration.
+
+
+The custody issue therefore reaches both federal systems and a named external technology contractor.
+
+
+ICE has asserted that the January dataset was kept outside officer-facing systems and was never used in law-enforcement operations. That is a specific government representation requiring a corresponding evidentiary foundation.
+
+
+The demonstrated defect in the government's deletion history makes the scope and reliability of its underlying verification a central issue.
+
+
+A complete accounting requires the identification of each custodian, the actual technical pathway, the records of access and transformation, the disposition of each copy, and the evidence supporting the agency's operational-use representations.
+
+
+The relevant question is whether the government and its contractors can reconstruct and substantiate their handling of the information.
+
+
+The records already justify a focused adversarial inquiry.
+
+
+The custodians must account for the data.
+
+
+---
+
+
+I. THE GOVERNMENT ESTABLISHED THE CHRONOLOGY
+
+
+The chronology emerges from sworn declarations, discovery responses, and procurement records.
+
+
+Date| Documented event
+December 29, 2025| The federal court entered a preliminary injunction governing categories of Medicaid information shared for immigration enforcement.
+January 6, 2026| ICE requested CMS information concerning individuals with specified immigration-status characteristics.
+January 7, 2026| ICE received a list of matches from CMS.
+January 13, 2026| The January file was uploaded or last updated in the AWS S3 Production environment, according to ICE's subsequent review.
+February 20, 2026| ICE restricted access to and quarantined the dataset amid disputes concerning the injunction.
+March 27, 2026| ICE's later account identifies deletion activity involving Databricks and the S3 Development environment.
+March 30, 2026| ICE confirmed deletion and represented that additional sources or derived versions were not retained within ICE holdings.
+May 29, 2026| ICE discovered and took steps to delete an overlooked copy in the AWS S3 Production bucket.
+June 15–17, 2026| ICE expanded its search across additional enterprise systems and Microsoft 365.
+June 17, 2026| Microsoft 365 logs showed six users had copies of the January file and one recorded download.
+June 18, 2026| ICE reported additional deletion actions involving Teams storage and recycle-bin locations.
+June 22, 2026| An expanded search identified multiple filename variants.
+July 2, 2026| The government provided interrogatory responses identifying sharing of the January data with the ELITE Team and Palantir.
+July 8, 2026| ICE executed a fourth declaration describing the additional discoveries and technical limitations of its searches.
+July 16, 2026| California Deputy Attorney General Anna Rich filed a declaration reproducing the government's Palantir-sharing response.
+
+
+The chronology establishes successive discoveries after an earlier declaration of completed deletion.
+
+
+The May discovery concerned AWS Production storage.
+
+
+The June discoveries concerned Microsoft 365 users, copies, a recorded download, and alternate filenames.
+
+
+The July filing placed Palantir directly within the case-specific sharing record.
+
+
+These are separate events with separate technical and evidentiary implications.
+
+
+Together, they demonstrate why a complete custody reconciliation is necessary.
+
+
+Primary records: "ECF 155-4" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.155.4.pdf); "ECF 172-1" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.172.1.pdf); "ECF 181-1" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.181.1.pdf); "ECF 182-1" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.182.1.pdf).
+
+
+---
+
+
+II. PALANTIR IS NAMED IN THE GOVERNMENT'S SHARING ACCOUNT
+
+
+Palantir's involvement in the disputed sharing history is recorded in the government's own discovery response.
+
+
+In her July 16 declaration, California Deputy Attorney General Anna Rich reproduced the defendants' response to Interrogatory No. 9.
+
+
+The government stated:
+
+
+«"The January 7, 2026, data were shared by Homeland Security Investigation (HSI) with the ELITE Team and Palantir via a Microsoft Teams chat."»
+
+
+The same response stated that the shared data were subsequently deleted from the Teams chat.
+
+
+This statement establishes three material facts concerning the government's account.
+
+
+First, ICE identified a specific dataset: the information received from CMS on January 7.
+
+
+Second, the government identified specific recipients: the ELITE Team and Palantir.
+
+
+Third, the government identified a specific communication channel: Microsoft Teams.
+
+
+Palantir is therefore a named participant in the documented sharing history, rather than a contractor connected to the case solely through its general procurement relationship with ICE.
+
+
+That distinction is central.
+
+
+The government was asked what steps had been taken to ensure that data provided to Palantir and other federal contractors were purged.
+
+
+Its response addressed deletion from the Teams chat.
+
+
+That answer places the completeness of the deletion inquiry directly at issue because recipients, messaging systems, downloaded files, subsequent storage, and contractor-controlled environments have different custody and retention characteristics.
+
+
+The relevant examination must identify the Teams participants, the original attachment, its timestamps and identifiers, recipient access events, download records, and the disposition of any copies handled by the participating organizations.
+
+
+Palantir's custodial account must be established through evidence specific to the contractor.
+
+
+The government has already identified the sharing event.
+
+
+The required next step is to reconstruct it.
+
+
+Source: "Rich declaration, ECF 182-1, ¶4" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.182.1.pdf).
+
+
+---
+
+
+III. THE MARCH DELETION REPRESENTATION WAS INCOMPLETE
+
+
+The March 30 deletion representation is a decisive point in the case.
+
+
+In his April 9 sworn declaration, Alberto V. Briseno stated that ICE had deleted the January 7 data file, including the information loaded into Databricks.
+
+
+The declaration also represented that no other sources or derived versions of that information were retained within ICE holdings.
+
+
+Subsequent declarations documented material omissions from the inventory underlying that representation.
+
+
+The May 29 investigation located the January file in AWS S3 Production storage.
+
+
+The June investigation identified additional Microsoft 365 copies and filename variants.
+
+
+ICE's July 8 declaration revisited the March representation and explained that Briseno had believed the deletion was complete based on information provided to him.
+
+
+That explanation addresses the declarant's understanding when the representation was made.
+
+
+The subsequent discoveries establish that the underlying inventory was incomplete.
+
+
+The distinction matters because official assurances must be evaluated against the actual condition of the systems they describe.
+
+
+The March declaration presented a completed deletion result.
+
+
+The May and June investigations revealed additional locations requiring search and remedial action.
+
+
+The July declaration acknowledged the technical difficulty of finding every possible modified or renamed version of a file.
+
+
+The government's documented history therefore contains an inventory problem, a verification problem, and a representation-accuracy problem.
+
+
+These issues require reconciliation through the original search instructions, technical logs, deletion events, and evidence available to the personnel responsible for preparing the declarations.
+
+
+The central demand is precise:
+
+
+Identify what the government searched before March 30, what it discovered afterward, why the additional locations were absent from the earlier inventory, and how its final representations account for the entire documented custody environment.
+
+
+Sources: "ECF 155-4, ¶16" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.155.4.pdf); "ECF 172-1, ¶¶9–16" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.172.1.pdf); "ECF 181-1, ¶¶6, 11–24" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.181.1.pdf).
+
+
+---
+
+
+IV. THE AWS PRODUCTION COPY IS AN ADMITTED CUSTODY FAILURE
+
+
+ICE's June 4 declaration documents the discovery of the January 7 dataset in an AWS S3 Production bucket.
+
+
+The declaration describes separate Development and Production environments.
+
+
+Development was used for initial review, data engineering, and testing.
+
+
+Production was described as the environment where a final, tested dataset was stored for integration with other services.
+
+
+The distinction supplies a concrete technical basis for further examination.
+
+
+ICE reported that the Production copy had been uploaded or last updated on January 13.
+
+
+The agency discovered it on May 29 during an expanded review of its AWS environment.
+
+
+The declaration attributed the omission to an earlier deletion process that removed the associated Databricks table while overlooking the Production storage location.
+
+
+The relevant finding is that a CMS dataset remained in an identified Production storage location after ICE had represented that the relevant information had been deleted.
+
+
+The declaration also describes review of access activity in that storage environment, including events dated April 2 and May 29.
+
+
+Those records provide identifiable starting points for a transaction-level examination.
+
+
+The necessary evidence includes the bucket and object identifiers, file hash, object version history, access-control configuration, service roles, modification records, deletion transactions, and integrations authorized to read or process the object.
+
+
+The Production environment's stated integration function makes service boundaries especially important.
+
+
+The relevant inquiry concerns which configured systems could access the file, which system identities actually interacted with it, and which downstream services received outputs associated with it.
+
+
+A complete AWS account must reconcile object existence, object access, transformation history, authorized integrations, and final disposition.
+
+
+ICE's description establishes the location, its intended environmental function, the discovery, and the reported deletion.
+
+
+The underlying technical evidence is the appropriate means of testing the completeness of that account.
+
+
+Source: "ECF 172-1, ¶¶9–17" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.172.1.pdf).
+
+
+---
+
+
+V. THE JUNE INVESTIGATION IDENTIFIED SIX USERS AND A DOWNLOAD
+
+
+The July 8 declaration adds substantial evidence to the custody history.
+
+
+ICE expanded its investigation beyond the previously examined AWS and Databricks activity.
+
+
+On June 17, the agency's Security Operations Center identified the January file within Microsoft 365 records.
+
+
+The declaration reports that six users had copies of the file and that the logs recorded one user downloading it.
+
+
+ICE also reported that two users' storage still contained the file when the June 17 search was conducted.
+
+
+The agency subsequently described deletion activity involving Microsoft Teams storage, OneDrive recycle bins, and other user storage locations.
+
+
+The recorded download is an independent custody event requiring identification and reconciliation.
+
+
+The government itself established that the file's custody extended into individual Microsoft 365 user environments and included at least one recorded download.
+
+
+The later search also exposed an additional problem: previous deletion efforts had concentrated on a particular filename.
+
+
+The July declaration identified the original engineering file as:
+
+
+"DHS Noncitizen_approved_schema_v2.csv"
+
+
+When ICE broadened its search to filename variations, Microsoft 365 records returned multiple related names.
+
+
+These included:
+
+
+- "DHS Noncitizen.xlsx"
+- "DHS Noncitizen.csv"
+- "DHS Noncitizen 1.csv"
+- "DHS Noncitizen_approved_schema_v2.csv"
+
+
+The agency reported locating files with these names and taking deletion steps.
+
+
+It also described the limitations of identifying modified data using original filenames and hashes.
+
+
+This directly affects the scope of a comprehensive inventory.
+
+
+A renamed or modified file may require content-based analysis, historical logs, lineage records, or source-derived identifiers to establish its relationship to the original.
+
+
+The agency's own declaration acknowledges this verification problem.
+
+
+The documented existence of multiple user copies, a recorded download, and alternate filenames requires the inquiry to extend beyond deletion of the originally identified file.
+
+
+The investigation must account for each recorded user, each identified file, each confirmed download, and the relevant location where the data could have been retained or transformed.
+
+
+Source: "Fourth Briseno declaration, ECF 181-1, ¶¶14–24" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.181.1.pdf).
+
+
+---
+
+
+VI. DATABRICKS CREATED A DATA-LINEAGE OBLIGATION
+
+
+ICE's April 9 declaration states that the CMS dataset was loaded into Databricks as part of the agency's data-engineering process.
+
+
+The agency described the work as cleaning, normalizing, and standardizing information.
+
+
+This handling is a documented transformation stage in the data's history.
+
+
+Data engineering commonly involves source files, intermediate tables, processing jobs, schemas, exports, and output datasets.
+
+
+The relevant forensic inquiry follows the particular operations actually performed on the CMS information.
+
+
+ICE identified Databricks as a processing environment and described deletion of the associated data.
+
+
+A complete examination should therefore reconstruct:
+
+
+1. The original data object and associated identifiers.
+2. The Databricks workspace, jobs, clusters, users, and service accounts involved.
+3. The tables and storage locations created during processing.
+4. The input-to-output lineage of each relevant transformation.
+5. The deletion, retention, or export history of the identified objects.
+6. The downstream destinations appearing in the corresponding transaction logs.
+
+
+The existence of the Databricks processing stage is significant because the January file must be traced through the actual transformation workflow.
+
+
+An inventory of source files alone cannot fully describe a dataset that has undergone engineering operations.
+
+
+The government's claim of completed deletion must be reconciled with the engineering history of the data, including the disposition of relevant derived objects.
+
+
+The AWS Production discovery underscores that requirement. An object associated with the processing workflow remained in a separate storage environment after the Databricks deletion activity.
+
+
+The central technical issue is lineage.
+
+
+The government should identify the complete source-to-output sequence and match each disposal representation to the specific objects it covers.
+
+
+Source: "ECF 155-4, ¶¶10–16" (https://storage.courtlistener.com/recap/gov.uscourts.cand.452203/gov.uscourts.cand.452203.155.4.pdf).
+
+
+---
+
+
+VII. EACH CUSTODY SYSTEM REQUIRES ITS OWN ACCOUNT
+
+
+The record identifies multiple custody surfaces.
+
+
+They include CMS transmission, ICE engineering systems, Databricks, AWS S3 Development and Production storage, Microsoft Teams, Microsoft 365 user storage, and a sharing event involving the ELITE Team and Palantir.
+
+
+Each system presents a distinct technical question.
+
+
+Custody surface| Required accounting
+CMS transmission| Source files, transmission events, receiving identities, transfer timestamps, and dataset identifiers.
+Databricks| Processing jobs, tables, transformations, outputs, service identities, and deletion records.
+AWS S3 Development| Original and intermediate objects, access controls, versions, reads, and deletions.
+AWS S3 Production| Production object history, permissions, access activity, authorized integrations, and final disposition.
+Microsoft Teams| Chat participants, shared attachments, recipients, access events, and message or attachment deletion history.
+Microsoft 365 and OneDrive| User-specific copies, downloads, filename variants, recovery locations, and disposal events.
+ELITE Team| Team membership, custodians, systems used, onward transfers, and handling instructions.
+Palantir| Recipient identities, contractor-controlled access records, copies, transfers, use records, retention decisions, and deletion evidence.
+ICE operational applications| Imports, interface events, relevant query histories, generated outputs, and downstream actions.
+
+
+The integrity of the custody account depends on reconciling all identified surfaces.
+
+
+A Teams deletion addresses a Teams object.
+
+
+An S3 deletion addresses an S3 object.
+
+
+A Databricks deletion addresses specified processing assets.
+
+
+A contractor attestation addresses the contractor's declared custody and deletion actions.
+
+
+These records must be joined using reliable identifiers, authenticated logs, timestamps, and source-to-destination relationships.
+
+
+The result should be one coherent chain of custody across the documented environment.
+
+
+The government identified the systems and custodians.
+
+
+The next evidentiary requirement is their reconciliation.
+
+
+---
+
+
+VIII. PALANTIR'S OPERATIONAL POSITION WITHIN ICE IS ESTABLISHED
+
+
+The Palantir relationship is separately documented through ICE procurement records.
+
+
+The April 2025 limited-sources justification, J&A-25-0092, ident
