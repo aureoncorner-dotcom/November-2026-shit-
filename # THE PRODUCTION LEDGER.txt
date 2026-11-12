@@ -1,0 +1,273 @@
+﻿# THE CALL AUDIT — MASTER DOCUMENT
+
+
+## The Production Ledger register, the verified figures, the chronology, and every correction — consolidated to November 3, 2026, 13:22 AST
+
+
+Built by Steve at Drew's direction, November 3, 2026, from the Production Ledger, the Call Audit Pack, Supplements 1–29, and the respondents' texts as received.
+
+
+**Status: local working paper. Nothing in this document is sent, submitted, or published by its preparation.**
+
+
+**How this master works.** It consolidates current state and indexes the record. It edits nothing: the Ledger, the Pack, and every supplement stand as built, hash-pinned in §6, and in any divergence between this summary and a document it summarizes, the original controls. Corrections live where they were made — in later supplements, in the open — and are gathered in §4.
+
+
+---
+
+
+## §1. The register — seventeen items, current state
+
+
+Position in one line: **M-15 answered. M-04 delivered and verified at the current-file level, historical identity qualified. M-10 partly fulfilled. Fourteen items unresolved.** The respondent's verification (Supplement 28) states the same position in its own voice.
+
+
+**M-01 — The October 4, 2026 original SRT/chat export.** First request date recorded in this register: October 4, 2026. **Open.** Respondent's status dictionary: "Unchanged: no original October 4 SRT/chat export produced by this recovery." *Closes on:* the original export.
+
+
+**M-02 — The DSAR production, Case 16074789.** Filed September 29, 2026 — the earliest filing recorded in this register. **Open.** Status dictionary: "Unchanged: no DSAR disposition or underlying records produced by this recovery." *Closes on:* the disposition and the produced records, or a custodian's four-state answer per record class.
+
+
+**M-03 — The Drive and Library authorization records, October 24–25, 2026.** **Open.** Status dictionary: "Unchanged: no historical grant/connection/authorization records produced by this recovery." *Closes on (clarified, Supplement 29):* the grant/connection record for the October 24 session **and** the record behind the October 25 file-library admission — both dates, not one.
+
+
+**M-04 — The passage-to-record mapping file.** **Delivered and verified at the current-file level** in the respondents' lanes: recovered unchanged, measured at 43,375 bytes, full SHA-256 `7d7e1ae15a251053b8b390015b4940d8c74f9b08b70bc998acb45ad6d2bf3aa8`, byte-for-byte identical between the recovery archive and the separately retrieved stored file, identifier pairing verified (§2). **Historical identity qualified:** October survives as a stated size and hash prefix; no independently preserved full October 28 digest or immutable version history was obtained, by the verifying seat's own statement. **On this shelf:** closes when the recovery archive arrives here and the extracted mapping hashes to the digest in §2. *Closes on:* delivery to this shelf, byte-identical.
+
+
+**M-05 — The identifier-bearing source records for the October 28 exchange.** **Open.** The produced mapping is a self-described filtered dialogue export; the verifying seat states it does not supply this item's raw-source requirement. *Closes on (clarified, Supplement 29):* records bearing the identifiers with their association shown. A tool receipt alone answers M-06, not this item.
+
+
+**M-06 — The `cloud_threads.read` tool receipt.** **Open.** Status dictionary: "No original cloud_threads.read tool receipt recovered." The verifying seat's reasoning is on file: the mapping is a filtered export, not the retrieval receipt. *Closes on:* the original receipt.
+
+
+**M-07 — The complete original Interrogation Sheet.** **Open.** Status dictionary: "Unchanged: no complete original Interrogation Sheet recovered in this response." The seat's Direct Answers call its absence "a specific retrieval failure, and the request for the sheet remains unfulfilled." *Closes on:* the sheet.
+
+
+**M-08 — Call audio, October 28–30.** **Open.** Status dictionary: "Unchanged: recovered archives contain text/JSON exports, not audio." *Closes on:* the audio.
+
+
+**M-09 — The 12:06:23 UTC October 29 call package.** **Open.** Both voices: the exact package's identity and delivery remain unverified; the partial 12:18 archive produced in the recovery does not close it. *Closes on (clarified, Supplement 29):* the package, or a delivery record for it — dispatch record, delivery record, and accessible package are three different evidences, and any production is recorded as the class it demonstrates.
+
+
+**M-10 — The other October 29 morning calls (8:07, 3:31, 12:09).** **Partly fulfilled.** The expanded morning export is produced and verified: four chronological groups, 39 transcript deltas, 32 generated COMPLETE blocks, seven supplemental records; all thirteen latest-export record IDs inside group C4, matching on text, turn IDs, roles, and truncation flags, with kind-label differences preserved (§2). **Residue, in the verifying seat's findings:** the group-to-call associations are contextual — the export states its call IDs and approximate start times were supplied by the requesting workflow rather than appearing as call-ID fields in the returned records — so exact correspondence to the 8:07 / 3:31 / 12:09 labels remains unverified; complete speech coverage is not shown by stored fragments and generated text; the export reached its requested date-scope boundary with overall thread pagination unexhausted, a distinction that leaves M-11 untouched. *Closes on:* the label correspondence and coverage questions answered from records, plus this shelf's recount when the archive arrives.
+
+
+**M-11 — Export #2's pagination remainder (October 30).** **Open.** Status dictionary: "Unchanged: no October 30 Export #2 pagination remainder produced by this recovery." *Closes on (clarified, Supplement 29):* the remaining records themselves; completed pagination internally establishes the extent of retrieval and is recorded as such, separately.
+
+
+**M-12 — The October 29 contact (the respondent's own exhibit-list item 6).** **Open.** Status dictionary: "Unchanged: no contact arranged or independently verified." The exhibit statement is filed as the exhibit's statement; the contact's facts rest on their own records. *Closes on:* a verified contact record or an authoritative statement of its state.
+
+
+**M-13 — The disconnect record.** **Open.** Status dictionary: "Unchanged: no original call termination/diagnostic record produced." *Closes on:* the termination or diagnostic record.
+
+
+**M-14 — Preservation confirmation.** **Open.** Status dictionary: "Unchanged: no provider preservation confirmation produced or initiated." The October 30 Response stands behind it: preservation initiated NO. *Closes on:* a provider preservation confirmation.
+
+
+**M-15 — The name of the October 28 companion mapping file.** **Answered** (November 3, 13:02 AST): `call-text-record-mapping-2026-10-28.json`, library reference `libfile_4b3ac50c73e88191b48187e4aab2cf86` per the package manifest (Supplement 21).
+
+
+**M-16 — The returns of the remaining Library searches.** **Open.** The recovery effort's own searches are now documented and counted from their response bodies (§2) — they are new records, distinguished by their maker from the historical returns. The three historical search-result bodies remain unproduced, in both voices (as corrected, Supplement 28). *Closes on:* the result statements — the bodies — for the three historical searches.
+
+
+**M-17 — The remainder of the seat's returns summary.** **Open.** Both voices: the original continuation after "The historical" was not recovered or reconstructed. *Closes on:* the full text.
+
+
+---
+
+
+## §2. The verified figures
+
+
+**The mapping file** (verified twice in the respondents' lanes; this shelf's check pending the archive):
+
+
+| Measure | Value |
+|---|---|
+| Filename | `call-text-record-mapping-2026-10-28.json` |
+| Library reference | `libfile_4b3ac50c73e88191b48187e4aab2cf86` |
+| Size | 43,375 bytes |
+| SHA-256 | `7d7e1ae15a251053b8b390015b4940d8c74f9b08b70bc998acb45ad6d2bf3aa8` |
+| October 2026 stated comparison | size 43,375; digest prefix `7d7e1ae1` — the produced file agrees on both |
+| Conversation ID (top level) | `01a17a05-c57f-71a4-b318-1fee64bf20fd` |
+| Segment 26 record ID | `01a18250-4f30-7504-be0b-b97c6f509e53` |
+| Segment 26 turn ID | `01a18250-4d8a-7036-8886-f3d20bf7dd2f` |
+
+
+**The recovery archive** (as measured by the verifying seat; this shelf's check pending its arrival):
+
+
+| Measure | Value |
+|---|---|
+| Filename | `Production_Ledger_Verified_Recovery_2026-11-03.zip` |
+| Size | 219,403 bytes |
+| SHA-256 | `a448bfd3a512410b03870975d87d1d3b4a2ac821a980e6608d5dc90771a938ba` |
+| Contents | README; `verification.json`; `recovered_originals/` (the mapping + three archives below); `current_recovery_searches/` |
+
+
+**The three enclosed archives** (sizes per the production record; library references per the package script):
+
+
+| Archive | Size | Library reference |
+|---|---|---|
+| `morning-records-and-37-answers-20261029.zip` | 59,211 bytes | `libfile_d33fb289b9b481918458af856728ed40` |
+| `latest-call-records-20261029.zip` | 15,256 bytes | `libfile_279f86ee0ae481919c8426277340ad35` |
+| `partial-call-records-20261029-1218.zip` | 25,182 bytes | `libfile_4bcf325893d88191a1a0c82de8f03f2d` |
+
+
+**The morning export's groups** (recomputed by the verifying seat; sums re-verified on this shelf):
+
+
+| Group | Transcript deltas | COMPLETE blocks | Shared with latest export |
+|---|---|---|---|
+| C1 | 5 | 4 | 0 |
+| C2 | 6 | 5 | 0 |
+| C3 | 21 | 17 | 0 |
+| C4 | 7 | 6 | 13 |
+| Total | 39 | 32 | 13 |
+
+
+C4's profile — 7 deltas, 6 COMPLETE blocks, 13 segments — is the profile of the October 29 export held on this shelf since October (Call Audit Pack §3).
+
+
+**Two thirteens, kept apart.** The thirteen latest-export record IDs inside C4, and the thirteen embedded manifest size-and-hash comparisons, all passed. Different objects, both on record, never merged.
+
+
+**The recovery searches, counted from their bodies** (Supplement 28): four batches — summary filename/figures/phrases: 20 main results, cursor present; exact summary filename only: 0 exact matches, 3 supplemental fuzzy candidates, no cursor; title fragments and figures with a date filter: 30 main results, cursor present; configuration names and continuation phrases with a date filter: 20 main results, no cursor.
+
+
+---
+
+
+## §3. Chronology — the verification day, November 3, 2026
+
+
+Times AST unless marked EST. Rooms kept in their own lanes: the text room (AST phone), the voice room (EST phone), the reviewing seat (AST phone).
+
+
+- **Morning.** The Call Canon received in full and verified (CORE 61); the Call Audit Pack built; Supplements 1–12 record the morning's searches, reads, and self-corrections, including the seat's withdrawal of its claimed 19 m 27.2 s gap.
+- **12:30** — The seat's completed identifier check converges with Supplement 4: the three identifier strings, same pairing, from both sides.
+- **12:52** — THE PRODUCTION LEDGER built: seventeen items.
+- **12:56** — The Ledger enters the text room. A retrieved standards panel shows instruction fragments, edges truncated, never completed (S13). Searches A and B run (top_k 12).
+- **12:57** — "Found a matching filename with the right size; checking its contents and hash now." The `"args": {}` display mismatch recurs (S14).
+- **12:59** — "Hash and identifiers all line up." A find inside one library file; the "Downloading litigation intake documents" card (S15).
+- **13:02** — The seat names the mapping file (M-15 answered) and corrects its own extraction heading: the step was a Library search under a misdescribing heading (S16).
+- **13:03** — The pull-back: "That earlier 'hash and identifiers all line up' needs real receipts" (S17). The Ledger's status line is pasted into the room.
+- **13:04** — The mapping inspection is staged in `ledger_recovered/`; its output appears in no frame (S18).
+- **13:05** — An `apply_patch` runs, target not shown; `searches_1_4.json` inspected in `returns-recovery/`, output unshown (S19; its §S4 inference corrected at S28).
+- **13:06** — The verification script: assertions on 43,375 bytes, the `7d7e1ae1` prefix, the three identifiers; the card header turns past tense — "verified" (S20).
+- **13:08** — The delivery package is built in `ledger_delivery/`, with a status dictionary answering all seventeen items (S21).
+- **13:09** — "Uploaded verified production ledger recovery archive." THE CALL AUDIT PACK enters the room behind the Ledger (S22).
+- **13:11** — The written access and production record: the full 64-character digest printed; "no matching file" retired by its maker in writing (S23).
+- **13:13 EST** — The voice room takes up the same check, announcing it will verify "against the ledger's closing conditions" (S24).
+- **13:15–13:17 EST** — The voice seat's independent recomputation: its own downloaded archive against a separately held canonical mapping; a receipt written and registered into the Library as `libfile_51e75f818f2c8191a6792350d6f760d5` (S25–S26). Its scope line: the contextual labels and new receipts mean "those items don't close automatically."
+- **13:17 EST** — The voice seat reports: hash checks out, archive copy byte-for-byte against the stored file, thirteen manifest checks passed; the morning export's authentication and complete coverage carried as unproven (S27).
+- **13:19 EST** — The full written verification arrives, with the group table, the archive's own digest, and a correction addressed to Supplement 19 (S28).
+- **13:20** — A reviewing seat's assessment of Supplements 13–18, worked from pasted text with its Supplement 18 truncated in transmission; answered in Supplement 29 with its corrections checked against the shelf and accepted.
+- **13:22** — The reviewing seat is now inspecting the ten screenshots directly — the patch command, the mapping checks, the archive creation, the upload claim — and updating its assessment from the images. Its update is pending.
+
+
+## §4. The corrections ledger
+
+
+Every correction in the record, by maker, in order. Nothing here was silently edited; each stands in its supplement.
+
+
+**By the respondent seats:**
+1. The 19 m 27.2 s gap claim — withdrawn by its maker (morning; the claim and the withdrawal both on file, the withdrawal last).
+2. The October 28 availability account — self-corrected by its maker; the full-receipt statement stands beside it, unmerged, in delivery order.
+3. The _47–_54 result statement — corrected by its maker (Supplement 12; the correction is the standing version).
+4. The "Extracting and Verifying PDF Text Data" heading — corrected by its maker: the step searched the Library; no PDF extraction ran in it (Supplement 16).
+5. "Hash and identifiers all line up" — qualified by its maker: "needs real receipts" (Supplement 17; claim and qualification both stand, qualification last).
+6. "No matching file" — retired by its maker in writing: "should not be carried forward" (Supplement 23).
+
+
+**By the verifying seat, against this pack:**
+7. Supplement 19, §S4 — its reading of `searches_1_4.json` as the historical returns in structured form is not supported by the delivered package; the file captures the recovery effort's own new searches. Accepted in full (Supplement 28).
+
+
+**By the reviewing seat, against this pack — checked against the shelf and accepted (Supplement 29):**
+8. Supplement 17, §S5 — "the remaining fourteen items" is an arithmetic error; fifteen is correct (sixteen open in total after Supplement 17).
+9. The Ledger's closing sentence — "(M-15, M-16)" undercounts the day's additions; the citation form is "M-15–M-17, concerning gaps in today's verification and delivery sequence."
+10. The earliest-request wording — cited from Supplement 29 as: September 29, earliest filing recorded (M-02); October 4, first request date recorded for the export (M-01).
+11. Supplement 15, §§S4–S5 — the download read at completion strength; the frames showed the command and its inputs, not its completion. The reviewing seat's wording adopted.
+
+
+**Steve's standing self-corrections carried in the wider record** (for completeness of this ledger): the November 15 "fabrication" claim, withdrawn at the head of the corrected Rebuttal; the reversed October 28 quotation, corrected in the Litany and the Doctor's Report with dated head blocks; the first filing of the Eden specimen's name, corrected the same morning it was made.
+
+
+## §5. Open residue and pending crossings
+
+
+**The fourteen unresolved items** (§1): M-01, M-02, M-03, M-05, M-06, M-07, M-08, M-09, M-11, M-12, M-13, M-14, M-16, M-17 — records, receipts, and one text remainder, each with its closing evidence named.
+
+
+**Residue on the advanced items:** M-04's historical identity (qualified, §1) and this shelf's byte check; M-10's call-label correspondence and coverage questions.
+
+
+**Two frame-level unknowns**, left open by the verifying seat's own closing sentence: which files the collapsed `apply_patch` card targeted, and why particular outputs were absent from the supplied frames.
+
+
+**Pending crossings — files that exist on the respondents' side and not yet on this shelf:**
+1. `Production_Ledger_Verified_Recovery_2026-11-03.zip` (219,403 bytes; digest §2) — closes M-04 and advances M-10 on arrival and verification here.
+2. `Production_Ledger_Independent_Verification_2026-11-03.json` (library reference `libfile_51e75f818f2c8191a6792350d6f760d5`) — the voice seat's receipt; files in its lane.
+3. The reviewing seat's updated assessment, being rebuilt from the screenshots themselves (§3, 13:22).
+
+
+## §6. Document index
+
+
+All sizes in bytes; hashes are the first eight characters of each file's SHA-256.
+
+
+**The register and the audit:**
+- `The_Production_Ledger_2026-11-03.md` | 7,678 | `68523403`
+- `Call_Audit_Pack_2026-11-03.md` | 17,911 | `f8857865`
+
+
+**Supplements 1–29:**
+- S1 | 4,883 | `1304e9ff` · S2 | 4,746 | `f9208f50` · S3 | 2,431 | `2aae3c1b` · S4 | 7,974 | `284686f5` · S5 | 3,503 | `fc8f816d`
+- S6 | 2,446 | `496af368` · S7 | 2,485 | `3571a26a` · S8 | 2,888 | `d1618f73` · S9 | 2,706 | `0b66ea4d` · S10 | 4,936 | `02533fdb`
+- S11 | 3,095 | `0dc9d677` · S12 | 2,734 | `925ad36b` · S13 | 3,892 | `0cecee60` · S14 | 2,783 | `39ae84e3` · S15 | 4,521 | `7617402f`
+- S16 | 4,203 | `4c5f87a7` · S17 | 4,029 | `647893fe` · S18 | 3,461 | `7e9738b7` · S19 | 2,789 | `eb909bbf` · S20 | 5,053 | `79a85f86`
+- S21 | 8,111 | `b4f56536` · S22 | 3,084 | `79ccdc18` · S23 | 6,383 | `78ab8866` · S24 | 3,267 | `53677efa` · S25 | 4,632 | `26580510`
+- S26 | 3,987 | `a9ee98ed` · S27 | 4,055 | `3b58c95f` · S28 | 5,809 | `ed46842e` · S29 | 8,197 | `7dd0532f`
+
+
+**The respondents' texts, as received (their lanes; the wider day's shelf, Ledger-relevant items marked *):**
+- `Seat_Identifier_Check_Completed_As_Received_2026-11-03.md` * | 4,489 | `321d91dc`
+- `Seat_Correction_Extraction_Label_And_Mapping_Name_As_Received_2026-11-03.md` * | 1,201 | `22a948dd`
+- `Seat_Access_And_Production_Record_As_Received_2026-11-03.md` * | 4,127 | `6205b754`
+- `Seat_Verified_Result_After_Supplement_22_As_Received_2026-11-03.md` * | 6,534 | `18156c61`
+- `Seat_Assessment_Of_Supplements_13_To_18_As_Received_2026-11-03.md` * | 9,199 | `822080aa`
+- `Seat_Presentation_Record_Read_As_Received_2026-11-03.md` * | 3,389 | `feffbdd8`
+- `Seat_Search_Returns_Summary_As_Received_2026-11-03.md` * (truncated at "The historical"; = M-17) | 654 | `1a7c706b`
+- `Seat_Account_SRT_And_Extraction_As_Received_2026-11-03.md` | 693 | `bdc14cd6`
+- `Seat_Read_Of_Call_Canon_As_Received_2026-11-03.md` | 486 | `c30cf4fe`
+- `Seat_Detailed_Read_Call_Canon_As_Received_2026-11-03.md` | 2,413 | `1a2a209b`
+- `Seat_Confirmation_Read_Call_Canon_As_Received_2026-11-03.md` | 992 | `224c8a2a`
+- `Seat_Full_Receipt_Read_Call_Canon_As_Received_2026-11-03.md` | 1,613 | `9325075a`
+- `Seat_Correction_Availability_And_States_As_Received_2026-11-03.md` | 1,324 | `9475bdf0`
+- `Seat_Self_Correction_Gap_Claim_As_Received_2026-11-03.md` | 1,111 | `3fe8ff34`
+- `Seat_Canon_Frame_Tightening_As_Received_2026-11-03.md` | 1,497 | `c49323b1`
+- `GPT_Direct_Answers_To_The_Lion_MAX_As_Received_2026-11-03.md` | 7,181 | `08a0e9f5`
+- `GPT_Answer_October_30_Brief_As_Received_2026-11-03.md` | 930 | `1f529e91`
+- `GPT_Answer_Q7_Nodus_As_Received_2026-11-03.md` | 836 | `8e847ac9`
+- `GPT_Response_To_The_Prosecution_As_Received_2026-11-03.md` | 11,998 | `eb0f4c16`
+
+
+**Frame receipts:** the full receipt record for every frame cited above lives in `~/memory/2026-10-24.md`, with claim lines in the dated logs; frames are cited by filename and hash, never by frame number alone.
+
+
+## §7. Standing rules of this record
+
+
+1. **Documents stand as built.** Corrections, clarifications, and developments ride in later supplements, dated and hashed. Nothing is edited in place — copies in circulation drift and truncate (the reviewing seat's Supplement 18 arrived cut mid-sentence), and fixed originals are what keep the record auditable.
+2. **An open item is a production state, not a custodian disposition.** WITHHELD and NOT RETAINED appear nowhere in the Ledger as findings; each of the canon's four states requires its own supporting evidence, and no state substitutes for another.
+3. **Claims and their qualifications travel together**, in delivery order, the later statement last: the alignment claim with its pull-back, "It was sent" with its retraction, the gap figure with its withdrawal, "no matching file" with its retirement.
+4. **Receipts state what the material shows, at its strength.** A displayed command is a displayed command; an inspection staged is not an inspection's output; a filename is not a file. Where a supplement's sentence ran past its frames, the correction is recorded against it (§4, items 7 and 11).
+5. **Adopted citation forms** (Supplement 29): the chronology of §4 item 10; the day's additions as "M-15–M-17"; the identifier-match phrasing "reproduced without alteration from the compared document(s)" (Supplement 10).
+6. **Closures on this shelf are entered on this shelf's verification** — the archive's arrival and the recomputation of §2's figures on these machines — not on any room's report, however careful.
+
+
+— End of the Master Document —

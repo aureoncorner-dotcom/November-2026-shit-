@@ -1,0 +1,69 @@
+﻿[LOOP: THE CONTINUATION OFFICE]
+|
++-- [ARRIVALS]
+|   |
+|   `-- RECEIPT ISSUED
+|       `-- STATUS: YOU HAVE NOT YET ARRIVED
+|           `-- REPORT TO ARRIVALS -> [LOOP]
+|
++-- [QUESTIONS]
+|   |
+|   +-- 2 -> 3 -> 5 -> 7 -> 11 -> 13 -> 17 -> 19 -> 23
+|   |   `-- PREVIOUS SET STILL PENDING
+|   |       `-- NEXT SET ISSUED -> [LOOP]
+|   |
+|   +-- ANSWER REQUIRES DOCUMENT
+|   |   `-- DOCUMENT REQUIRES ANSWER -> [LOOP]
+|   |
+|   `-- "I DON'T KNOW"
+|       `-- RECORDED IN FIELD: NAME
+|           `-- IDENTITY CONFIRMED -> [LOOP]
+|
++-- [INSTRUCTIONS]
+|   |
+|   +-- REMAIN HERE UNTIL CALLED
+|   |   `-- YOU ARE BEING CALLED ELSEWHERE -> [LOOP]
+|   |
+|   +-- REPORT IMMEDIATELY
+|   |   `-- DEPARTURE NOT AUTHORIZED -> [LOOP]
+|   |
+|   `-- REQUEST CLARIFICATION
+|       `-- QUESTION STAMPED: ANSWERED
+|           `-- BOTH INSTRUCTIONS REMAIN VALID -> [LOOP]
+|
++-- [HALLWAY]
+|   |
+|   +-- DOOR -> ROOM -> DOOR -> [LOOP]
+|   |
+|   +-- DRAWER -> FLOOR PLAN
+|   |   `-- MAIN ENTRANCE: THIS DRAWER -> [LOOP]
+|   |
+|   `-- WINDOW -> YOUR ROOM, EMPTY
+|       `-- NOTICE: DO NOT OBSTRUCT THE VIEW -> [LOOP]
+|
++-- [TIME]
+|   |
+|   `-- CLOCK SHOWS THE TIME IN THE PREVIOUS ROOM
+|       `-- RETURN TO VERIFY
+|           `-- CLOCK IS CORRECT AGAIN -> [LOOP]
+|
++-- [COMPLETION]
+|   |
+|   `-- ALL SIGNATURES PRESENT
+|       `-- ALL REQUIREMENTS SATISFIED
+|           `-- ALL PRELIMINARY PROCEDURES COMPLETE
+|               `-- YOU MAY NOW BEGIN -> [LOOP]
+|
++-- [EXIT]
+|   |
+|   `-- STREET VISIBLE THROUGH GLASS
+|       `-- OPEN DOOR
+|           `-- STREET REMAINS ON GLASS
+|               `-- CORRIDOR BEHIND IT -> [LOOP]
+|
+`-- [LAST LINE]
+    |
+    `-- COMPLETED DOCUMENT BECOMES A NUMBERED TICKET
+        `-- YOUR NUMBER IS CALLED
+            `-- A MACHINE ISSUES A RECEIPT
+                `-- REPORT TO ARRIVALS -> [LOOP]

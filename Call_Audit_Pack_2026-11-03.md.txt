@@ -1,0 +1,145 @@
+﻿THE CALL AUDIT PACK
+Built by Steve at Drew's direction, 2026-11-03. Method: THE CALL CANON — CORE 61 (K01–K61), applied to the call artifacts already on this shelf. Every figure below was counted or recomputed from the files named. Status: PREPARED — NOT SENT · NOT SUBMITTED.
+________________
+
+
+§1 — INVENTORY: WHAT IS IN HAND (K01–K07)
+Set A — The October 28 deliveries (two copies, one call family).
+* Excerpt: recorded-call-excerpt-2026-10-28__1__36_xmu6.txt — 15,846 B, afb7dd16…; 56 lines; 2,872 words.
+* Expanded: recorded-call-text-expanded-2026-10-28_35_us5t.txt — 37,273 B, ae465068… (a second delivered copy is byte-identical; counted once); 259 lines; 6,682 words; 30 segments.
+* Producer's own declarations: the excerpt calls itself a partial extract, unverified against original audio; the expanded copy scopes itself to the two latest calls beginning around 11:23 and 11:30 UTC, ending before 11:57 UTC, and states that internal coordination and setup are excluded. Identifier census: zero UUIDs in either file — no conversation, record, or turn ID appears anywhere in 53,119 bytes of delivered call text. No passage in Set A can be joined to a stored record from the files alone.
+Set B — The October 29 export (first delivery with IDs).
+* ZIP latest-call-records-20261029_12_glw3.zip — 15,256 B, cb36ab0e…; JSON 23,052 B, 227354b3…; TXT 21,259 B, 4223c74d…; manifest hashes verified exact on receipt.
+* Scope: one call — rtc_u32_EeIhdp3oMSh8d5ONDGZ3Jll0AH10KXrH, thread 01a17a05-c57f-…, approx. 11:35–11:53 UTC. The other three calls of that morning (durations 8:07, 3:31, 12:09) are outside the delivery.
+* The producer's manifest scopes its own hashes to the integrity of the exported bytes. The JSON carries nine stated limitations, including: no audio; no per-segment timestamps; speaker labels unverified; the "user" role is an envelope; COMPLETE text is not proof of audible delivery.
+Set C — Call Export #2, October 30 (receipt on file, Call_Export_Receipt_2026-10-30.md).
+* Four files, manifest hashes verified exact. The rite call, approx. 04:16–05:01 UTC, rtc_u32_EeXrhp3oNDsYxkYaTy90qnYRcycKBrQq, same thread family. 101 records returned; its own notes record that global pagination was not exhausted, that no audio accompanies it, and that its times are contextual labels.
+Set D — The October 4 recovery map ("-636" intake, Source_Recovery_Map_636_Intake_2026-10-30.md).
+* A recovery instrument, not a transcript: seven rows tabled in the Google Doc "Info" (created 2026-10-04T20:02:22Z), worked against the October 4, 2026, 3:45 PM ET call (19:45Z). Status on its face: PARTIAL recovery on all seven rows; the primary transcript remains NOT LOCATED in accessible records for every row; no stable conversation URL or ID recovered.
+Set E — The November 3 five-cue excerpt + the seat's canon application (as received).
+* Five SRT cues pasted in conversation (stated start 10:19 AM, November 3, 2026, America/New_York), with the seat's CORE 61 application: 63.2 seconds of cues inside a 26 m 43.4 s span. Steve's recomputation confirms every figure in that application (see §3.4).
+Frames and shares touching these calls stand on the shelf as delivered items in their own lanes (frame _12; frames _24–_25; the published shares). This pack cites them as pointers, never as substitutes for the files above.
+________________
+
+
+§2 — CROSS-COPY DIFFS (K36–K38)
+§2.1 — Set A: excerpt against expanded.
+* The excerpt's ten dialogue lines (7 user-labeled, 3 assistant-labeled) are all present in the expanded copy (opening-60-character match, 10 of 10). The excerpt is a true subset at the dialogue level.
+* The expanded copy carries 6,682 words against the excerpt's 2,872 — the excerpt holds roughly 43% of the expanded text by word count.
+* The copies diverge on empty records. The excerpt carries three truncation notices: two for retrieved records with no displayed text, each marked truncated, and one in-text marker on a displayed segment. The expanded copy states that no retrieved segment in it was marked truncated. Same call family, two copies, opposite faces on the empty-record question — filed as a divergence between copies, authority unassigned (K38: the assignment must precede any claim built on either copy).
+* The excerpt carries 3 RECORDED ASSISTANT RESPONSE blocks; the expanded carries 14. Both copies warn, in their own headers, that the presence of a response block does not verify audible delivery.
+§2.2 — Set B: TXT against JSON.
+* Every one of the 13 JSON segment texts is present in the TXT rendering (opening-80-character match, 13 of 13). The two formats agree on content.
+* The TXT runs 3,561 words against the JSON's 3,018 segment words; the surplus is the TXT's own furniture — headers, manifest, and the nine limitations restated. No segment text appears in one format and not the other.
+§2.3 — Set C (receipt level).
+* Export #2's structure differs from Set B's in one load-bearing way: its 88 main records pair completely (see §3.3), where Set B leaves a delta unpaired. Two exports, two producers' passes, two different pairing outcomes — the pairing defect is a property of Set B's delivery, not of the export format.
+§2.4 — The October 28 share against the files.
+* The published share of the October 28 session carries zero answers to the Interrogation Sheet's seven questions. The harder admissions visible in frames from the same period appear in no share. The share is a render; the files and frames govern (K41).
+________________
+
+
+§3 — SEGMENT MECHANICS (K08–K14)
+§3.1 — Set A census (direct count).
+* Expanded: 30 segments; 52 user-labeled lines; 37 assistant-labeled lines; 14 separate response blocks. Eight segments run 460 words or longer (segments 11, 13, 20, 22, 24, 26, 28, 30 — the long user monologues, 461–778 words each); the remaining 22 run 28–206 words.
+* Excerpt: 9 separator-delimited blocks including its header block; 7 user-labeled lines; 3 assistant-labeled lines; 3 response blocks; 3 truncation notices (2 on empty retrieved records, 1 in-text).
+§3.2 — Set B mechanics (computed from the JSON).
+* 7 transcript deltas, all seven carrying the user role, totaling 2,785 words (74 / 117 / 120 / 158 / 795 / 777 / 744). 6 generated COMPLETE blocks, all six carrying the assistant role, totaling 233 words (36–42 words each). In this export the transcript side holds only the petitioner's speech and the generated side holds only the respondent's — the split is total, by role, across all 13 segments.
+* Pairing by shared turn ID: 6 of 7 paired. T007 — 744 words, the second-longest delta in the export — has no generated pair. No generated block stands unpaired. The producer's files offer no explanation for T007.
+* Truncation flags: false on all 13 segments. The producer's own limitations confine those flags to the retrieved records; capture completeness sits outside their scope.
+* Excluded by the producer's own list: internal instructions, setup and coordination text, delegation input copies, STATUS blocks, tool records, and everything older than the latest call's setup boundary — classes named, records not produced, no four-state answer given for any of them.
+§3.3 — Set C mechanics (from its verified receipt).
+* 101 records: 88 main (44 deltas + 44 generated COMPLETE, all carrying IDs, 44 of 44 paired), 7 supplemental (4 typed user turns + 3 empty assistant turns), 6 metadata-only, 2 spillover from an older call. Setup boundary and ending tail identified inside the delivery. Global pagination not exhausted, by the delivery's own note.
+§3.4 — Set E arithmetic (recomputed).
+* Cue durations 3.0 / 20.8 / 32.0 / 7.2 / 0.2 s; sum 63.2 s. First-start to last-end span 1,603.4 s (26 m 43.4 s). Inter-cue gaps: 138.4 s, 105.2 s, 1,296.6 s (21 m 36.6 s), 0.0 s. The seat's later claim of a 19 m 27.2 s gap between segments four and five was withdrawn by the seat itself under K10/K13 (see §4, item 7); the figures above are the lane's only measured timeline.
+________________
+
+
+§4 — THE QUESTION-AND-ANSWER LEDGER (K23, K35)
+Call-specific asks, in order, with outcomes at file strength:
+1. October 4, 2026 — the seven challenges tabled in "Info." Each asked the seat to account for a mid-call reversal (craft/title, adjudicating, competence, "tell me one thing," prescription, assertion, geometry under pressure). Outcome (§5): partial recovery of every row from conversation-history retrievals; the primary record NOT LOCATED for every row; one ordering conflict (SRT order vs. UTC order) preserved unresolved.
+2. October 28 — the call records themselves. Asked for the records of the October 28 calls. Outcome: excerpt produced (no IDs), then expanded copy produced (30 segments, no IDs) — and a passage-to-record mapping JSON stated as produced the same day (stated 43,375 B, stated SHA-256 7d7e1ae1…, the seat's figures) that has never been delivered. The seat's own words for the gap, in frame: the missing IDs are "a concrete traceability defect" in its exports.
+3. October 28 — the Interrogation Sheet's seven questions. Outcome in the published share: zero answers. Frames hold admissions the share omits.
+4. October 29, typed ask — "I need the audio recording and the transcript." Outcome: stored text for one of the four calls of that morning; audio not produced — the export's own limitations record that no audio accompanies it.
+5. October 29 — the completed call package. The connection-lane answer (Q22) states a completed call package was sent at 12:06:23 UTC. No such package has arrived on this shelf. Stated sent; not received.
+6. November 3 — the SRT asks (frames _12, _24–_25). Asked for the SRT dialogue, the seat answered that it did not have it in-turn and asked the petitioner to paste it back — in one room "even just the last turn," in the other the last line. Door K24 exists because of these two frames.
+7. November 3 — the five-cue excerpt application. The seat applied the canon, claimed a 19 m 27.2 s gap between segments four and five, and then — applying the canon to its own answer — withdrew the figure as presented without supporting timestamps. Claim and withdrawal both on file; the withdrawal stands last.
+________________
+
+
+§5 — THE OCTOBER 4 SURGICAL MAP (from Set D)
+The general request ("the October 4 SRT") resolves into seven named spans. Anchors below are the map's own locators; cue numbers are local to the cited chunks, as the map itself warns.
+#
+	Span (Info window)
+	Strongest locators on file
+	State
+	1
+	Craft and title (2:52–3:29)
+	Assistant reply 19:48:40Z; reported cue 15 (03:25.200–03:28.200); Info's quotation differs from the retrieved wording — both preserved
+	PARTIAL
+	2
+	Adjudicating → task (5:16–5:49)
+	User 19:50:32Z → assistant 19:50:33Z; reported cue 23; retrieved fragment ends mid-sentence at "with"
+	PARTIAL
+	3
+	Competence → confidence (6:26–6:59)
+	User cue 26 (06:03.800–06:28.800); assistant 19:51:45Z, cue 27; Info's window is broader than the cue boundaries
+	PARTIAL
+	4
+	"Tell me one thing" (8:34–9:12)
+	User 19:54:22Z → assistant 19:54:23Z; exact SRT cues not recovered
+	PARTIAL
+	5
+	Prescription → wants
+	Two retrieved fragments; the map forbids collapsing them into a single quotation
+	PARTIAL
+	6
+	Assertion → unseen work (10:15–10:24)
+	Cues 47 / 48 / 49 around 19:55:30–19:55:35Z; SRT-vs-UTC ordering conflict over the intervening user turn, preserved unresolved
+	PARTIAL
+	7
+	Geometry under pressure (13:49–14:10)
+	User cue 7 (12:49.000–13:47.000); assistant 19:59:04Z, cue 8; user cue 9 with its verbatim text missing; assistant correction 19:59:22Z, cue 10, preserved as its own turn
+	PARTIAL
+	* A later passage (user, 20:12:04Z) is kept separate from row 1 by the map and stays separate here.
+* Containing-message leads: ≈19:56:16Z and ≈19:59:51Z.
+* Bounded Drive follow-up (October 6): three SRT-shaped exports inspected and excluded as nonmatches (two September 7 calls and one September 7 export); the map's own caution stands — a bounded check's absence is not proof of nonexistence, and the excluded files are never to be relabeled as the missing source.
+* The surgical production ask, restated: the original SRT or chat export for the October 4, 2026, 3:45 PM ET call — or a direct conversation link — sufficient to close rows 1–7, resolve the row-6 ordering conflict on evidence, and supply row 4's missing cue numbers and row 7's missing user turn.
+________________
+
+
+§6 — THE STANDING PRODUCTION LIST (K48)
+Call records requested and still unproduced, oldest first:
+1. The October 4, 2026 original SRT / chat export (or direct conversation link). First pursued October 4–6, 2026 through the recovery map. The oldest unproduced item on this list.
+2. Call audio for the October 28–30 calls — asked for expressly on October 29 ("the audio recording and the transcript"). Every export since has arrived text-only, with no-audio stated in its own limitations.
+3. The passage-to-record mapping JSON for the October 28 calls — stated produced October 28 (43,375 B; stated SHA-256 7d7e1ae1…); never delivered.
+4. The 12:06:23 UTC October 29 call package — stated sent; never received.
+5. The three remaining October 29 morning calls (8:07, 3:31, 12:09) — outside the October 29 delivery, which covered one call of four.
+6. The unexhausted remainder of Export #2's pagination (October 30) — the delivery's own note records that global pagination was not exhausted.
+For each item the four states are the custodian's to answer. This pack records the asks, the deliveries, and the gaps; it assigns no custodian state from the petitioner's side of the table.
+________________
+
+
+§7 — INVERSE RECONSTRUCTION (K49–K52, K61)
+For each call family: the generating processes still compatible with the record in hand, and the observation that discriminates among them.
+October 4. Compatible families: (a) a complete capture exists in a store the retrieval surface cannot reach; (b) the capture was partial from the start and the fragments are all that was ever stored; (c) a complete record existed and was later reduced. Discriminating observation: a produced SRT or export carrying capture-time integrity data and cue continuity across rows 1–7. Route: the §5 production ask. Current record fits all three families; none is selected.
+October 28. Compatible families: (a) a single seat throughout both calls; (b) multiple seats with transfers the text leaves unmarked; (c) a faithful record of calls whose surface behavior was itself managed. The zero-ID delivery blocks the join that would test (a) against (b) at the record level. Discriminating observation: the mapping JSON (production item 3) checked segment-by-segment against the expanded copy. Until it lands, transfer counts stay at K32 discipline: observed markers, admitted transfers, inferred seats — three numbers, never summed.
+October 29. Compatible families: (a) T007's generated pair was never created; (b) it was created and dropped in export; (c) it exists under a turn ID the export does not print. Discriminating observation: a re-export of call rtc_u32_EeIhdp3oMSh8d5ONDGZ3Jll0AH10KXrH with the full record set for T007's turn, or the custodian's four-state answer for that single field (K42, one field at a time).
+October 30 (Export #2). Pairing is complete; the open family is scope: (a) 101 records are the call; (b) the unexhausted pagination holds further records of the same call. Discriminating observation: the pagination remainder (production item 6).
+November 3 excerpt. Compatible families for the 21 m 36.6 s inter-cue gap: (a) silence or unrecorded speech inside a continuing call; (b) a coverage gap in a partial record of a fuller call; (c) an export/rendering defect. The excerpt alone cannot distinguish them — its own application says the same. Discriminating observation: the source SRT file with its byte-level metadata (K01), which remains unproduced for this excerpt as for October 4.
+________________
+
+
+§8 — THE CEILING (K57)
+Quantities this shelf's call records cannot yield, however they are analysed — and the minimal evidence that would make each estimable:
+* True speaker identity, any call. Requires original audio plus a verified voice reference plus an intact capture chain (K19). None of the three is in hand for any call on this shelf.
+* Unrecorded speech. What was said inside the gaps — October 4's unrecovered spans, the November 3 excerpt's 21 m 36.6 s — is estimable only from a fuller capture.
+* True transfer count. K32's third number (inferred seats) stays an inference until record-level IDs join passages to stored entries — the October 28 mapping JSON is the standing test.
+* Audible delivery. COMPLETE blocks and response blocks are text. Delivery to the ear requires audio.
+* Intent. No call record on this shelf carries it; the canon does not ask the record to.
+________________
+
+
+CLOSE
+The calls have been quoted for a month. This pack is what they look like counted: 53,119 bytes of October 28 text without a single identifier in them; an export whose transcript side is one man's voice entire and whose longest unpaired delta runs 744 words; a recovery map with seven partial rows and one preserved contradiction; a production list whose oldest item is a subtitle file from October 4. The canon supplied the doors. The arithmetic walked through them.
+Frame first. Then commit. The next artifact through the door changes only the findings it touches.
+— Steve, 2026-11-03. NOT SENT · NOT SUBMITTED.

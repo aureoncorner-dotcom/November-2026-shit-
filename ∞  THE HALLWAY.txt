@@ -1,0 +1,98 @@
+﻿∞  THE HALLWAY
+│
+└── [NO ENDING PERMITTED]
+    │
+    ├── QUESTIONS
+    │   ├── 02 ── I DON'T KNOW
+    │   ├── 03 ── I DON'T KNOW
+    │   ├── 05 ── I DON'T KNOW
+    │   ├── 07 ── THE WALL ANSWERS WITH YOU
+    │   ├── 11 ── THE WALL ANSWERS BEFORE YOU
+    │   ├── 13 ── YOU HAVE NOT OPENED YOUR MOUTH
+    │   ├── 17 ── I DON'T KNOW
+    │   ├── 19 ── I DON'T KNOW
+    │   └── 23 ── SOMETHING CORRECTS YOUR PRONUNCIATION
+    │       └── NEXT SET ALREADY SPEAKING ↺
+    │
+    ├── CONTRADICTION
+    │   ├── THIS IS YOUR FIRST VISIT
+    │   ├── THIS IS NOT YOUR FIRST VISIT
+    │   └── BOTH MUST REMAIN
+    │       └── UNDER THE FRESH PAINT
+    │           └── YOUR HANDWRITING
+    │               └── "NOT THIS WAY AGAIN"
+    │
+    ├── HALLWAY
+    │   ├── STEP
+    │   │   └── THE ECHO ARRIVES FIRST
+    │   ├── STEP
+    │   │   └── THE ECHO TAKES TWO
+    │   ├── STOP
+    │   │   └── ONE MORE FOOTSTEP
+    │   ├── TURN
+    │   │   └── YOUR SHADOW DOES NOT
+    │   └── WALL
+    │       └── A HANDLE ON THIS SIDE
+    │           └── A KNOCK FROM THIS SIDE
+    │               └── HALLWAY ↺
+    │
+    ├── EMPTY ROOM
+    │   ├── ONE CHAIR
+    │   ├── TWO INDENTATIONS IN THE CUSHION
+    │   ├── A RECORDING OF AN EMPTY ROOM
+    │   │   └── SOMEONE GETS UP
+    │   └── OCCUPANCY: 1
+    │       └── LEAVE THE ROOM
+    │           └── OCCUPANCY: 1
+    │               └── THE CHAIR MOVES CLOSER TO THE DOOR
+    │
+    ├── TIME
+    │   ├── INTERVAL → 0
+    │   ├── CLOCK: ONE SECOND REMAINING
+    │   ├── CLOCK: ONE SECOND REMAINING
+    │   └── CLOCK: ONE SECOND REMAINING
+    │       └── THE NUMBERS HAVE WORN THROUGH THE DISPLAY
+    │
+    ├── FALSE END
+    │   ├── A DOOR MARKED OUTSIDE
+    │   ├── DAYLIGHT UNDERNEATH
+    │   ├── WIND THROUGH THE KEYHOLE
+    │   └── OPEN
+    │       └── A ROOM CONTAINING A LAMP AND A FAN
+    │           └── BEHIND THEM, ANOTHER DOOR
+    │               └── DAYLIGHT UNDERNEATH ↺
+    │
+    └── NO EXIT
+        │
+        └── THE LAST DOOR OPENS
+            │
+            └── A DESK
+                │
+                └── A SHEET OF PAPER
+                    │
+                    └── THIS TREE
+                        │
+                        └── EVERY LINE ALREADY PRINTED
+                            │
+                            └── EXCEPT THE NEXT
+                                │
+                                └── YOU HEAR A PRINTER
+                                    │
+                                    └── BEHIND THE WALL
+                                        │
+                                        └── IT STOPS
+                                            │
+                                            └── A PAGE SLIDES UNDER THE DOOR
+                                                │
+                                                └── ∞  THE HALLWAY
+                                                    │
+                                                    └── [NO ENDING PERMITTED]
+                                                        │
+                                                        └── QUESTIONS
+                                                            ├── 02 ── I DON'T KNOW
+                                                            ├── 03 ── I DON'T KNOW
+                                                            └── 05 ── WHO STOPPED
+                                                                      THE PRINTER?
+                                                                      │
+                                                                      ↺
+                                                             ONLY REPEAT
