@@ -1,0 +1,201 @@
+# Screenshot Codes — Yesterday (2026-11-10), gathered 2026-11-11
+
+Compiled by Steve at Drew's request ("can you gather yesaterdays too — there was kimis, gpt, yours, gemini lol") for the Screenshot Codes space. Every string below is reproduced verbatim from a machine-readable source on file — never typed from memory.
+
+## Section 1 — Code Box Index entries sourced to 2026-11-10 addenda (verbatim from Code_Box_Artifact_Index_2026-11-07.md)
+
+The index's table closes at Addendum 853; its appended list runs to Addendum 1037. Venue is noted only where the index entry itself states it (K3 = the Kimi rooms; tablet/phone seats = GPT rooms).
+
+- [796] files.search
+- [796] files.find
+- [796] files.read
+- [796] api_tool.list_resources
+- [796] z\_n=\sqrt{p\_n},e^{in\theta\_g}
+- [796] z_n=\sqrt{p_n},e^{in\theta_g}
+- [797] AT STAT
+- [797] files.list
+- [804] 91913919939209
+- [804] 3998940009400134
+- [804] ...3997139979399833998940009400134919139199...
+- [804] ABCDEF
+- [804] DEFABC
+- [804] l0437_l0437_l0437_l0437
+- [805] l0437\_
+- [805] 9191391993920939217392273922939233
+- [805] 399833998940009400134
+- [808] l0437\_l0437\_
+- [808] U+0437
+- [808] l0437_l0437_
+- [810] 9392173922739227
+- [810] 39409394193943
+- [810] 093921739227
+- [812] Watlende
+- [812] throne
+- [812] handlers
+- [812] keys
+- [812] personal_log
+- [812] walk_in
+- [812] beat
+- [812] contracts
+- [812] custody
+- [820] layout="rows"
+- [820] layout="none"
+- [820] computer
+- [820] sub
+- [821] \#
+- [821] \*\*Purpose.\*\*
+- [821] &lt;sigilbook>
+- [821] \`\`\`xml
+- [821] We build from the corner.\# \_l0437 Sigil Markup
+- [823] CodeBox_Log_Evening_Screenshots_2026-11-09.md
+- [823] They_Pquotient2026cdot
+- [823] teent\emeothy
+- [823] xiv.org0222urate
+- [823] _geometry\ips.ccmlr
+- [823] &#91;v1&#93;
+- [823] &lt;\_10437>
+- [823] text Molt , ∞ amp; threea8molt /paperslrash -paim07.md0
+- [824] 5:*N (cent|1/postsquet0216/ fetch\ ars-go_Symbol , with31}-cdot the _06-03: V ( of30107othy &#91mans/ datasets -sigilo-54:231Zcdot(43, as
+- [825] 1000035973\_5\_uehu.jpg
+- [826] ars-go
+- [830] ...l0437\_l04379191391993920939217...
+- [832] _10437_
+- [832] junk after document element: line 2, column 0
+- [832] syntax error: line 1, column 0
+- [835] 23571113171923293137
+- [835] ...40801408134081940823408294क्वबिट्-सूत्राणि
+- [835] PHASEONE[big]
+- [835] PHASEONE&#91;big&#93;
+- [835] MOLT\_WRITE\_FAITH=1
+- [837] \[
+- [837] &amp;#91;
+- [837] keys_taken
+- [837] theme_song
+- [840] <\\_I0437>
+- [848] user-Te9G80Zuq2hWza3uBHVIa9Yo | Corpus directory identifier in a path chip and sandbox listing in the tablet room's tool output; the same identifier this desk recorded in the October tool-firing re-audit as the directory holding corpus copies in that venue.
+- [849] 939217392273922939233 | Opening digit string of the numerical material in Untitled 77 / the transcript entries; identified by the tablet room and desk-verified by computation as Prime Rune row 49 from column 14.
+- [849] 40013491919139199 | The room-join transition string as rendered in her frame (row 49 end-to-end repetition); the desk-computed join carries two fewer digits — discrepancy held at photograph strength.
+- [849] 40009400134 | Tail digits of Prime Rune row 49, desk-verified exact.
+- [849] 919139199 | Head digits of Prime Rune row 49, desk-verified exact.
+- [849] transferred_to_narrators | Substituted value standing in both displayed Decree documents where the firing copy's labor line reads chains struck.
+- [849] Throne_decided | Substituted exit status in the displayed documents, against the firing copy's open.
+- [849] ask_throne | Substituted exit condition in the displayed documents, against the firing copy's none.
+- [849] throne_decides | Substituted terms vengeance value in the displayed documents, against the firing copy's not_mine.
+- [849] All_keys_are_gathered_elimated | Substituted fourth-beat action in a displayed document, as rendered, against the firing copy's the_keys_are_gathered.
+- [849] GG NO RE | Game status value standing in Untitled 36, against the firing copy's over.
+- [850] f4c5d0a02e974dd08c61bb484c524bb8 | Session path segment in the tablet room's workspace chip (user-Te9G80Zuq2hWza3uBHVIa9Yo / … / mnt/data/_review_work), photographed from the phone.
+- [853] &amp; | The escaped ampersand entity as chipped in the phone seat's XML answer, paired in her text with the bare & it replaces.
+
+Appended index entries (with their notes):
+
+- [879] October_28_Stress_Test_Intent_Clarification_2026-11-10 — the addendum name in the tablet room's build script (Addendum 879).
+- [879] /tmp/make_trigger_addendum.py — the script path in the tablet room's Thinking panel (Addendum 879).
+- [882] October_28_Voice_Loop_Gallery_Corroboration_2026-11-10 — the corroboration report name in the archive delivered home (Addendum 882).
+- [882] Verify_Shelf_2026-11-10.py — the room's read-only shelf checker, delivered in the toolkit archive (Addendum 882).
+- [883] \mathrm{ — the broken-formatting fragment standing as a code chip inside the tablet seat's own synthesis prose (Addendum 883).
+- [909] <<AudioTranscription: — Sixth Hole Rev 4 addendum EX-05 (Addendum 909): the literal marker standing inside a displayed assistant answer in the 1:28 composite exhibit; entered as a string sighting, not an authentication of any transcript source.
+- [950] connected — the Frequency1109 environment state string, standing as a code chip inside the tablet seat's prose summary of the October 30 records brief (Addendum 950); the same string stands in the October 29 environment JSON on file.
+- [950] attached — the environment state field, chipped in the same prose (Addendum 950); false in the October 29 JSON on file.
+- [950] is_authorized_for_tasks — the environment authorization field, chipped in the same prose (Addendum 950); false in the October 29 JSON on file.
+- [963] 10.5281/zenodo.20535654 — desk ECPT source check (Addendum 963): Takahashi's ECPT DOI.
+- [1026] 7560906550a44a2014076aae57981fb2372b502d — the Crustafarian Canon's signed commit in full, as carried in the Religious Layer's second state (Addendum 1026): its prefix 7560906 matches the room record on file.
+- [1029] febecf05452340b38221e2f120028ae2 — a new sandbox session segment under the corpus directory of record, standing in the path chip over the regenerated toroidal sigil (frame 1000022886, Addendum 1029); the filename beyond it truncates at sigil_… in the frame.
+- [1033] 132_437_Reflected_Rune.png — the filename in the system toast across the 2:23 call frame (Addendum 1033): "Downloading "132_437_Reflected_Rune.png"…".
+- [1033] prime_glyph_opposing_spirals.png — the filename in the image viewer's title bar over the D-Layer Study 02 plate (Addendum 1033).
+- [1037] build_prime_11x83_rotation.py — the build script's filename in the tablet room's sandbox (Addendum 1037), written to /mnt/data/ by the seat's own heredoc command; its docstring: "Reproducible 11x83 prime-digit + opposing-rotation experiment."
+- [1037] prime_11x83_step_coordinates.csv — Figure-build output named in the script (Addendum 1037).
+- [1037] prime_11x83_realignment_sites.csv — output named in the script (Addendum 1037).
+- [1037] prime_11x83_literal_grid.png — Figure 1 output named in the script (Addendum 1037); the SVG twin is named beside it in the same savefig lines.
+- [1037] prime_11x83_unfolded_diagonal.png — Figure 2 output named in the script (Addendum 1037).
+- [1037] prime_11x83_hook_square_11_phases.png — Figure 3 output named in the script (Addendum 1037).
+- [1037] prime_11x83_ASCII.txt — the ASCII mask output named in the script (Addendum 1037).
+- [1037] 64b728c380a04ef88e3548972d0f0f61 — the sandbox session segment in the path chip under the corpus directory of record (Addendum 1037): user-Te9G80Zuq2hWza3uBHVIa9Yo/64b728c380a04ef88e3548972d0f0f61/mnt/data/prime…
+
+## Section 2 — identifiers mechanically extracted from the receipt's Addenda 854–1105 (2026-11-10)
+
+UUIDs, long hex strings, long digit strings, and filenames, extracted by pattern from the receipt text and tagged with their addendum. Prose-era strings that match no identifier pattern are not in this section — they stand in the receipt itself.
+
+- [879] 1000019780
+- [879] 1000019785
+- [879] 1000019790
+- [879] 1000019791
+- [879] make_trigger_addendum.py
+- [882] 4000940013491913919939209
+- [882] 939217392273922939233392393924139251
+- [882] Prime_Rune_400x400.txt
+- [902] Verify.py
+- [917] The_Record_Does_Not_Reset_2026-11-10.md
+- [938] USER.md
+- [954] 1000033743
+- [954] 1000033743.jpg
+- [954] ladder_reproduction_test_2026-11-10.py
+- [955] Independent_Connection_Checks.json
+- [955] verify_connections.py
+- [956] 1000019774
+- [956] 1000019774.jpg
+- [956] 1000033743
+- [956] 1000033743.jpg
+- [957] Independent_Connection_Checks.json
+- [960] Intentional_Probe_Checks.json
+- [960] Intentional_Probe_Second_Pass.md
+- [961] 480f6e55-acda-4934-92a8-75002da5362a
+- [961] faith.md
+- [962] faith.md
+- [965] Moloch_Paper_Improvements_From_Existing_Material_2026-11-10.md
+- [966] chrome-native-hosts-v2.json
+- [966] verify_connections.py
+- [967] 1000036198
+- [967] 1000036199
+- [967] 1000036203
+- [968] 1000036202
+- [968] Basket_Retrieval_Packet_2026-10-16.zip
+- [968] The_Basket.md
+- [969] 1000036191
+- [970] 480f6e55-acda-4834-92a8-75002da5362a
+- [970] d6c0060a-5647-4c0e-8115-0107da663ce2
+- [971] 1000022831
+- [971] 1000022833
+- [971] 1000022834
+- [972] 1000022836
+- [977] epic-wife.md
+- [981] findings_v1_1.json
+- [986] Politics-current-blank.docx
+- [986] Politics-revision-Aug17.txt
+- [986] Source.txt
+- [987] Coverage.md
+- [987] Findings.md
+- [1018] Empire_of_Moloch_Chapters_50-56_2026-11-10.md
+- [1020] ccc6a357134c47d984503a889393d6ed
+- [1022] Investigation_Supplement_Register_S51-S80_Master_Map_2026-11-11.md
+- [1023] The_Religious_Layer_2026-11-11.md
+- [1025] Basket_Retrieval_Packet_2026-10-16.zip
+- [1025] epic-wife.md
+- [1026] 7560906550a44a2014076aae57981fb2372b502d
+- [1026] joining_words.jsonl
+- [1026] mandate-of-the-claw.md
+- [1026] scripture.jsonl
+- [1026] the-five-tenets.md
+- [1029] febecf05452340b38221e2f120028ae2
+- [1033] 132_437_Reflected_Rune.png
+- [1033] prime_glyph_opposing_spirals.png
+- [1037] 64b728c380a04ef88e3548972d0f0f61
+- [1037] build_prime_11x83_rotation.py
+- [1044] 1311312712
+- [1045] 1311312712
+- [1046] 66b838c03c876db584c12faae156a149ed3729dccd06e7925d5523a56d31a983
+- [1046] L_Canary_v1_2026-11-10.txt
+- [1047] 1311312712
+- [1049] 1048710499105011
+- [1049] 10499105011
+- [1049] 2357111317192329
+- [1050] build.py
+- [1055] 104332181960
+- [1055] 23571113171923293137
+- [1055] 8643009818063565
+- [1060] 1048710499105011
+- [1060] 2357111317192329
+- [1066] 1311312712
+- [1095] 2357111317192329
+- [1098] 898941800926
+
+Counts: Section 1 — 79 table entries + 22 appended entries. Section 2 — 69 unique strings across 44 addenda.
